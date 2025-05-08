@@ -1,0 +1,70 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+    --blue-01: #3e68ff;
+    --black-01: #201F1F;
+    --white-01: #FFFFFF;
+
+}
+
+/* 폰트 전체 적용 */
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+}
+
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    word-break: keep-all;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* 색상 클래스 수정 */
+.white {
+    color: var(--white-01) !important;
+}
+.blue {
+    color: var(--blue-01) !important;
+}
+.black {
+    color: #000 !important;
+}
+
+/* 레이아웃 유틸리티 클래스 */
+.w-1244 {
+    width: 1244px;
+    margin: 0 auto;
+    display: flex;
+}
+.w-50 {
+    width: 50%;
+}
+.w-55 {
+    width: 55%;
+}
+.w-60 {
+    width: 60%;
+}
+.mb-70 {
+    margin-bottom: 70px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+/* Swiper 전용 클래스 */
+.speed {
+    transition-timing-function: linear !important;
+}
