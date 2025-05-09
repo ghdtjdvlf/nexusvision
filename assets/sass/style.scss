@@ -2,37 +2,42 @@ body {
   background: var(--white-01)
 }
 
+.loading-text {
+  p {
+    font-size: 72px;
+    font-weight: 700;
+    position: absolute;
+    top: 38.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 88px;
+  height: 70px; 
   padding: 0 80px;
-  a{
+
+  .fs-4 {
+    font-size: 20px !important;
+  }
+  
+  .nav-link {
+    color: #727272;
+  }
+  
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background: var(--black-01);
+  }
+  
+  .nav-link:focus, .nav-link:hover {
     color: var(--black-01);
-    font-weight: 800;
-    font-size: 20px;
   }
-  .gnb {
-    display: flex;
-    li:last-child{
-      background-color: #38383A;
-      border-radius: 100px;
-      a{
-        color: #fff;
-      }
-    }
-    li {
-      display: flex;
-      a {
-        font-size: 18px;
-        font-weight: 400;
-        padding: 9px 20px;
-        color: var(--black-01);
-        font-size: var(--font);
-      }
-    }
-  }
+
 }
 
 spline-viewer {
@@ -130,6 +135,7 @@ transform: translate(0px, 1036px);
   .swiper.mySwiper {
     height: 783px; /* 원하는 높이 */
   }
+  
   .swiper-wrapper {
     transition-timing-function: linear !important;
   }
@@ -342,7 +348,7 @@ transform: translate(0px, 1036px);
 
 .section06 {
   position: relative;
-  transform: translate(0, 3795px);
+  transform: translate(0, 4105px);
   background: var(--blue-01);
   height: 703px;
   color: var(--white-01);
@@ -361,7 +367,7 @@ transform: translate(0px, 1036px);
 
 footer {
   position: relative;
-  transform: translate(0, 3900px);
+  transform: translate(0, 4210px);
 }
 
 

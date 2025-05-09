@@ -43,36 +43,34 @@ document.addEventListener('DOMContentLoaded', function() {
       const windowHeight = window.innerHeight;
       const docHeight = document.body.scrollHeight;
 
-      // 프로그레스 바 업데이트
-      // progressBar.style.width = (scrollY / (docHeight - windowHeight)) * 100 + '%';
 
       // 조건문 순서 중요! 높은 값부터 체크해야 합니다.
-      if (scrollY >= 7200) {
-          // 7000px 이상: 모두 숨김
+      if (scrollY >= 7600) {
+          // 모두 숨김
           text1.classList.remove('active');
           text2.classList.remove('active');
           text3.classList.remove('active');
       } 
-      else if (scrollY >= 6500) {
-          // 6000px~7000px: text3 표시
+      else if (scrollY >= 6900) {
+          // text3 표시
           text1.classList.remove('active');
           text2.classList.remove('active');
           text3.classList.add('active');
       } 
-      else if (scrollY >= 5500) {
-          // 5000px~6000px: text2 표시
+      else if (scrollY >= 5900) {
+          // text2 표시
           text1.classList.remove('active');
           text2.classList.add('active');
           text3.classList.remove('active');
       } 
-      else if (scrollY >= 4500) {
-          // 4068px~5000px: text1 표시
+      else if (scrollY >= 4900) {
+          // text1 표시
           text1.classList.add('active');
           text2.classList.remove('active');
           text3.classList.remove('active');
       } 
       else {
-          // 4068px 미만: 모두 숨김
+          //  모두 숨김
           text1.classList.remove('active');
           text2.classList.remove('active');
           text3.classList.remove('active');
