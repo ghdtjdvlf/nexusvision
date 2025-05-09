@@ -2,4 +2,4 @@
 
 
 사이트 주소 입니다 <br/> <br/> 
-[https://aquamarine-kringle-64278b.netlify.app/](https://app.netlify.com/sites/nexusvision-robot/overview)
+(https://nexusvision-robot.netlify.app/)
