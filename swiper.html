@@ -4,132 +4,177 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
-
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 <style>
-*
-*::before,
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:orange;
-}
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 
-img {
-  width: 100%;
-  height: 100%;
-}
+  .container {
+    width: 50%;
+  }
 
-.swiper {
-  width: 100%;
-  padding: 50px 0; 
+  .swiper {
+    width: 100%;
+    padding: 50px 0;
+  }
 
-}
+  .swiper-slide {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+  }
+  .swiper-slide img{
+    object-fit: cover;
+    width: 300px;
+  }
+  .caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    height: 70px;
+    background: rgba(0, 0, 0, .7);
+    color: #e2e2e2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transform: translate(0,70px);
+    transition: all 1s  ease;
+  }
+  .swiper-slide:hover .caption{
+    transform: translate(0,0);
 
-.swiper-slide {
-  position: relative;
-  width: 300px;
-  aspect-ratio: 3/4;
-  border-radius: 12px;
-  cursor: grab;
-  user-select: none;
-  overflow: hidden;
-}
-
-.swiper-slide img {
-  object-fit: cover;
-  pointer-events: none;
-}
-
-.caption {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  background: rgba(0, 0, 0,0.7);
-  color: #e2e2e2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  transform: translateY(70px);
-  transition: all 1s ease;
-}
-
-.swiper-slide:hover .caption {
-  transform: translateY(0);
-}
-
-h1 {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-}
-
-.swiper-wrapper {
-  transition-timing-function: linear !important;
-}
+  }
 
 
 </style>
-<body>
 
+</head>
+<body>
   <div class="container">
-    <div class="swiper mySwiper">
+    <div class="swiper">
+
       <div class="swiper-wrapper">
+  
         <div class="swiper-slide">
+        
           <img src="assets/img/slide-img01.png" alt="">
           <div class="caption">
-            <h1>하하</h1>
+            <h1>summer vibes</h1>
           </div>
         </div>
         <div class="swiper-slide">
-          <img src="assets/img/slide-img02.png" alt="">
-          <h1>하하</h1>
+        
+          <img src="assets/img/slide-img01.png" alt="">
+          <div class="caption">
+            <h1>summer vibes</h1>
+          </div>
         </div>
         <div class="swiper-slide">
-          <img src="assets/img/slide-img03.png" alt="">
-          <h1>하하</h1>
+        
+          <img src="assets/img/slide-img01.png" alt="">
+          <div class="caption">
+            <h1>summer vibes</h1>
+          </div>
         </div>
         <div class="swiper-slide">
-          <img src="assets/img/slide-img04.png" alt="">
-          <h1>하하</h1>
+        
+          <img src="assets/img/slide-img01.png" alt="">
+          <div class="caption">
+            <h1>summer vibes</h1>
+          </div>
         </div>
         <div class="swiper-slide">
-          <img src="assets/img/slide-img05.png" alt="">
-          <h1>하하</h1>
+        
+          <img src="assets/img/slide-img01.png" alt="">
+          <div class="caption">
+            <h1>summer vibes</h1>
+          </div>
         </div>
         <div class="swiper-slide">
-          <img src="assets/img/slide-img06.png" alt="">
-          <h1>하하</h1>
+        
+          <img src="assets/img/slide-img01.png" alt="">
+          <div class="caption">
+            <h1>summer vibes</h1>
+          </div>
         </div>
+        <div class="swiper-slide">
+        
+          <img src="assets/img/slide-img01.png" alt="">
+          <div class="caption">
+            <h1>summer vibes</h1>
+          </div>
+        </div>
+        <div class="swiper-slide">
+        
+          <img src="assets/img/slide-img01.png" alt="">
+          <div class="caption">
+            <h1>summer vibes</h1>
+          </div>
+        </div>
+
+
+
+
       </div>
-      <div class="swiper-pagination"></div>
     </div>
   </div>
-  
 
+  
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-   const container = document.querySelector(".container")
 
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      slidePerview:3,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+  const container = document.querySelector(".container")    
+
+  var swiper = new Swiper (".swiper", {
+    spaceBetween : 30,
+    slidePerView: 66,
+    loop:true,
+    speed:6000,
+    freeMode: true,
+    autoplay : {
+      delay : 0
+    }
+  })
+
+  const stopAutoplay = () => {
+    const swiperTranslate = swiper.getTranslate();
+    swiper.setTranslate(swiperTranslate);
+    swiper.autoplay.stop();
+  }
+  const startAutoplay = () => {
+    swiper.slideTo(swiper.activeIndex, 3000, false);
+    swiper.autoplay.start();
+  }
+
+
+  container.addEventListener("mouseenter", () => stopAutoplay())
+  container.addEventListener("mouseleave", () => startAutoplay())
+
+
+
   </script>
 </body>
 </html>
