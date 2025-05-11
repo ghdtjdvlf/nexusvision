@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
+
 window.addEventListener('scroll', function() {
   console.log("현재 스크롤 위치:", window.scrollY + "px");
 });

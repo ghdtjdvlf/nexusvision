@@ -1,17 +1,13 @@
-<<<<<<< Updated upstream
   const container = document.querySelector('.s_container')
   
   var swiper = new Swiper(".mySwiper", {
-=======
 const container = document.querySelector(".swiper_container")    
 
     var swiper = new Swiper(".mySwiper", {
->>>>>>> Stashed changes
       direction: "vertical",
       slidesPerView: 3.5, 
       speed: 2400,
       loop:true,
-<<<<<<< Updated upstream
       freeMode: true,
       allowTouchMove: false,
       pagination: {
@@ -35,7 +31,6 @@ function startAutoplay() {
     container.addEventListener('mouseenter',() => stopAutoplay())
     container.addEventListener('mouseleave',() => startAutoplay())
 
-=======
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -61,7 +56,6 @@ function startAutoplay() {
 
     
   
->>>>>>> Stashed changes
 
     // var logoSwiper = new Swiper(".logoSwiper", {
     //   slidesPerView: 4, 
