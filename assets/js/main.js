@@ -19,16 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('video-background');
-    const maxScroll = 600; // 스크롤 범위 (0~600px)
+    const maxScroll = 200; // 스크롤 범위 (0~600px)
     
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY || window.pageYOffset;
       const scrollProgress = Math.min(scrollY / maxScroll, 1); // 0~1 사이 값
-      const newWidth = 60 + (35 * scrollProgress); // 60% → 100% 계산
+      const newWidth = 60 + (41 * scrollProgress); // 60% → 100% 계산
   
       video.style.width = `${newWidth}%`;
     });
   });
+ 
 
 //sec05 text 
 
