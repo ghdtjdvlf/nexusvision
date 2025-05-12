@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY || window.pageYOffset;
       const scrollProgress = Math.min(scrollY / maxScroll, 1); // 0~1 사이 값
-      const newWidth = 60 + (41 * scrollProgress); // 60% → 100% 계산
+      const newWidth = 60 + (35 * scrollProgress); // 60% → 100% 계산
   
       video.style.width = `${newWidth}%`;
     });
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
       // 조건문 순서 중요! 높은 값부터 체크해야 합니다.
-      if (scrollY >= 7600) {
+      if (scrollY >= 7500) {
           // 모두 숨김
           text1.classList.remove('active');
           text2.classList.remove('active');
@@ -82,3 +82,16 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('scroll', function() {
   console.log("현재 스크롤 위치:", window.scrollY + "px");
 });
+
+
+//다크모드
+
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    const isDark = body.classList.contains('dark-mode');
+    themeToggle.querySelector('span').textContent = isDark ? '라이트 모드' : '다크 모드';
+  });

@@ -1,69 +1,46 @@
-  const container = document.querySelector('.s_container')
-  
-  var swiper = new Swiper(".mySwiper", {
-const container = document.querySelector(".swiper_container")    
 
-    var swiper = new Swiper(".mySwiper", {
-      direction: "vertical",
-      slidesPerView: 3.5, 
-      speed: 2400,
-      loop:true,
-      freeMode: true,
-      allowTouchMove: false,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },  
-      autoplay: {
-        delay: 0,
-    },
-    });
 
-    function stopAutoplay() {
-      const swiperTranslate = swiper.getTranslate();
-      swiper.setTranslate(swiperTranslate);
-      swiper.autoplay.stop()
-    }
-function startAutoplay() {
-  // swiper.slideTo(swiper.activeIndex, 3000, false); // 제거
-  swiper.autoplay.start();
-}
-    container.addEventListener('mouseenter',() => stopAutoplay())
-    container.addEventListener('mouseleave',() => startAutoplay())
+let rightSwiper = new Swiper(".rightSwiper", {
+  slidesPerView: 3.5,
+  spaceBetween: 30,
+  direction: "vertical",
+  loop: true,
+  speed: 2000, // 슬라이드 전환 속도 (ms)
+  autoplay: {
+    delay: 0,    // 0으로 설정하면 자동재생이 끊기지 않고 계속 진행
+    disableOnInteraction: false // 사용자 상호작용(드래그 등) 후에도 자동재생 유지
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      }, 
-      autoplay : {
-        delay : 0
-      }
-    });
+let leftSwiper = new Swiper(".leftSwiper", {
+  slidesPerView: 3.5,
+  spaceBetween: 30,
+  direction: "vertical",
+  loop: true,
+  speed: 2000, // 슬라이드 전환 속도 (ms)
+  autoplay: {
+    delay: 0,    // 0으로 설정하면 자동재생이 끊기지 않고 계속 진행
+    disableOnInteraction: false, // 사용자 상호작용(드래그 등) 후에도 자동재생 유지
+    reverseDirection: true // ★ 자동 재생 방향 반대로 (위→아래)
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
-    const stopAutoplay = () => {
-      const swiperTranslate = swiper.getTranslate();
-      swiper.setTranslate(swiperTranslate);
-      swiper.autoplay.stop();
-    }
-    const startAutoplay = () => {
-      swiper.slideTo(swiper.activeIndex, 3000, false);
-      swiper.autoplay.start();
-    }
-  
-  
-    container.addEventListener("mouseenter", () => stopAutoplay())
-    container.addEventListener("mouseleave", () => startAutoplay())
+let logoSwiper =  new Swiper(".logoSwiper", {
+  spaceBetween: 30,
+  loop: true,
+  speed: 3000,
+  slidesPerView:5,
+  freeMode: true,
+  autoplay : {
+    delay: 0,
+  },
+})
 
-    
-  
-
-    // var logoSwiper = new Swiper(".logoSwiper", {
-    //   slidesPerView: 4, 
-    //   speed: 3000,
-    //   loop:true,
-    //   allowTouchMove: false,
-    //   autoplay: {
-    //     delay: 0,
-    //     pauseOnMouseEnter : false
-    // },
-    // });

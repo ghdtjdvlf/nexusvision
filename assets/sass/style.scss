@@ -14,13 +14,22 @@ body {
 }
 
 
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 70px; 
   padding: 0 80px;
+  position: fixed; 
+  top: 0;         
+  left: 0;        
+  width: 100%;    
+  z-index: 1000;   
+  background: rgba(255, 255, 255, 0.6); /* 반투명 흰색 */
+  backdrop-filter: blur(20px); /* 뒷 배경 블러 효과 */
+  -webkit-backdrop-filter: blur(10px); /* Safari 호환 */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #d3d3d3; /* 경계선 부드럽게 */
 
   .fs-4 {
     font-size: 20px !important;
@@ -50,11 +59,11 @@ spline-viewer {
 
 section.kv {
   position: relative; /* 부모에 relative 추가 */
-  height: 100vh; /* 전체 화면 높이 */
+  height: 80vh; /* 전체 화면 높이 */
   .title {
     margin: 260px 0 65px 0 ;
     h1 {
-      color: var(--blue-01);
+      color: var(--black-01);
       font-size: 68px;
       font-weight: 600;
       margin-bottom: 65px;
@@ -64,7 +73,7 @@ section.kv {
     .next {
       position: absolute;
       z-index: 7000;
-      top: 80%;
+      top: 15%;
       left: 50%;
       transform: translate(-50%, 50%);
       img {
@@ -93,7 +102,7 @@ section.kv {
       position: absolute;
       top: 80%;
       left: 50%;
-      transform: translate(-50%, 80%);
+      transform: translate(-50%,30%);
       width: 60%; /* 초기 너비 60% */
       height: auto;
       aspect-ratio: 16 / 9;
@@ -110,15 +119,15 @@ section.kv {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(10px);
+      transform: translateY(30px);
     }
   }
   
 }
 
 
-//Reference
 
+//Reference
 .section02 {
 background: var(--black-01);
 height: auto;
@@ -139,7 +148,10 @@ transform: translate(0px, 1036px);
     font-size: 52px;
   }
 
-  .swiper.mySwiper {
+  .swiper.leftSwiper {
+    height: 783px; /* 원하는 높이 */
+  }
+  .swiper.rightSwiper {
     height: 783px; /* 원하는 높이 */
   }
   
@@ -160,7 +172,6 @@ transform: translate(0px, 1036px);
     width: 100%;
     padding: 20px;
     color: white;
-
     background: rgba(0, 0, 0, 0.7); /* 딤드 효과 */
     transition: all 0.3s ease;
     z-index: 10;
@@ -367,7 +378,7 @@ transform: translate(0px, 1036px);
 
 .section06 {
   position: relative;
-  transform: translate(0, 4105px);
+  transform: translate(0, 4327px);
   background: var(--blue-01);
   height: 703px;
   color: var(--white-01);
@@ -386,7 +397,7 @@ transform: translate(0px, 1036px);
 
 footer {
   position: relative;
-  transform: translate(0, 4210px);
+  transform: translate(0, 4400px);
 }
 
 
@@ -435,7 +446,7 @@ footer {
           height: 100%;
       }
 
-      .footer {
+      footer {
         background-color: #ffffff;
         color: #1a1a1a;
         padding: 60px 0 30px;
@@ -578,9 +589,55 @@ footer {
         gap: 8px;
         margin-top: 20px;
     }
+
+    body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #cccccc;
+}
+
+body.dark-mode .footer-links a {
+  color: #cccccc;
+}
+
+body.dark-mode .social-icon svg {
+  stroke: #cccccc;
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
     
     /* 반응형 디자인 */
-    @media (max-width: 768px) {
+    @media (max-width:1080px) {
+
+      header {
+        padding:  0 50px !important; 
+      }
+      .me-2 {
+      display: none;
+      }
+
+      .section02 {
+        transform: translate(0px, 0px);
+      }
+      .section03 {
+        transform: translate(0px, 0px);
+      }
+      .section04 {
+        transform: translate(0px, 0px);
+      }
+
+    }
+
+
+    @media (max-width: 480px) {
+      header {
+        .nav-pills {
+          display: none;
+        }
+      }
+
         .footer-grid {
             grid-template-columns: 1fr;
             gap: 30px;
