@@ -76,11 +76,36 @@ section.kv {
       top: 15%;
       left: 50%;
       transform: translate(-50%, 50%);
+        animation: fadeInOut 4s ease-in-out infinite;
       img {
         width: 78px;
         animation: moveUpDown 2s infinite alternate;
         animation-timing-function: ease-in-out;
       }
+
+        @keyframes fadeInOut {
+  0%, 30% {
+    opacity: 1;
+    visibility: visible;
+  }
+  50%, 60% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+  @keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(30px);
+    }
+  }
     }
   }
   .video { 
@@ -112,16 +137,7 @@ section.kv {
 
   }
 
-  
 
-  @keyframes moveUpDown {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(30px);
-    }
-  }
   
 }
 
@@ -134,7 +150,7 @@ height: auto;
 padding: 70px 0;
 text-align: center;
 position: relative;
-transform: translate(0px, 1036px);
+transform: var(--transform-section);
 
 .container {
   height: auto;
@@ -208,7 +224,7 @@ transform: translate(0px, 1036px);
   padding: 90px 0;
   text-align: left;
   font-weight: 700;
-  transform: translate(0px, 1036px);
+  transform: var(--transform-section);
     p {
       font-size: 20px;
       color: var(--blue-01);
@@ -290,7 +306,7 @@ transform: translate(0px, 1036px);
 //Partners
 
 .section04 {
-  transform: translate(0px, 1036px);
+  transform: var(--transform-section);
   padding: 92px 0;
   text-align: center;
   .row.partners {
@@ -607,6 +623,13 @@ body.dark-mode .theme-toggle {
   background-color: #2b2b2b;
   color: #ffffff;
 }
+
+    @media (max-width:1280px) {
+      .section02 {
+
+        transform: translate(0px, 400px);
+      }
+    }
     
     /* 반응형 디자인 */
     @media (max-width:1080px) {

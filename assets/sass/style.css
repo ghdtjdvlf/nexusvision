@@ -71,11 +71,34 @@ section.kv .title .next {
   top: 15%;
   left: 50%;
   transform: translate(-50%, 50%);
+  animation: fadeInOut 4s ease-in-out infinite;
 }
 section.kv .title .next img {
   width: 78px;
   animation: moveUpDown 2s infinite alternate;
   animation-timing-function: ease-in-out;
+}
+@keyframes fadeInOut {
+  0%, 30% {
+    opacity: 1;
+    visibility: visible;
+  }
+  50%, 60% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
 }
 section.kv .video video {
   border-radius: 100px;
@@ -98,14 +121,6 @@ section.kv .video #video-background {
   aspect-ratio: 16/9;
   transition: width 0.4s ease-out;
 }
-@keyframes moveUpDown {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(30px);
-  }
-}
 
 .section02 {
   background: var(--black-01);
@@ -113,7 +128,7 @@ section.kv .video #video-background {
   padding: 70px 0;
   text-align: center;
   position: relative;
-  transform: translate(0px, 1036px);
+  transform: var(--transform-section);
 }
 .section02 .container {
   height: auto;
@@ -172,7 +187,7 @@ section.kv .video #video-background {
   padding: 90px 0;
   text-align: left;
   font-weight: 700;
-  transform: translate(0px, 1036px);
+  transform: var(--transform-section);
 }
 .section03 p {
   font-size: 20px;
@@ -244,7 +259,7 @@ section.kv .video #video-background {
 }
 
 .section04 {
-  transform: translate(0px, 1036px);
+  transform: var(--transform-section);
   padding: 92px 0;
   text-align: center;
 }
@@ -546,6 +561,11 @@ body.dark-mode .theme-toggle {
   color: #ffffff;
 }
 
+@media (max-width: 1280px) {
+  .section02 {
+    transform: translate(0px, 400px);
+  }
+}
 /* 반응형 디자인 */
 @media (max-width: 1080px) {
   header {

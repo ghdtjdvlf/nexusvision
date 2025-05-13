@@ -5,6 +5,7 @@
     --black-01: #201F1F;
     --black-02: #2F2F2F;
     --white-01: #FFFFFF;
+    --transform-section: translate(0px, 1036px);
 
 }
 
@@ -68,4 +69,10 @@ img {
 /* Swiper 전용 클래스 */
 .speed {
     transition-timing-function: linear !important;
+}
+
+@media (max-width: 1280px) {
+    :root {
+        --transform-section: translate(0px, 400px); 
+    }
 }
