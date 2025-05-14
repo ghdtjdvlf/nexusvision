@@ -1,96 +1,231 @@
-<body class="no-scroll"> 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>세로 무한 슬라이드</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  .slider-container {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+  }
+  .slider-track {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  .slider-item {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    user-select: none;
+    background: #000;
+  }
+  .slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .slider-item:hover img {
+    transform: scale(1.05);
+  }
+  .overlay {
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .slider-item:hover .overlay {
+    opacity: 1;
+  }
+  .overlay h3 {
+    margin: 0 0 12px;
+    font-size: 1.1rem;
+  }
+  .btn-detail {
+    background: #ff6b6b;
+    border: none;
+    padding: 8px 14px;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .btn-detail:hover {
+    background: #ff4b4b;
+  }
+</style>
+</head>
+<body>
 
-    <div class="loading-screen" id="loadingScreen">
-      <div class="loading-spinner"></div>
-      <div class="loading-text">로딩 중...</div>
+<div class="slider-container" id="slider">
+  <div class="slider-track" id="sliderTrack">
+    <div class="slider-track" id="sliderTrack">
+  <!-- 이미지 5개 원본 -->
+  <div class="slider-item">
+    <img src="https://picsum.photos/id/1015/200/300" alt="산과 강" draggable="false" />
+    <div class="overlay">
+      <h3>산과 강</h3>
+      <button class="btn-detail">자세히보기</button>
     </div>
-  
-      <!-- 메인 콘텐츠 -->
-    <div class="main-content" id="mainContent">
+  </div>
+  <div class="slider-item">
+    <img src="https://picsum.photos/id/1016/200/300" alt="바다" draggable="false" />
+    <div class="overlay">
+      <h3>바다</h3>
+      <button class="btn-detail">자세히보기</button>
+    </div>
+  </div>
+  <div class="slider-item">
+    <img src="https://picsum.photos/id/1018/200/300" alt="숲" draggable="false" />
+    <div class="overlay">
+      <h3>숲</h3>
+      <button class="btn-detail">자세히보기</button>
+    </div>
+  </div>
+  <div class="slider-item">
+    <img src="https://picsum.photos/id/1020/200/300" alt="도시" draggable="false" />
+    <div class="overlay">
+      <h3>도시</h3>
+      <button class="btn-detail">자세히보기</button>
+    </div>
+  </div>
+  <div class="slider-item">
+    <img src="https://picsum.photos/id/1024/200/300" alt="사막" draggable="false" />
+    <div class="overlay">
+      <h3>사막</h3>
+      <button class="btn-detail">자세히보기</button>
+    </div>
+  </div>
 
+  <!-- 이미지 5개 복제 (무한 스크롤용) -->
+  <div class="slider-item">
+    <img src="https://picsum.photos/id/1015/200/300" alt="산과 강" draggable="false" />
+    <div class="overlay">
+      <h3>산과 강</h3>
+      <button class="btn-detail">자세히보기</button>
     </div>
-  
-    <footer class="footer" id="footer">
-      <div class="container">
-          <div class="footer-grid">
-              <!-- 회사 정보 섹션 -->
-              <div class="brand-section">
-                  <a href="#" class="logo">Nexus vision</a>
-                  <p class="company-desc">
-                      최신 기술로 사용자 경험을 혁신하는 기업
-                  </p>
-                  <div class="social-links">
-                      <a href="#" class="social-icon">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                          </svg>
-                      </a>
-                      <a href="#" class="social-icon">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                          </svg>
-                      </a>
-                      <a href="#" class="social-icon">
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                              <rect x="2" y="9" width="4" height="12"></rect>
-                              <circle cx="4" cy="4" r="2"></circle>
-                          </svg>
-                      </a>
-                  </div>
-              </div>
-              
-              <!-- 링크 섹션들 -->
-              <div class="footer-section">
-                  <h3>제품</h3>
-                  <ul class="footer-links">
-                      <li><a href="#">기능</a></li>
-                      <li><a href="#">가격</a></li>
-                      <li><a href="#">사례 연구</a></li>
-                      <li><a href="#">업데이트</a></li>
-                  </ul>
-              </div>
-              
-              <div class="footer-section">
-                  <h3>지원</h3>
-                  <ul class="footer-links">
-                      <li><a href="#">문서</a></li>
-                      <li><a href="#">커뮤니티</a></li>
-                      <li><a href="#">연락처</a></li>
-                      <li><a href="#">FAQ</a></li>
-                  </ul>
-              </div>
-              
-              <div class="footer-section">
-                  <h3>법적 정보</h3>
-                  <ul class="footer-links">
-                      <li><a href="#">개인정보 처리방침</a></li>
-                      <li><a href="#">이용약관</a></li>
-                      <li><a href="#">쿠키 정책</a></li>
-                      <li><a href="#">라이선스</a></li>
-                  </ul>
-              </div>
-          </div>
-          
-          <!-- 하단 바 -->
-          <div class="footer-bottom">
-              <p>© 2024 YourBrand. All rights reserved.</p>
-              <button class="theme-toggle" id="themeToggle">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="12" cy="12" r="5"></circle>
-                      <line x1="12" y1="1" x2="12" y2="3"></line>
-                      <line x1="12" y1="21" x2="12" y2="23"></line>
-                      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                      <line x1="1" y1="12" x2="3" y2="12"></line>
-                      <line x1="21" y1="12" x2="23" y2="12"></line>
-                      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                  </svg>
-                  <span>다크 모드</span>
-              </button>
-          </div>
-      </div>
-  </footer>
+  </div>
+  <div class="slider-item">
+    <img src="https://picsum.photos/id/1016/200/300" alt="바다" draggable="false" />
+    <div class="overlay">
+      <h3>바다</h3>
+      <button class="btn-detail">자세히보기</button>
+    </div>
+  </div>
+  <div class="slider-item">
+    <img src="https://picsum.photos/id/1018/200/300" alt="숲" draggable="false" />
+    <div class="overlay">
+      <h3>숲</h3>
+      <button class="btn-detail">자세히보기</button>
+    </div>
+  </div>
+  <div class="slider-item">
+    <img src="https://picsum.photos/id/1020/200/300" alt="도시" draggable="false" />
+    <div class="overlay">
+      <h3>도시</h3>
+      <button class="btn-detail">자세히보기</button>
+    </div>
+  </div>
+  <div class="slider-item">
+    <img src="https://picsum.photos/id/1024/200/300" alt="사막" draggable="false" />
+    <div class="overlay">
+      <h3>사막</h3>
+      <button class="btn-detail">자세히보기</button>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<script>
+  const images = [
+    {id:1, src:"https://picsum.photos/id/1015/200/300", name:"산과 강"},
+    {id:2, src:"https://picsum.photos/id/1016/200/300", name:"바다"},
+    {id:3, src:"https://picsum.photos/id/1018/200/300", name:"숲"},
+    {id:4, src:"https://picsum.photos/id/1020/200/300", name:"도시"},
+    {id:5, src:"https://picsum.photos/id/1024/200/300", name:"사막"},
+  ];
+
+  const sliderTrack = document.getElementById('sliderTrack');
+  const slider = document.getElementById('slider');
+  const ITEM_HEIGHT = 310; // 300px 이미지 + 10px margin-bottom
+
+  // 원본 배열 2배 복제해서 무한 스크롤용 항목 생성
+  const allItems = images.concat(images);
+
+  let position = 0;  // translateY 위치
+  let animationId = null;
+  let isPaused = false;
+
+  // 항목들 HTML로 삽입
+  function createItem(item) {
+    const div = document.createElement('div');
+    div.className = 'slider-item';
+
+
+    div.addEventListener('mouseenter', () => {
+      isPaused = true;
+    });
+    div.addEventListener('mouseleave', () => {
+      isPaused = false;
+    });
+
+    return div;
+  }
+
+  allItems.forEach(item => {
+    const el = createItem(item);
+    sliderTrack.appendChild(el);
+  });
+
+  // 무한히 아래로 움직이도록 애니메이션
+  function animate() {
+    if (!isPaused) {
+      position += 1; // 속도 조절 가능 (1픽셀씩)
+      if (position >= ITEM_HEIGHT * images.length) {
+        position = 0;
+      }
+      sliderTrack.style.transform = `translateY(-${position}px)`;
+    }
+    animationId = requestAnimationFrame(animate);
+  }
+
+  animate();
+
+</script>
+
+</body>
+</html>

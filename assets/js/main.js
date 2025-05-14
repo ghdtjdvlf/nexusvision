@@ -12,72 +12,89 @@ document.addEventListener('DOMContentLoaded', function() {
           body.classList.remove('no-scroll'); // 스크롤 허용
       }, 500); // CSS 트랜지션 시간(0.5s)과 동일하게 설정
       
-  }, 1500); // 로딩 시간 2초
+  }, 1000); // 로딩 시간 2초
 });
 
 //KV 커지는 영상
 
-document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('video-background');
-    const maxScroll = 200; // 스크롤 범위 (0~600px)
-    
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY || window.pageYOffset;
-      const scrollProgress = Math.min(scrollY / maxScroll, 1); // 0~1 사이 값
-      const newWidth = 60 + (35 * scrollProgress); // 60% → 100% 계산
-  
-      video.style.width = `${newWidth}%`;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(video, {
+      width: "95%", // 목표 너비 (60%에서 95%로 변경 가능)
+      ease: "power1.out",
+      markers: true,
+      scrollTrigger: {
+        trigger: document.body,
+        start: "top top",      // 스크롤 시작 위치
+        end: "+=200",          // 200px 까지 애니메이션
+        scrub: 0.3             // 스크롤에 부드럽게 연동(0.3초 딜레이)
+      }
     });
   });
+
+
+
  
 
 //sec05 text 
-
 document.addEventListener('DOMContentLoaded', function() {
   const text1 = document.getElementById('text1');
   const text2 = document.getElementById('text2');
   const text3 = document.getElementById('text3');
   const progressBar = document.querySelector('.progress-bar');
 
+  function isMobile() {
+    return window.innerWidth <= 480;
+  }
+  function isTablet() {
+    return window.innerWidth <= 768;
+  }
+  function isLaptop() {
+    return window.innerWidth <= 1280;
+  }
+
   window.addEventListener('scroll', function() {
       const scrollY = window.scrollY || window.pageYOffset;
-      const windowHeight = window.innerHeight;
-      const docHeight = document.body.scrollHeight;
 
+      const scale = isMobile() ? 0.6 : 1;  
 
-      // 조건문 순서 중요! 높은 값부터 체크해야 합니다.
-      if (scrollY >= 7500) {
-          // 모두 숨김
+      const thresh1 = 4900 * scale;
+      const thresh2 = 5900 * scale;
+      const thresh3 = 6900 * scale;
+      const threshHide = 7500 * scale;
+
+      if (scrollY >= threshHide) {
           text1.classList.remove('active');
           text2.classList.remove('active');
           text3.classList.remove('active');
       } 
-      else if (scrollY >= 6900) {
-          // text3 표시
+      else if (scrollY >= thresh3) {
           text1.classList.remove('active');
           text2.classList.remove('active');
           text3.classList.add('active');
       } 
-      else if (scrollY >= 5900) {
-          // text2 표시
+      else if (scrollY >= thresh2) {
           text1.classList.remove('active');
           text2.classList.add('active');
           text3.classList.remove('active');
       } 
-      else if (scrollY >= 4900) {
-          // text1 표시
+      else if (scrollY >= thresh1) {
           text1.classList.add('active');
           text2.classList.remove('active');
           text3.classList.remove('active');
       } 
       else {
-          //  모두 숨김
           text1.classList.remove('active');
           text2.classList.remove('active');
           text3.classList.remove('active');
       }
   });
 });
+
+
 
 window.addEventListener('scroll', function() {
   console.log("현재 스크롤 위치:", window.scrollY + "px");
