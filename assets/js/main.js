@@ -50,16 +50,24 @@ document.addEventListener('DOMContentLoaded', function() {
     return window.innerWidth <= 480;
   }
   function isTablet() {
-    return window.innerWidth <= 768;
+    return window.innerWidth > 480 && window.innerWidth <= 768;
   }
   function isLaptop() {
-    return window.innerWidth <= 1280;
+    return window.innerWidth > 768 && window.innerWidth <= 1280;
   }
 
   window.addEventListener('scroll', function() {
       const scrollY = window.scrollY || window.pageYOffset;
 
-      const scale = isMobile() ? 0.6 : 1;  
+      let scale = 1; // 기본 scale
+
+      if (isMobile()) {
+          scale = 0.6;
+      } else if (isTablet()) {
+          scale = 0.4;
+      } else if (isLaptop()) {
+          scale = 0.9;
+      }
 
       const thresh1 = 4900 * scale;
       const thresh2 = 5900 * scale;

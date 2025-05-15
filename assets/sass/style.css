@@ -184,78 +184,75 @@ section.kv .video #video-background {
 }
 
 .section03 {
-  padding: 90px 0;
+  height: auto;
+  padding: 70px 0;
   text-align: left;
-  font-weight: 700;
+  position: relative;
   transform: var(--transform-section);
 }
-.section03 p {
-  font-size: 20px;
-  color: var(--blue-01);
-}
-.section03 h2 {
-  font-size: 52px;
-}
-.section03 .row.mb-5 {
-  display: flex;
-  flex-wrap: wrap;
-}
-.section03 .row.mb-5 .col-md-4 {
-  box-sizing: border-box; /* padding을 width에 포함 */
-  border-radius: 50px;
-  z-index: 2000;
-  flex: 0 0 33.333%;
-  max-width: 33.333%;
-  padding: 0 18px; /* padding 제거 또는 조정 */
+.section03 .box {
   position: relative;
-  overflow: hidden;
-}
-.section03 .row.mb-5 .col-md-4 img {
-  width: 100%;
-  height: auto;
-  transition: all 0.5s ease;
-  display: block;
-  border-radius: 50px; /* 이미지에도 border-radius 적용 */
-}
-.section03 .row.mb-5 .col-md-4 .hover-text {
-  position: absolute;
-  top: 0;
-  left: 5%;
-  width: 90.5%;
-  height: 100%;
-  padding: 0 18px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  transition: all 0.3s ease;
-  opacity: 0;
   display: flex;
-  flex-direction: column;
+}
+.section03 .box .content {
+  position: absolute;
+  left: calc(40% + 80px);
+  color: var(--blue-01);
+  font-size: 1.2rem;
+  top: 10%;
+}
+.section03 .box .content .title {
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+.section03 .box .content .desc {
+  opacity: 0.6;
+}
+.section03 .box .swiper {
+  width: 100%;
+  margin: unset;
+  background-size: cover;
+}
+.section03 .box .swiper.swiper-lg {
+  max-width: 40%;
+}
+.section03 .box .swiper.swiper-mini {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: calc(60% - 80px);
+  height: 200px;
+}
+.section03 .box .swiper.swiper-mini .swiper-slide {
+  opacity: 0.3;
+}
+.section03 .box .swiper.swiper-mini .swiper-slide .img-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.section03 .box .swiper.swiper-mini .swiper-slide .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.section03 .box .swiper.swiper-mini .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.section03 .box .swiper .img-wrapper {
+  display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
+  width: 100%;
+  height: 100%;
 }
-.section03 .row.mb-5 .col-md-4 .hover-text h3 {
-  font-size: 18px;
-  line-height: 140%;
-  color: var(--white-01);
-}
-.section03 .row.mb-5 .col-md-4 .hover-text p {
-  font-size: 30px;
-  line-height: 140%;
-  color: var(--white-01);
-  margin-bottom: 15px;
-}
-.section03 .row.mb-5 .col-md-4 .hover-text a {
-  font-size: 18px;
-  color: var(--white-01);
-  background: var(--blue-01);
-  border-radius: 20px;
-  padding: 5px 15px;
-  font-weight: 700;
-  line-height: 140%;
-}
-.section03 .row.mb-5 .col-md-4:hover .hover-text {
-  opacity: 1;
+.section03 .box .swiper .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .section04 {
@@ -405,34 +402,33 @@ footer {
   padding: 60px 0 30px;
   border-top: 1px solid #e2e8f0;
   transition: all 0.3s ease;
+  /* 푸터 그리드 레이아웃 */
+  /* 회사 정보 섹션 */
+  /* 소셜 미디어 아이콘 */
+  /* 링크 섹션 */
+  /* 하단 바 */
+  /* 다크 모드 토글 */
 }
-
-.footer.dark {
+footer .footer.dark {
   background-color: #1a1a1a;
   color: #f8f9fa;
   border-top-color: #4a5568;
 }
-
-.container {
+footer .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
-/* 푸터 그리드 레이아웃 */
-.footer-grid {
+footer .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
   margin-bottom: 50px;
 }
-
-/* 회사 정보 섹션 */
-.brand-section {
+footer .brand-section {
   max-width: 280px;
 }
-
-.logo {
+footer .logo {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -440,24 +436,19 @@ footer {
   text-decoration: none;
   display: inline-block;
 }
-
-.company-desc {
+footer .company-desc {
   color: #4a5568;
   margin-bottom: 20px;
   font-size: 15px;
 }
-
-.footer.dark .company-desc {
+footer .footer.dark .company-desc {
   color: #adb5bd;
 }
-
-/* 소셜 미디어 아이콘 */
-.social-links {
+footer .social-links {
   display: flex;
   gap: 15px;
 }
-
-.social-icon {
+footer .social-icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -467,49 +458,38 @@ footer {
   justify-content: center;
   transition: all 0.3s ease;
 }
-
-.footer.dark .social-icon {
+footer .footer.dark .social-icon {
   background-color: #2d3748;
 }
-
-.social-icon:hover {
+footer .social-icon:hover {
   background-color: #4f46e5;
   color: white;
   transform: translateY(-3px);
 }
-
-/* 링크 섹션 */
-.footer-section h3 {
+footer .footer-section h3 {
   font-size: 18px;
   margin-bottom: 20px;
   font-weight: 600;
 }
-
-.footer-links {
+footer .footer-links {
   list-style: none;
 }
-
-.footer-links li {
+footer .footer-links li {
   margin-bottom: 12px;
 }
-
-.footer-links a {
+footer .footer-links a {
   color: #4a5568;
   text-decoration: none;
   transition: color 0.2s;
   font-size: 15px;
 }
-
-.footer.dark .footer-links a {
+footer .footer.dark .footer-links a {
   color: #adb5bd;
 }
-
-.footer-links a:hover {
+footer .footer-links a:hover {
   color: #4f46e5;
 }
-
-/* 하단 바 */
-.footer-bottom {
+footer .footer-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -517,22 +497,17 @@ footer {
   padding-top: 30px;
   border-top: 1px solid #e2e8f0;
 }
-
-.footer.dark .footer-bottom {
+footer .footer.dark .footer-bottom {
   border-top-color: #4a5568;
 }
-
-.footer-bottom p {
+footer .footer-bottom p {
   color: #4a5568;
   font-size: 14px;
 }
-
-.footer.dark .footer-bottom p {
+footer .footer.dark .footer-bottom p {
   color: #adb5bd;
 }
-
-/* 다크 모드 토글 */
-.theme-toggle {
+footer .theme-toggle {
   background: none;
   border: none;
   cursor: pointer;
@@ -542,21 +517,17 @@ footer {
   gap: 8px;
   margin-top: 20px;
 }
-
-body.dark-mode footer {
+footer body.dark-mode footer {
   background-color: #1e1e1e;
   color: #cccccc;
 }
-
-body.dark-mode .footer-links a {
+footer body.dark-mode .footer-links a {
   color: #cccccc;
 }
-
-body.dark-mode .social-icon svg {
+footer body.dark-mode .social-icon svg {
   stroke: #cccccc;
 }
-
-body.dark-mode .theme-toggle {
+footer body.dark-mode .theme-toggle {
   background-color: #2b2b2b;
   color: #ffffff;
 }
@@ -594,6 +565,23 @@ body.dark-mode .theme-toggle {
 @media (max-width: 768px) {
   section.kv .video #video-background {
     width: 75%;
+  }
+  .section03 .box {
+    flex-direction: column;
+  }
+  .section03 .box .swiper.swiper-lg {
+    max-width: 80%;
+    height: 300px;
+    margin: 2rem auto;
+  }
+  .section03 .box .swiper.swiper-mini {
+    position: static;
+    width: 80%;
+    margin: auto;
+  }
+  .section03 .box .content {
+    position: static;
+    padding: 0 10% 2rem;
   }
 }
 @media (max-width: 480px) {

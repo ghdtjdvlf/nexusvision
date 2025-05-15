@@ -1,86 +1,14 @@
-gsap.registerPlugin(ScrollTrigger);
-let bodyScrollBar = Scrollbar.init(document.body, {
-  damping: 0.1,
-  delegateTo: document,
-});
-ScrollTrigger.scrollerProxy(".scroller", {
-  scrollTop(value) {
-    if (arguments.length) {
-      bodyScrollBar.scrollTop = value;
-    }
-    return bodyScrollBar.scrollTop;
-  },
-});
-bodyScrollBar.addListener(ScrollTrigger.update);
+gsap.registerPlugin(ScrollSmoother);
 
+const skewSetter = gsap.quickTo("img", "skewY", {duration: 0.3}), // duration 지정 권장
+      clamp = gsap.utils.clamp(-20, 20);
 
-
-gsap.set(".panel", { zIndex: (i, target, targets) => targets.length - i });
-
-var images = gsap.utils.toArray('.panel:not(.purple)');
-
-images.forEach((image, i) => {
-  
-  var tl = gsap.timeline({
-    
-    scrollTrigger: {
-      trigger: "section.black",
-      scroller: ".scroller",
-      start: () => "top -" + (window.innerHeight*(i+0.5)),
-      end: () => "+=" + window.innerHeight,
-      scrub: true,
-      toggleActions: "play none reverse none",
-      invalidateOnRefresh: true,     
-    }
-    
-  })
-  
-  tl
-  .to(image, { height: 0 })
-  ;
-  
-});
-
-
-
-
-gsap.set(".panel-text", { zIndex: (i, target, targets) => targets.length - i });
-
-var texts = gsap.utils.toArray('.panel-text');
-
-texts.forEach((text, i) => {
-  
-  var tl = gsap.timeline({
-    
-    scrollTrigger: {
-      trigger: "section.black",
-      scroller: ".scroller",
-      start: () => "top -" + (window.innerHeight*i),
-      end: () => "+=" + window.innerHeight,
-      scrub: true,
-      toggleActions: "play none reverse none",
-      invalidateOnRefresh: true,     
-    }
-    
-  })
-  
-  tl
-  .to(text, { duration: 0.33, opacity: 1, y:"90%" })  
-  .to(text, { duration: 0.33, opacity: 0, y:"100%" }, 0.66)
-  ;
-  
-});
-
-
-ScrollTrigger.create({
-
-    trigger: "section.black",
-    scroller: ".scroller",
-    scrub: true,
-    markers: true,
-    pin: true,
-    start: () => "top top",
-    end: () => "+=" + ((images.length + 1) * window.innerHeight),
-    invalidateOnRefresh: true,
-
+ScrollSmoother.create({
+  wrapper: "#wrapper",
+  content: "#content",
+  smooth: 2,
+  speed: 3,
+  effects: true,
+  onUpdate: self => skewSetter(clamp(self.getVelocity() / -50)),
+  onStop: () => skewSetter(0)
 });
