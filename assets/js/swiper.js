@@ -1,27 +1,36 @@
 
 // sec02 product슬라이드
 
+    var swiper = new Swiper(".sec02_Swiper", {
+      loop:"true",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+
 
   const slidesData = [
     {
-      title: "Exhuma",
-      desc: "험한 것이 나왔다",
-      img: "https://image.news1.kr/system/photos/2024/2/28/6505458/high.jpg/dims/resize/1200x/optimize"
+      title: "플렉스 스크린 (Nexus FlexScreen)",
+      desc: " 초박형, 플렉서블 OLED 디스플레이",
+      img: "../assets/img/sec03-01.png"
     },
     {
       title: "Dune",
       desc: "Long live the fighters",
-      img: "https://img.stoo.com/upimages/gisaimg/202402/27_919500_96465.jpg"
+      img: "../assets/img/sec03-02.png"
     },
     {
       title: "Wonka",
       desc: "Every good thing in this world started with a dream",
-      img: "https://file2.nocutnews.co.kr/newsroom/image/2024/02/26/202402261656321243_0.jpg"
+      img: "../assets/img/sec03-03.png"
     },
     {
       title: "The Roundup : Punishment",
       desc: "Don lee returns as the monster cop",
-      img: "https://isplus.com/data/isp/image/2024/02/26/isp20240226000026.800x.0.jpg"
+      img: "../assets/img/sec03-01.png"
     }
   ];
   function createSlideContent(slide) {
@@ -68,7 +77,7 @@
   function initSwipers() {
     window.swiperMini = new Swiper(".swiper-mini", {
       spaceBetween: 10,
-      slidesPerView: 4.5,
+      slidesPerView: 3.5,
       watchSlidesProgress: true,
     });
 

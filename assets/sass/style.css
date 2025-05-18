@@ -7,9 +7,11 @@ body {
   font-size: 72px;
   font-weight: 700;
   position: absolute;
+  z-index: 101;
   top: 38.5%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: var(--blue-01);
 }
 
 header {
@@ -45,7 +47,7 @@ header .nav-link:focus, header .nav-link:hover {
 
 spline-viewer {
   position: absolute;
-  z-index: 900;
+  z-index: 100;
   width: 100%;
   overflow: hidden;
 }
@@ -125,62 +127,50 @@ section.kv .video #video-background {
 .section02 {
   background: var(--black-01);
   height: auto;
-  padding: 70px 0;
+  padding: 120px 0;
   text-align: center;
   position: relative;
   transform: var(--transform-section);
 }
 .section02 .container {
   height: auto;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
-.section02 h2 {
+.section02 .container .title {
+  margin-bottom: 58px;
+  font-weight: 700;
+}
+.section02 .container .title p {
+  font-size: 30px;
+  color: var(--blue-01);
+}
+.section02 .container .title h2 {
   color: var(--white-01);
   font-size: 52px;
+  line-height: 140%;
 }
-.section02 .swiper.leftSwiper {
-  height: 783px; /* 원하는 높이 */
-}
-.section02 .swiper.rightSwiper {
-  height: 783px; /* 원하는 높이 */
-}
-.section02 .swiper-wrapper {
-  transition-timing-function: linear !important;
-}
-.section02 .swiper-slide {
-  position: relative;
-  z-index: 1;
-}
-.section02 .slide-content {
-  position: absolute;
-  font-size: 20px;
-  bottom: -100%; /* 처음에는 숨겨짐 */
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  color: white;
-  background: rgba(0, 0, 0, 0.7); /* 딤드 효과 */
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-.section02 .swiper-slide:hover img {
-  filter: brightness(0.5); /* 이미지 어둡게 */
-}
-.section02 .swiper-slide:hover .slide-content {
-  bottom: 0; /* 텍스트 나타남 */
-}
-.section02 .swiper-slide img {
+.section02 .container .swiper {
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
-.section02 .swiper-slide img:hover {
+.section02 .container .swiper .swiper-wrapper {
+  width: 1000px;
+}
+.section02 .container .swiper .swiper-wrapper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+.section02 .container .swiper .swiper-wrapper .swiper-slide img {
+  display: block;
   width: 100%;
   height: 100%;
-  background: #000;
-  border-radius: 30px;
+  object-fit: cover;
 }
 
 .section03 {
@@ -190,6 +180,19 @@ section.kv .video #video-background {
   position: relative;
   transform: var(--transform-section);
 }
+.section03 .title {
+  margin-bottom: 58px;
+  font-weight: 700;
+}
+.section03 .title p {
+  font-size: 30px;
+  color: var(--blue-01);
+}
+.section03 .title h2 {
+  color: var(--black-02);
+  font-size: 52px;
+  line-height: 140%;
+}
 .section03 .box {
   position: relative;
   display: flex;
@@ -197,19 +200,22 @@ section.kv .video #video-background {
 .section03 .box .content {
   position: absolute;
   left: calc(40% + 80px);
-  color: var(--blue-01);
-  font-size: 1.2rem;
-  top: 10%;
+  color: var(--black-01);
+  top: 15%;
 }
 .section03 .box .content .title {
-  font-size: 2rem;
-  margin-bottom: 1em;
+  font-size: 35px;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 .section03 .box .content .desc {
+  font-size: 20px;
   opacity: 0.6;
+  font-weight: 700;
 }
 .section03 .box .swiper {
   width: 100%;
+  border-radius: 40px;
   margin: unset;
   background-size: cover;
 }
@@ -221,7 +227,8 @@ section.kv .video #video-background {
   right: 0;
   bottom: 0;
   width: calc(60% - 80px);
-  height: 200px;
+  height: 250px;
+  border-radius: 0;
 }
 .section03 .box .swiper.swiper-mini .swiper-slide {
   opacity: 0.3;
@@ -236,6 +243,7 @@ section.kv .video #video-background {
   object-fit: cover;
   object-position: center;
   display: block;
+  border-radius: 20px;
 }
 .section03 .box .swiper.swiper-mini .swiper-slide-thumb-active {
   opacity: 1;
@@ -273,7 +281,7 @@ section.kv .video #video-background {
   font-weight: 700;
 }
 .section04 .row.title {
-  margin: 90px 0;
+  margin: 130px 0;
   display: flex;
   align-items: center;
 }
@@ -295,44 +303,12 @@ section.kv .video #video-background {
   object-fit: contain;
 }
 
-.section05 {
-  height: 703px;
-}
-.section05 span {
-  color: var(--blue-01);
-}
-.section05 .scroll-text {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--black-01);
-  font-size: 46px;
-  font-weight: 700;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: -1000;
-}
-.section05 .scroll-text.active {
-  opacity: 1;
-}
-.section05 #text3 {
-  background: url("/assets/img/sec04-01.png") no-repeat center;
-  background-size: cover;
-  width: 100vw;
-  height: 80vh;
-  color: var(--white-01);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .section06 {
   position: relative;
-  transform: translate(0, 4327px);
+  transform: translate(0, 1127px);
   background: var(--blue-01);
-  height: 703px;
+  padding: 217px 0;
+  text-align: center;
   color: var(--white-01);
   display: flex;
   justify-content: center;
@@ -340,16 +316,25 @@ section.kv .video #video-background {
 }
 .section06 p {
   font-size: 22px;
+  margin-bottom: 27px;
 }
 .section06 h2 {
   text-transform: uppercase;
   font-size: 100px;
   font-weight: 700;
+  margin-bottom: 63px;
+}
+.section06 a {
+  border-radius: 20px;
+  font-size: 18px;
+  padding: 5px 15px;
+  background: var(--white-01);
+  color: var(--blue-01);
 }
 
 footer {
   position: relative;
-  transform: translate(0, 4400px);
+  transform: translate(0, 1127px);
 }
 
 /* 로딩 스크린 */
@@ -359,7 +344,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--black-01);
+  background: var(--white-01);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -439,7 +424,7 @@ footer .logo {
 footer .company-desc {
   color: #4a5568;
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: 20px;
 }
 footer .footer.dark .company-desc {
   color: #adb5bd;

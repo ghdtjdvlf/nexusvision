@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
           body.classList.remove('no-scroll'); // 스크롤 허용
       }, 500); // CSS 트랜지션 시간(0.5s)과 동일하게 설정
       
-  }, 1000); // 로딩 시간 2초
+  }, 3000); // 로딩 시간 2초
 });
 
 //KV 커지는 영상
@@ -24,13 +24,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     gsap.to(video, {
       width: "95%", // 목표 너비 (60%에서 95%로 변경 가능)
+      height: 400,
       ease: "power1.out",
       markers: true,
       scrollTrigger: {
         trigger: document.body,
         start: "top top",      // 스크롤 시작 위치
         end: "+=200",          // 200px 까지 애니메이션
-        scrub: 0.3             // 스크롤에 부드럽게 연동(0.3초 딜레이)
+        scrub: 1.5             // 스크롤에 부드럽게 연동(0.3초 딜레이)
       }
     });
   });
