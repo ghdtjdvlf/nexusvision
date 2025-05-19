@@ -1,20 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const loadingScreen = document.getElementById('loadingScreen');
-  const body = document.body;
-  
-  // 2초 후 로딩 완료 처리
-  setTimeout(function() {
-      loadingScreen.style.opacity = '0';
-      
-      // 페이드 아웃 애니메이션 완료 후
-      setTimeout(function() {
-          loadingScreen.style.display = 'none';
-          body.classList.remove('no-scroll'); // 스크롤 허용
-      }, 500); // CSS 트랜지션 시간(0.5s)과 동일하게 설정
-      
-  }, 3000); // 로딩 시간 2초
-});
-
 //KV 커지는 영상
 
  document.addEventListener('DOMContentLoaded', () => {

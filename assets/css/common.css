@@ -5,7 +5,10 @@
     --black-01: #201F1F;
     --black-02: #2F2F2F;
     --white-01: #FFFFFF;
-    --transform-section: translate(0px, 1036px);
+    --transform-section: translate(0px, 1386px);
+    --section-padding: 100px 0;
+    --font-title : 52px;
+    --font-title-sub : 30px
 
 }
 
@@ -79,6 +82,27 @@ img {
 
 @media (max-width: 1280px) {
     :root {
-        --transform-section: translate(0px, 400px); 
+        --transform-section:translate(0px, 400px)
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --transform-section:translate(0px, 277px);
+    }
+}
+@media (max-width: 768px) {
+    :root {
+        --transform-section:translate(0px, 69px);
+    }
+}
+@media (max-width: 586px) {
+    :root {
+        --transform-section:translate(0px, -84px)
+    }
+}
+@media (max-width: 346px) {
+    :root {
+        --transform-section:translate(0px, -84px)
     }
 }

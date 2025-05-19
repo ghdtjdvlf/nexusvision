@@ -2,19 +2,6 @@ body {
   background: var(--white-01)
 }
 
-.loading-text {
-  p {
-    font-size: 72px;
-    font-weight: 700;
-    position: absolute;
-    z-index: 101;
-    top: 38.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--blue-01);
-  }
-}
-
 
 header {
   display: flex;
@@ -32,23 +19,19 @@ header {
   -webkit-backdrop-filter: blur(10px); /* Safari 호환 */
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #d3d3d3; /* 경계선 부드럽게 */
+  
+  ul {
+    display: flex;
+    gap: 20px;
+    li {
+     a{
+      padding: 9px 18px;
+     }     
+    }
 
-  .fs-4 {
-    font-size: 20px !important;
-    font-weight: 700;
   }
-  
-  .nav-link {
-    color: #727272;
-  }
-  
-  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background: var(--black-01);
-  }
-  
-  .nav-link:focus, .nav-link:hover {
-    color: var(--black-01);
-  }
+
+
 
 }
 
@@ -61,7 +44,7 @@ spline-viewer {
 
 section.kv {
   position: relative; /* 부모에 relative 추가 */
-  height: 500px;
+  transform: translate(0,50px);
   .title {
     margin: 260px 0 65px 0 ;
     h1 {
@@ -75,7 +58,7 @@ section.kv {
     .next {
       position: absolute;
       z-index: 7000;
-      top: 25%;
+      top: 170%;
       left: 50%;
       transform: translate(-50%, 50%);
         animation: fadeInOut 4s ease-in-out infinite;
@@ -150,7 +133,7 @@ section.kv {
 .section02 {
 background: var(--black-01);
 height: auto;
-padding: 120px 0;
+padding: var(--section-padding);
 text-align: center;
 position: relative;
 transform: var(--transform-section);
@@ -165,41 +148,93 @@ transform: var(--transform-section);
     font-weight: 700;
 
     p {
-      font-size: 30px;
+      font-size: var(--font-title-sub);
       color: var(--blue-01);
     }
     h2 {
       color: var(--white-01);
-      font-size: 52px;
+      font-size: var(--font-title);
       line-height: 140%;
     }
   }
     .swiper {
       width: 100%;
       height: 100%;
+
+      .swiper-pagination {
+        text-align: left;
+        position: absolute;
+        left: 50px;
+        bottom: 20px;
+      }
+
+      .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color: #000;
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .swiper-pagination-bullet-active {
+      color: #fff;
+      background: #007aff;
+    }
  
     .swiper-wrapper {
       width: 1000px;
-
       .swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #fff;
-        display: flex;
         justify-content: center;
         align-items: center;
-      border-radius: 40px;
+       border-radius: 40px;
         img {
           display: block;
           width: 100%;
           height: 100%;
           object-fit: cover;
-
         }
+
       }
+      
     }
     }
 
+    .sec02_Swiper .swiper-slide {
+  position: relative; /* 텍스트 오버레이를 위해 position relative */
+  overflow: hidden; 
+  cursor: pointer;
+}
+
+.sec02_Swiper .text-wrap {
+  position: absolute;
+  width: 80%;
+  bottom: 20px; /* 원하는 위치로 조정 */
+  left: 50%;
+  transform: translate(-50%, -60%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* 평상시 텍스트에 마우스 이벤트 방지 */
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 140%;
+  }
+}
+
+.sec02_Swiper .swiper-slide:hover .text-wrap {
+  opacity: 1;
+  pointer-events: auto; /* 호버 시 텍스트 활성화 */
+}
 
 
 
@@ -217,7 +252,7 @@ transform: var(--transform-section);
 .section03 {
 
 height: auto;
-padding: 70px 0;
+padding: var(--section-padding);
 text-align: left;
 position: relative;
 transform: var(--transform-section);
@@ -227,12 +262,12 @@ transform: var(--transform-section);
     font-weight: 700;
 
     p {
-      font-size: 30px;
+      font-size: var(--font-title-sub);
       color: var(--blue-01);
     }
     h2 {
       color: var(--black-02);
-      font-size: 52px;
+      font-size: var(--font-title);
       line-height: 140%;
     }
   }
@@ -330,17 +365,17 @@ transform: var(--transform-section);
 
 .section04 {
   transform: var(--transform-section);
-  padding: 92px 0;
+  padding: var(--section-padding);
   text-align: center;
   .row.partners {
     text-align: left;
     p {
-      font-size: 20px;
+      font-size: var(--font-title-sub);
       font-weight: 700;
       color: var(--blue-01);
     }
     h2 {
-      font-size: 52px;
+      font-size: var(--font-title);
       font-weight: 700;
     }
   }
@@ -375,9 +410,9 @@ transform: var(--transform-section);
 
 .section06 {
   position: relative;
-  transform: translate(0, 1127px);
+  transform: var(--transform-section);
   background: var(--blue-01);
-  padding: 217px 0;
+padding: var(--section-padding);
   text-align: center;
   color: var(--white-01);
   display: flex;
@@ -404,40 +439,9 @@ transform: var(--transform-section);
 
 footer {
   position: relative;
-  transform: translate(0, 1127px);
+  transform: var(--transform-section);
 }
 
-
-        /* 로딩 스크린 */
-      .loading-screen {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: var(--white-01);
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          z-index: 9999;
-          transition: opacity 0.5s ease;
-          .loading-spinner {
-            width: 50px;
-            height: 50px;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: white;
-            animation: spin 1s ease-in-out infinite;
-            margin-bottom: 20px;
-        }
-        
-        .loading-text {
-            color: white;
-            font-size: 24px;
-            font-family: Arial, sans-serif;
-        }
-      }
     
       @keyframes spin {
           to { transform: rotate(360deg); }
@@ -627,18 +631,30 @@ body.dark-mode .theme-toggle {
       section.kv {
         height: 690px;
            .title {
-        margin: 180px 0 65px 0;
-        
+              margin: 180px 0 65px 0;
+              .next {
+                top: 15%;
               }
-          
+              }
+        }
+        
+      .section04 .row.title h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--black-01);
+      }  
+       .section06 h2 {
+    font-size: 80px;
+        }
+ 
          
       }
-      
+       
     
-    }
+    
     
     /* 반응형 디자인 */
-    @media (max-width:1080px) {
+    @media (max-width:1024px) {
 
       header {
         padding:  0 50px !important; 
@@ -646,23 +662,34 @@ body.dark-mode .theme-toggle {
       .me-2 {
       display: none;
       }
+      
+      section.kv .title .next img {
+        width: 50px;
+      }
 
-      .section02 {
-        transform: translate(0px, 0px);
-      }
-      .section03 {
-        transform: translate(0px, 0px);
-      }
-      .section04 {
-        transform: translate(0px, 0px);
-      }
+      .section04 .row.title h2 {
+       font-size: 37px;
+       font-weight: 700;
+       color: var(--black-01);
+    }
+
 
     }
 
     @media (max-width:768px) {
+      section.kv .title .next {
+        top: 13%;
+      }
+      section.kv .title h1 {
+    font-size: 60px;
+
+}
       section.kv .video #video-background {
         width: 75%;
       }
+
+
+      
 
       .section03 {
           .box {
@@ -687,12 +714,47 @@ body.dark-mode .theme-toggle {
 }
 
       }
+
+          .section03 .box .swiper.swiper-lg {
+        max-width: 100%;
+        height: 400px;
+
+    }
+
+      .section03 .box .swiper.swiper-mini {
+        height: 200px;
+      }
+        .section03 .box .swiper.swiper-mini {
+        position: static;
+        width: 100%;
+        margin: auto;
+    }
+      
+
+    .section04 .row.title h2 {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--black-01);
+    }
+
+
+      .section06 p {
+        font-size: 15px;
+        margin-bottom: 15px;
+      }
+
+      .section06 h2 {
+
+       font-size: 45px;
+
+}
     
+
 
     }
 
 
-    @media (max-width: 480px) {
+    @media (max-width: 586px) {
       header {
         .nav-pills {
           display: none;

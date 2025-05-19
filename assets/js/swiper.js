@@ -7,7 +7,13 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-    });
+         pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    }});
 
 
 
@@ -81,11 +87,11 @@
       watchSlidesProgress: true,
          breakpoints: {
       390: {
-        slidesPerView: 2,
+        slidesPerView: 2.5,
         spaceBetween: 5,
       },
       768: {
-        slidesPerView: 3,
+        slidesPerView: 3.5,
         spaceBetween: 10,
       },
       1280: {
