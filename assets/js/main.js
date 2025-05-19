@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     gsap.to(video, {
       width: "95%", // 목표 너비 (60%에서 95%로 변경 가능)
-      height: 400,
       ease: "power1.out",
       markers: true,
       scrollTrigger: {

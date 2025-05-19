@@ -79,6 +79,20 @@
       spaceBetween: 10,
       slidesPerView: 3.5,
       watchSlidesProgress: true,
+         breakpoints: {
+      390: {
+        slidesPerView: 2,
+        spaceBetween: 5,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1280: {
+        slidesPerView: 3.5,
+        spaceBetween: 10,
+      }
+    }
     });
 
     window.swiper = new Swiper(".swiper-lg", {
@@ -126,14 +140,23 @@
 // sec03 로고 슬라이드
 
 
-let logoSwiper =  new Swiper(".logoSwiper", {
+let logoSwiper = new Swiper(".logoSwiper", {
   spaceBetween: 30,
   loop: true,
   speed: 3000,
-  slidesPerView:5,
   freeMode: true,
-  autoplay : {
+  autoplay: {
     delay: 0,
   },
-})
-
+  breakpoints: {
+    390: {      // 390px 이상일 때
+      slidesPerView: 3,
+    },
+    768: {      // 768px 이상일 때
+      slidesPerView: 3,
+    },
+    1280: {     // 1280px 이상일 때
+      slidesPerView: 5,
+    }
+  }
+});
