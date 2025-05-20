@@ -35,6 +35,10 @@ a {
     text-decoration: none;
 }
 
+.off {
+    display: flex;
+}
+
 img {
     width: 100%;
 }
@@ -90,6 +94,9 @@ img {
     :root {
         --transform-section:translate(0px, 277px);
     }
+    .off {
+        display: none;
+    }
 }
 @media (max-width: 768px) {
     :root {
@@ -98,7 +105,9 @@ img {
 }
 @media (max-width: 586px) {
     :root {
-        --transform-section:translate(0px, -84px)
+        --transform-section:translate(0px, -84px);
+        --font-title : 35px;
+        --font-title-sub : 20px
     }
 }
 @media (max-width: 346px) {
