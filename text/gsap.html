@@ -1,89 +1,169 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-			body {
-				height: 5000px;
-			}
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 
-        .image-container {
-            position: fixed;
-            top: 90%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90%;
-            height: auto;
-            overflow: hidden;
-        }
+                <link rel="stylesheet" href="/srs/htdocs/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="/srs/htdocs/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="/srs/htdocs/css/aos.css">
+        <link rel="stylesheet" href="/srs/htdocs/css/common.css">
+                <script type="text/javascript" src="/srs/htdocs/js/lib/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="/srs/htdocs/js/lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/srs/htdocs/js/lib/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="/srs/htdocs/js/lib/lenis.min.js"></script>
+        <script type="text/javascript" src="/srs/htdocs/js/lib/gsap.min.js"></script>
+        <script type="text/javascript" src="/srs/htdocs/js/lib/ScrollTrigger.min.js"></script>
+        <script type="text/javascript" src="/srs/htdocs/js/lib/jquery-marquee.js"></script>
+        <script type="text/javascript" src="/srs/htdocs/js/lib/aos.js"></script>
+                <script src="/srs/htdocs/js/common.js" type="text/javascript"></script>
 
-        .image-box {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
+       </head>
+       <body>
+               
+       <div class="wrap main_wrap">
+         <div class="content-wrapper">
+           <div id="container" class="container">
+             <section class="main_service">
+                  <ul class="service_bg">
+                      <li class="bg1"></li>
+                      <li class="bg2"></li>
+                      <li class="bg3"></li>
+                      <li class="bg4"></li>
+                      <li class="bg5"></li>
+                      <li class="bg6"></li>
+                      <li class="bg7"></li>
+                  </ul>
+                  <div class="inner">
+                      <div class="service_cont">
+                          <div class="tit_box">
+                              <h3 class="tit_depth4">Our Sevices</h3>
+                              <h4 class="tit_depth1">신한은행 PG란?</h4>
+                              <p class="desc">
+                                  신한은행만의 높은 안정성과 보안성을 기반으로
+                                  신용카드나 간편결제등 통합정산 서비스를 제공하는
+                                  B2B, B2C 전자지급결제대행 서비스입니다
+                              </p>
+                          </div>
+                          <ul class="list_box">
+                              <!-- 240819 리스트 수정 -->
+                              <li>
+                                  <a href="/report/onlinePay/card" class="list_category card">
+                                      <div class="img_box">
+                                          <img src="/srs/htdocs/images/main/bg_box_card.jpg" alt="신용카드">
+                                      </div>
+                                      <div class="inner">
+                                          <span class="tit">신용카드</span>
+                                          <span class="desc">신용카드 결제 프로세스의 효율성을 극대화하고 보안을 강화하여 편리하고 안전한 결제가 가능하게 하며, 고객에게 편리하고 안전한 결제 옵션을 제공하여 매출 증가와 고객 만족도 향상에 기여합니다.</span>
+                                          <div class="more">
+                                              <span>자세히 보기</span>
+                                          </div>
+                                      </div>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/report/onlinePay/virtualAccount" class="list_category virtual">
+                                      <div class="img_box">
+                                          <img src="/srs/htdocs/images/main/bg_box_virtual.jpg" alt="가상계좌">
+                                      </div>
+                                      <div class="inner">
+                                          <div class="icon"></div>
+                                          <span class="tit">가상계좌</span>
+                                          <span class="desc">가상계좌는 특정 거래나 고객에게 할당된 일회성 또는 반복 사용 계좌로, 고객에게 고유한 가상계좌를 발급하고 결제 과정을 자동화하여 입금 확인 절차 간소화 및 결제 효율성을 높일 수 있습니다.</span>
+                                          <div class="more">
+                                              <span>자세히 보기</span>
+                                          </div>
+                                      </div>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/report/onlinePay/accountTransfer" class="list_category transfer">
+                                      <div class="img_box">
+                                          <img src="/srs/htdocs/images/main/bg_box_transfer.jpg" alt="계좌이체">
+                                      </div>
+                                      <div class="inner">
+                                          <div class="icon"></div>
+                                          <span class="tit">계좌이체</span>
+                                          <span class="desc">번거로운 은행방문이나 인터넷 뱅킹 접속 없이 플랫폼 내에서 은행계좌 간 자동화된 자금 이동 서비스를 제공하여 신속하고 안전한 금융거래 및 자금 관리를 용이하게 합니다.</span>
+                                          <div class="more">
+                                              <span>자세히 보기</span>
+                                          </div>
+                                      </div>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/report/onlinePay/regularPay" class="list_category payment">
+                                      <div class="img_box">
+                                          <img src="/srs/htdocs/images/main/bg_box_payment.jpg" alt="정기결제">
+                                      </div>
+                                      <div class="inner">
+                                          <div class="icon"></div>
+                                          <span class="tit">정기결제</span>
+                                          <span class="desc">정기적으로 구독료나 서비스 요금을 청구할 수 있으며, 결제 과정을 간소화하고 자동화하여 고객에게 편리한 결제 서비스를 제공함으로써 안정적 수익 확보 및 고객 만족도를 높일 수 있습니다.</span>
+                                          <div class="more">
+                                              <span>자세히 보기</span>
+                                          </div>
+                                      </div>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/report/valueAdded/brandPay" class="list_category brand">
+                                      <div class="img_box">
+                                          <img src="/srs/htdocs/images/main/bg_box_brand.jpg" alt="브랜드페이">
+                                      </div>
+                                      <div class="inner">
+                                          <div class="icon"></div>
+                                          <span class="tit">브랜드페이</span>
+                                          <span class="desc">자사 브랜드의 개성을 강조한 자체 결제 시스템을 구축하여 고객에게 안전하고 편리한 결제 시스템을 지원하는 서비스 입니다. 일관된 브랜드 경험을 제공하여 락인 효과를 극대화할 수 있습니다.</span>
+                                          <div class="more">
+                                              <span>자세히 보기</span>
+                                          </div>
+                                      </div>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/report/valueAdded/escrow" class="list_category escrow">
+                                      <div class="img_box">
+                                          <img src="/srs/htdocs/images/main/bg_box_escrow.jpg" alt="에스크로">
+                                      </div>
+                                      <div class="inner">
+                                          <div class="icon"></div>
+                                          <span class="tit">에스크로</span>
+                                          <span class="desc">고객이 결제한 금액을 신한은행 PG가 보관하고, 거래 조건이 충족되면 해당 금액을 가맹점에게 지급하는 시스템으로 고객에게 안전하고 신뢰할 수 있는 거래 환경을 제공하여 분쟁을 최소할 수 있는 서비스입니다.</span>
+                                          <div class="more">
+                                              <span>자세히 보기</span>
+                                          </div>
+                                      </div>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="/report/valueAdded/paymentAgency" class="list_category request">
+                                      <div class="img_box">
+                                          <img src="/srs/htdocs/images/main/bg_box_agency.jpg" alt="지급대행">
+                                      </div>
+                                      <div class="inner">
+                                          <div class="icon"></div>
+                                          <span class="tit">지급대행</span>
+                                          <span class="desc">오픈마켓 사업자를 대신해 신한은행이 판매자에게 정산금을 지급대행하는 서비스 입니다. 거래와 정산 과정을 효율적으로 처리하고, 정확한 지급을 보장하여 신뢰를 구축하는 데 중요한 역할을 합니다.</span>
+                                          <div class="more">
+                                              <span>자세히 보기</span>
+                                          </div>
+                                      </div>
+                                  </a>
+                              </li>
+                              <!-- //240819 리스트 수정 -->
+                          </ul>
+                      </div>
+                  </div>
+              </section>
+           </div>
+         </div>
+       </div>
+       </body>
+       </html>
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+       <script> 
+        
+       </script>
 
-        .cover-box {
-            position: absolute;
-            top: 0;
-            width: 50%;
-            height: 100%;
-            background: white;
-            z-index: 2;
-        }
-
-        .left-box {
-            left: -20%;
-        }
-
-        .right-box {
-            right: -20%;
-        }
-    </style>
-</head>
-<body>
-    <div class="image-container">
-        <div class="image-box">
-            <div class="cover-box left-box"></div>
-            <div class="cover-box right-box"></div>
-            <img src="/assets/img/sec04-01.png" alt="sample">
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        // 왼쪽 박스 애니메이션
-        gsap.to(".left-box", {
-            scrollTrigger: {
-                trigger: ".image-container",
-                start: "1000px top",
-                end: "2000px top",
-                scrub: true
-            },
-            x: "-100%",
-            ease: "none"
-        });
-
-        // 오른쪽 박스 애니메이션
-        gsap.to(".right-box", {
-            scrollTrigger: {
-                trigger: ".image-container",
-                start: "1000px top",
-                end: "2000px top",
-                scrub: true
-            },
-            x: "100%",
-            ease: "none"
-        });
-    </script>
-</body>
-</html>

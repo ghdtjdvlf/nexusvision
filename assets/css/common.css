@@ -4,6 +4,7 @@
     --blue-01: #3e68ff;
     --black-01: #201F1F;
     --black-02: #2F2F2F;
+    --grey-01 : #B3B3BA;
     --white-01: #FFFFFF;
     --transform-section: translate(0px, 1386px);
     --section-padding: 100px 0;
@@ -78,6 +79,17 @@ img {
 .mb-100 {
     margin-bottom: 100px;
 }
+.mt-70 {
+    margin-top: 70px;
+}
+
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+
 
 /* Swiper 전용 클래스 */
 .speed {
