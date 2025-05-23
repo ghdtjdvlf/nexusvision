@@ -1,169 +1,886 @@
-       <!DOCTYPE html>
-       <html lang="en">
-       <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+<!DOCTYPE html>
+<html lang="ko">
 
-                <link rel="stylesheet" href="/srs/htdocs/css/jquery-ui.min.css">
-        <link rel="stylesheet" href="/srs/htdocs/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="/srs/htdocs/css/aos.css">
-        <link rel="stylesheet" href="/srs/htdocs/css/common.css">
-                <script type="text/javascript" src="/srs/htdocs/js/lib/jquery-3.6.0.min.js"></script>
-        <script type="text/javascript" src="/srs/htdocs/js/lib/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="/srs/htdocs/js/lib/swiper-bundle.min.js"></script>
-        <script type="text/javascript" src="/srs/htdocs/js/lib/lenis.min.js"></script>
-        <script type="text/javascript" src="/srs/htdocs/js/lib/gsap.min.js"></script>
-        <script type="text/javascript" src="/srs/htdocs/js/lib/ScrollTrigger.min.js"></script>
-        <script type="text/javascript" src="/srs/htdocs/js/lib/jquery-marquee.js"></script>
-        <script type="text/javascript" src="/srs/htdocs/js/lib/aos.js"></script>
-                <script src="/srs/htdocs/js/common.js" type="text/javascript"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-       </head>
-       <body>
-               
-       <div class="wrap main_wrap">
-         <div class="content-wrapper">
-           <div id="container" class="container">
-             <section class="main_service">
-                  <ul class="service_bg">
-                      <li class="bg1"></li>
-                      <li class="bg2"></li>
-                      <li class="bg3"></li>
-                      <li class="bg4"></li>
-                      <li class="bg5"></li>
-                      <li class="bg6"></li>
-                      <li class="bg7"></li>
-                  </ul>
-                  <div class="inner">
-                      <div class="service_cont">
-                          <div class="tit_box">
-                              <h3 class="tit_depth4">Our Sevices</h3>
-                              <h4 class="tit_depth1">신한은행 PG란?</h4>
-                              <p class="desc">
-                                  신한은행만의 높은 안정성과 보안성을 기반으로
-                                  신용카드나 간편결제등 통합정산 서비스를 제공하는
-                                  B2B, B2C 전자지급결제대행 서비스입니다
-                              </p>
-                          </div>
-                          <ul class="list_box">
-                              <!-- 240819 리스트 수정 -->
-                              <li>
-                                  <a href="/report/onlinePay/card" class="list_category card">
-                                      <div class="img_box">
-                                          <img src="/srs/htdocs/images/main/bg_box_card.jpg" alt="신용카드">
-                                      </div>
-                                      <div class="inner">
-                                          <span class="tit">신용카드</span>
-                                          <span class="desc">신용카드 결제 프로세스의 효율성을 극대화하고 보안을 강화하여 편리하고 안전한 결제가 가능하게 하며, 고객에게 편리하고 안전한 결제 옵션을 제공하여 매출 증가와 고객 만족도 향상에 기여합니다.</span>
-                                          <div class="more">
-                                              <span>자세히 보기</span>
-                                          </div>
-                                      </div>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="/report/onlinePay/virtualAccount" class="list_category virtual">
-                                      <div class="img_box">
-                                          <img src="/srs/htdocs/images/main/bg_box_virtual.jpg" alt="가상계좌">
-                                      </div>
-                                      <div class="inner">
-                                          <div class="icon"></div>
-                                          <span class="tit">가상계좌</span>
-                                          <span class="desc">가상계좌는 특정 거래나 고객에게 할당된 일회성 또는 반복 사용 계좌로, 고객에게 고유한 가상계좌를 발급하고 결제 과정을 자동화하여 입금 확인 절차 간소화 및 결제 효율성을 높일 수 있습니다.</span>
-                                          <div class="more">
-                                              <span>자세히 보기</span>
-                                          </div>
-                                      </div>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="/report/onlinePay/accountTransfer" class="list_category transfer">
-                                      <div class="img_box">
-                                          <img src="/srs/htdocs/images/main/bg_box_transfer.jpg" alt="계좌이체">
-                                      </div>
-                                      <div class="inner">
-                                          <div class="icon"></div>
-                                          <span class="tit">계좌이체</span>
-                                          <span class="desc">번거로운 은행방문이나 인터넷 뱅킹 접속 없이 플랫폼 내에서 은행계좌 간 자동화된 자금 이동 서비스를 제공하여 신속하고 안전한 금융거래 및 자금 관리를 용이하게 합니다.</span>
-                                          <div class="more">
-                                              <span>자세히 보기</span>
-                                          </div>
-                                      </div>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="/report/onlinePay/regularPay" class="list_category payment">
-                                      <div class="img_box">
-                                          <img src="/srs/htdocs/images/main/bg_box_payment.jpg" alt="정기결제">
-                                      </div>
-                                      <div class="inner">
-                                          <div class="icon"></div>
-                                          <span class="tit">정기결제</span>
-                                          <span class="desc">정기적으로 구독료나 서비스 요금을 청구할 수 있으며, 결제 과정을 간소화하고 자동화하여 고객에게 편리한 결제 서비스를 제공함으로써 안정적 수익 확보 및 고객 만족도를 높일 수 있습니다.</span>
-                                          <div class="more">
-                                              <span>자세히 보기</span>
-                                          </div>
-                                      </div>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="/report/valueAdded/brandPay" class="list_category brand">
-                                      <div class="img_box">
-                                          <img src="/srs/htdocs/images/main/bg_box_brand.jpg" alt="브랜드페이">
-                                      </div>
-                                      <div class="inner">
-                                          <div class="icon"></div>
-                                          <span class="tit">브랜드페이</span>
-                                          <span class="desc">자사 브랜드의 개성을 강조한 자체 결제 시스템을 구축하여 고객에게 안전하고 편리한 결제 시스템을 지원하는 서비스 입니다. 일관된 브랜드 경험을 제공하여 락인 효과를 극대화할 수 있습니다.</span>
-                                          <div class="more">
-                                              <span>자세히 보기</span>
-                                          </div>
-                                      </div>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="/report/valueAdded/escrow" class="list_category escrow">
-                                      <div class="img_box">
-                                          <img src="/srs/htdocs/images/main/bg_box_escrow.jpg" alt="에스크로">
-                                      </div>
-                                      <div class="inner">
-                                          <div class="icon"></div>
-                                          <span class="tit">에스크로</span>
-                                          <span class="desc">고객이 결제한 금액을 신한은행 PG가 보관하고, 거래 조건이 충족되면 해당 금액을 가맹점에게 지급하는 시스템으로 고객에게 안전하고 신뢰할 수 있는 거래 환경을 제공하여 분쟁을 최소할 수 있는 서비스입니다.</span>
-                                          <div class="more">
-                                              <span>자세히 보기</span>
-                                          </div>
-                                      </div>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a href="/report/valueAdded/paymentAgency" class="list_category request">
-                                      <div class="img_box">
-                                          <img src="/srs/htdocs/images/main/bg_box_agency.jpg" alt="지급대행">
-                                      </div>
-                                      <div class="inner">
-                                          <div class="icon"></div>
-                                          <span class="tit">지급대행</span>
-                                          <span class="desc">오픈마켓 사업자를 대신해 신한은행이 판매자에게 정산금을 지급대행하는 서비스 입니다. 거래와 정산 과정을 효율적으로 처리하고, 정확한 지급을 보장하여 신뢰를 구축하는 데 중요한 역할을 합니다.</span>
-                                          <div class="more">
-                                              <span>자세히 보기</span>
-                                          </div>
-                                      </div>
-                                  </a>
-                              </li>
-                              <!-- //240819 리스트 수정 -->
-                          </ul>
-                      </div>
-                  </div>
-              </section>
-           </div>
-         </div>
-       </div>
-       </body>
-       </html>
 
-       <script> 
-        
-       </script>
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/common.css">
+<link rel="stylesheet" href="assets/sass/style.css">
+<link rel="stylesheet" href="assets/sass/reference.css">
 
+<body>
+  <header>
+
+    <a href="index.html">넥서스비전(Nexux vision)</a>
+
+    <ul class="gnb">
+      <li><a href="company.html">Company</a></li>
+      <li><a href="Reference.html">Reference</a></li>
+      <li><a href="Product.html">Product</a></li>
+      <li><a href="Content.html">Content</a></li>
+      <li><a href="Solution.html">Solution</a></li>
+      <li><a href="#">견적문의 02-3221-2231</a></li>
+    </ul>
+  </header>
+
+  <div class="container mt-70">
+    <div class="row title">
+      <div class="col-md-12 text-center">
+        <h2>Reference</h2>
+        <p>설치사례</p>
+      </div>
+    </div>
+    <div class="main-item">
+      <div class="row">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img-wrap"><img src="/assets/img/reference/sec01-01.png" alt=""></div>
+              <div class="txtwrap">
+                <p>한국인터넷진흥원</p>
+                <h3>판교 한국인터넷진흥원 비디오 월</h3>
+                <h4>LCD 사이니 · 기업</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-wrap"><img src="/assets/img/reference/sec01-01.png" alt=""></div>
+              <div class="txtwrap">
+                <p>한국인터넷진흥원</p>
+                <h3>판교 한국인터넷진흥원 비디오 월</h3>
+                <h4>LCD 사이니 · 기업</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-wrap"><img src="/assets/img/reference/sec01-01.png" alt=""></div>
+              <div class="txtwrap">
+                <p>한국인터넷진흥원</p>
+                <h3>판교 한국인터넷진흥원 비디오 월</h3>
+                <h4>LCD 사이니 · 기업</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-wrap"><img src="/assets/img/reference/sec01-01.png" alt=""></div>
+              <div class="txtwrap">
+                <p>한국인터넷진흥원</p>
+                <h3>판교 한국인터넷진흥원 비디오 월</h3>
+                <h4>LCD 사이니 · 기업</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-wrap"><img src="/assets/img/reference/sec01-01.png" alt=""></div>
+              <div class="txtwrap">
+                <p>한국인터넷진흥원</p>
+                <h3>판교 한국인터넷진흥원 비디오 월</h3>
+                <h4>LCD 사이니 · 기업</h4>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img-wrap"><img src="/assets/img/reference/sec01-01.png" alt=""></div>
+              <div class="txtwrap">
+                <p>한국인터넷진흥원</p>
+                <h3>판교 한국인터넷진흥원 비디오 월</h3>
+                <h4>LCD 사이니 · 기업</h4>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-list">
+
+
+      <div class="page" data-page="1" style="display:block;">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-02.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="page" data-page="2" style="display:none;">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-03.png" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="page" data-page="3" style="display:none;">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap"><img src="/assets/img/reference/sec01-04.jpg" alt=""></div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="page" data-page="4" style="display:none;">
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="img-wrap">
+              <img src="/assets/img/reference/sec01-05.jpg" alt="">
+            </div>
+            <div class="txtwrap">
+              <p>한국인터넷진흥원</p>
+              <h3>판교 한국인터넷진흥원 비디오 월</h3>
+              <h4>LCD 사이니 · 기업</h4>
+            </div>
+          </div>
+
+
+        </div>
+        <div>
+
+        </div>
+
+
+      </div>
+
+      <nav class="pagination">
+        <button type="button" data-page="1" class="active">1</button>
+        <button type="button" data-page="2">2</button>
+        <button type="button" data-page="3">3</button>
+        <button type="button" data-page="4">4</button>
+      </nav>
+
+
+      <footer>
+        <div class="container">
+          <div class="footer-grid">
+            <!-- 회사 정보 섹션 -->
+            <div class="brand-section">
+              <a href="#" class="logo">Nexus vision</a>
+              <p class="company-desc">
+                최신 기술로 사용자 경험을 혁신하는 기업
+              </p>
+              <div class="social-links">
+                <a href="#" class="social-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                    </path>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+                <a href="#" class="social-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- 링크 섹션들 -->
+            <div class="footer-section">
+              <h3>제품</h3>
+              <ul class="footer-links">
+                <li><a href="#">기능</a></li>
+                <li><a href="#">가격</a></li>
+                <li><a href="#">사례 연구</a></li>
+                <li><a href="#">업데이트</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h3>지원</h3>
+              <ul class="footer-links">
+                <li><a href="#">문서</a></li>
+                <li><a href="#">커뮤니티</a></li>
+                <li><a href="#">연락처</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h3>법적 정보</h3>
+              <ul class="footer-links">
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">쿠키 정책</a></li>
+                <li><a href="#">라이선스</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+
+          <!-- 하단 바 -->
+          <div class="footer-bottom">
+            <p>© 2024 YourBrand. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
+
+
+
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          loop: 'true',
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+          const rows = document.querySelectorAll(".row");
+
+          const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.1, // 요소가 10% 이상 보일 때
+          };
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("scroll-in");
+              } else {
+                entry.target.classList.remove("scroll-in");
+              }
+            });
+          }, observerOptions);
+
+          rows.forEach((row) => observer.observe(row));
+        });
+
+
+
+        document.querySelectorAll('.pagination button').forEach(button => {
+          button.addEventListener('click', () => {
+            const page = button.dataset.page;
+
+            // 페이지 보이기/숨기기
+            document.querySelectorAll('.item-list .page').forEach(p => {
+              p.style.display = (p.dataset.page === page) ? 'block' : 'none';
+            });
+
+            // 버튼 active 토글
+            document.querySelectorAll('.pagination button').forEach(btn => {
+              btn.classList.toggle('active', btn === button);
+            });
+
+            // 스크롤 제어 (예: 300px 위치로 이동)
+            window.scrollTo({ top: 900, behavior: 'smooth' });
+
+            // 또는 특정 요소로 스크롤 (예: #content-section)
+            // document.querySelector('#content-section').scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+
+      </script>
+
+
+</body>
+
+</html>
