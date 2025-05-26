@@ -6,10 +6,12 @@
     --black-02: #2F2F2F;
     --grey-01 : #B3B3BA;
     --white-01: #FFFFFF;
-    --transform-section: translate(0px, 1386px);
+    --transform-section: translate(0px, 1475px);
     --section-padding: 100px 0;
     --font-title : 52px;
-    --font-title-sub : 30px
+    --font-title-sub : 30px;
+    --font-main-title : 68px;
+    --font-main-subtitle : 40px
 
 }
 
