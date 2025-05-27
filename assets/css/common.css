@@ -4,7 +4,9 @@
     --blue-01: #3e68ff;
     --black-01: #201F1F;
     --black-02: #2F2F2F;
+    --black-03: #5c5c5c;
     --grey-01 : #B3B3BA;
+    --grey-02 : #e2e2e2;
     --white-01: #FFFFFF;
     --transform-section: translate(0px, 1475px);
     --section-padding: 100px 0;
@@ -36,6 +38,10 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.on {
+    display: block;
 }
 
 .off {
