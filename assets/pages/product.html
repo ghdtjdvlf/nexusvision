@@ -6,26 +6,45 @@
   <title>Document</title>
 </head>
 
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/common.css">
-  <link rel="stylesheet" href="assets/sass/style.css">
-  <link rel="stylesheet" href="assets/sass/Products.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../sass/style.css">
+  <link rel="stylesheet" href="../sass/Products.css">
 <body>
+
+
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <header>
-          <a href="index.html">넥서스비전(Nexux vision)</a>
-    
-          <ul class="gnb">
-            <li><a href="company.html">Company</a></li>
-            <li><a href="Reference.html">Reference</a></li>
-            <li><a href="Product.html">Product</a></li>
-            <li><a href="Content.html">Content</a></li>
-            <li><a href="Solution.html">Solution</a></li>
-            <li><a href="#">견적문의 02-3221-2231</a></li>
-          </ul>
-          
-        </header>
+<header>
+  <nav class="navbar">
+    <a href="/" class="logo">넥서스비전</a>
+    <ul class="gnb">
+      <li><a href="../pages/company.html">Company</a></li>
+      <li><a href="../pages/reference.html">Reference</a></li>
+      <li><a href="../pages/product.html">Product</a></li>
+      <li><a href="../pages/content.html">Content</a></li>
+      <li><a href="../pages/solution.html">Solution</a></li>
+      <li><a href="#">견적문의 02-3221-2231</a></li>
+    </ul>
+    <button class="toggle-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="#" class="logo">LOGO</a>
+    <ul class="mobile-gnb">
+      <li><a href="../pages/company.html">Company</a></li>
+      <li><a href="../pages/reference.html">Reference</a></li>
+      <li><a href="../pages/product.html">Product</a></li>
+      <li><a href="../pages/content.html">Content</a></li>
+      <li><a href="../pages/solution.html">Solution</a></li>
+      <li><a href="#">견적문의 02-3221-2231</a></li>
+    </ul>
+  </div>
+
+  <div class="overlay"></div>
+</header>
     
         <section class="section01">
           
@@ -36,7 +55,7 @@
     
       <div class="card-wrap">
         <div class="card">
-          <img src="/assets/img/products/sec01-01.jpg" alt="Card Image" class="card-img">
+          <img src="../img/products/sec01-01.jpg" alt="Card Image" class="card-img">
           <div class="content">
             <h3>Product 01</h3>
             <p>마이크로 LED</p>
@@ -44,7 +63,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="/assets/img/products/sec01-02.jpg" alt="Card Image" class="card-img">
+          <img src="../img/products/sec01-02.jpg" alt="Card Image" class="card-img">
           <div class="content">
             <h3>Product 02</h3>
             <p>플렉스 OLED</p>
@@ -52,7 +71,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="/assets/img/products/sec01-03.jpeg" alt="Card Image" class="card-img">
+          <img src="../img/products/sec01-03.jpeg" alt="Card Image" class="card-img">
           <div class="content">
             <h3>Product 03</h3>
             <p>디지털 사이니지</p>

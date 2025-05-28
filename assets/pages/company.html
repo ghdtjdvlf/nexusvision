@@ -14,29 +14,47 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/common.css">
-  <link rel="stylesheet" href="assets/sass/style.css">
-  <link rel="stylesheet" href="assets/sass/company.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../sass/style.css">
+  <link rel="stylesheet" href="../sass/company.css">
 
 
 
 </head>
 
 <body>
-  <header>
-
-    <a href="index.html">넥서스비전(Nexux vision)</a>
-
+<header>
+  <nav class="navbar">
+    <a href="/" class="logo">넥서스비전</a>
     <ul class="gnb">
-      <li><a href="company.html">Company</a></li>
-      <li><a href="Reference.html">Reference</a></li>
-      <li><a href="Product.html">Product</a></li>
-      <li><a href="Content.html">Content</a></li>
-      <li><a href="Solution.html">Solution</a></li>
+      <li><a href="../pages/company.html">Company</a></li>
+      <li><a href="../pages/reference.html">Reference</a></li>
+      <li><a href="../pages/product.html">Product</a></li>
+      <li><a href="../pages/content.html">Content</a></li>
+      <li><a href="../pages/solution.html">Solution</a></li>
       <li><a href="#">견적문의 02-3221-2231</a></li>
     </ul>
-  </header>
+    <button class="toggle-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="#" class="logo">LOGO</a>
+    <ul class="mobile-gnb">
+      <li><a href="../pages/company.html">Company</a></li>
+      <li><a href="../pages/reference.html">Reference</a></li>
+      <li><a href="../pages/product.html">Product</a></li>
+      <li><a href="../pages/content.html">Content</a></li>
+      <li><a href="../pages/solution.html">Solution</a></li>
+      <li><a href="#">견적문의 02-3221-2231</a></li>
+    </ul>
+  </div>
+
+  <div class="overlay"></div>
+</header>
+
 
 
   <div class="top-menu">
@@ -57,7 +75,7 @@
         <h2>Vision</h2>
         <p>혁신적인 디스플레이 기술로 세상을 더 선명하게 연결하는 글로벌 리더</p>
       </div>
-      <img src="/assets/img/company/sec01_bg.png" alt="">
+      <img src="../img/company/sec01_bg.png" alt="">
       <div id="text1" class="text">
         <p>인간은 눈으로 <span>보는 것만</span> 믿는다고 합니다.</p>
 
@@ -172,7 +190,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="assets/js/company.js"></script>
+  <script src="../js/company.js"></script>
 
 
 </html>
