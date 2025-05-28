@@ -121,9 +121,6 @@ p {
   }
 }
 
-footer {
-  transform: translate(0, 0);
-}
 
 .pagination {
   display: flex;
@@ -153,4 +150,8 @@ footer {
       pointer-events: none;
     }
   }
+}
+
+footer {
+  transform:translate(0,0)
 }

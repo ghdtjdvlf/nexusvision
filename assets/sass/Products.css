@@ -16,6 +16,7 @@ a:visited {
 
 .section01 {
   margin-top: 70px;
+  padding: 100px 0;
 }
 .section01 .title {
   text-align: center;
@@ -67,8 +68,8 @@ a:visited {
   color: #eef2f7;
   z-index: 0;
   position: absolute;
-  top: 60%;
-  left: 26%;
+  top: 10%;
+  left: 0%;
   transform: translate(-50%, -50%);
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-size: 48px;
@@ -148,7 +149,7 @@ p {
   height: 800px;
   margin: 30px;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #ffffff;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -204,4 +205,8 @@ p {
   text-decoration: none;
   font-weight: 500;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  transform: translate(0, 0);
 }/*# sourceMappingURL=Products.css.map */
