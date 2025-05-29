@@ -18,12 +18,12 @@ body {
   font-family: 'Arial', sans-serif;
   overflow-x: hidden;
 }
-
+header {
      .navbar {
             display: flex;
             justify-content: space-between;
             height: 70px;
-            padding: 1rem 2rem;
+            padding: 0 70px;
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -34,6 +34,7 @@ body {
             width: 100%;
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            align-items: center;
 
         }
         
@@ -181,20 +182,11 @@ body {
                 align-items: flex-end;
             }
         }
-
-
-
-
-spline-viewer {
-  position: absolute;
-  z-index: 100;
-  width: 100%;
-  overflow: hidden;
 }
 
+
 section.kv {
-  position: relative; /* 부모에 relative 추가 */
-  transform: translate(0,50px);
+
   .title {
     margin: 260px 0 65px 0 ;
     h1 {
@@ -205,10 +197,15 @@ section.kv {
       position: relative;
       z-index: 1000;
     }
+    h2 {
+      font-size: 40px;
+      color: var(--blue-02);
+      font-weight: 700;
+    }
     .next {
       position: absolute;
       z-index: 7000;
-      top: 170%;
+      top: 4.5%;
       left: 50%;
       transform: translate(-50%, 50%);
         animation: fadeInOut 4s ease-in-out infinite;
@@ -243,34 +240,30 @@ section.kv {
   }
     }
   }
-  .video { 
-    video {
-      border-radius: 100px;
-    }
-
-    #video-container {
-      position: relative; /* fixed → relative 변경 */
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: darkblue;
-      border-radius: 100px;
-      
-    }
-
-    #video-background {
-      position: absolute;
-      top: 80%;
-      left: 50%;
-      transform: translate(-50%,30%);
-      width: 60%; /* 초기 너비 60% */
-      height: auto;
-      aspect-ratio: 16 / 9;
-      transition: width .4s ease-out;
-    }
 
 
+.video {
+  width: 45%;
+  height: 1440px;
+  margin: 0 auto;
+  transition: all .5s;
+
+
+  video {
+    border-radius: 28px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
   }
+    &.expanded {
+    width: 100%;
+    video {
+      border-radius: 0;
+    }
+  }
+}
 
 
   
@@ -311,32 +304,11 @@ transform: var(--transform-section);
       width: 100%;
       height: 100%;
 
-      .swiper-pagination {
-        text-align: left;
-        position: absolute;
-        left: 50px;
-        bottom: 20px;
-      }
-
-      .swiper-pagination-bullet {
-      width: 20px;
-      height: 20px;
-      text-align: center;
-      line-height: 20px;
-      font-size: 12px;
-      color: #000;
-      opacity: 1;
-      background: rgba(0, 0, 0, 0.2);
-    }
-
-    .swiper-pagination-bullet-active {
-      color: #fff;
-      background: #007aff;
-    }
  
     .swiper-wrapper {
-      width: 1000px;
+  
       .swiper-slide {
+        height: 650px;
         text-align: center;
         font-size: 18px;
         background: #fff;
@@ -355,36 +327,38 @@ transform: var(--transform-section);
     }
     }
 
-    .sec02_Swiper .swiper-slide {
+  .sec02_Swiper .swiper-slide {
   position: relative; /* 텍스트 오버레이를 위해 position relative */
   overflow: hidden; 
   cursor: pointer;
 }
 
-.sec02_Swiper .text-wrap {
-  position: absolute;
-  width: 80%;
-  bottom: 20px; /* 원하는 위치로 조정 */
-  left: 50%;
-  transform: translate(-50%, -60%);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none; /* 평상시 텍스트에 마우스 이벤트 방지 */
-  h2 {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 140%;
-  }
-}
+// //텍스트 호버 효과
 
-.sec02_Swiper .swiper-slide:hover .text-wrap {
-  opacity: 1;
-  pointer-events: auto; /* 호버 시 텍스트 활성화 */
-}
+// .sec02_Swiper .text-wrap {
+//   position: absolute;
+//   width: 80%;
+//   bottom: 20px; /* 원하는 위치로 조정 */
+//   left: 50%;
+//   transform: translate(-50%, -60%);
+//   background: rgba(0, 0, 0, 0.6);
+//   color: #fff;
+//   padding: 10px 15px;
+//   border-radius: 10px;
+//   opacity: 0;
+//   transition: opacity 0.3s ease;
+//   pointer-events: none; /* 평상시 텍스트에 마우스 이벤트 방지 */
+//   h2 {
+//     font-size: 30px;
+//     font-weight: 700;
+//     line-height: 140%;
+//   }
+// }
+
+// .sec02_Swiper .swiper-slide:hover .text-wrap {
+//   opacity: 1;
+//   pointer-events: auto; /* 호버 시 텍스트 활성화 */
+// }
 
 
 
@@ -450,7 +424,25 @@ transform: var(--transform-section);
   border-radius: 40px;
   margin: unset;
   background-size: cover;
+  
+  .swiper-button-prev,
+.swiper-button-next {
+  background-color: #fff;
+  opacity: .7;
+  padding: 25px 10px;
+  border-radius: 20px;
+  color: black !important;
+  transition: all .3s;
+   &:hover{
+      opacity: 1;
+   }
+}
 
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
   &.swiper-lg {
     max-width: 40%;
 
@@ -562,7 +554,7 @@ transform: var(--transform-section);
   position: relative;
   transform: var(--transform-section);
   background: var(--blue-01);
-padding: var(--section-padding);
+  padding: var(--section-padding);
   text-align: center;
   color: var(--white-01);
   display: flex;
@@ -576,16 +568,61 @@ padding: var(--section-padding);
     text-transform:uppercase;
     font-size: 100px;
     font-weight: 700;
-    margin-bottom: 63px;
+    margin-bottom: 60px;
   }
-  a {
-    border-radius: 20px;
-    font-size: 18px;
-    padding: 5px 15px;
-    background: var(--white-01);
-    color: var(--blue-01);
+.sec06-btn {
+  --glow-color: rgb(255, 255, 255);
+  --glow-spread-color: rgba(255, 255, 255, 0.781);
+  --enhanced-glow-color: rgb(60, 99, 228);
+  --btn-color: rgb(44, 102, 209);
+  
+  border: 0.25em solid var(--glow-color);
+  padding: 20px 60px;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+
+  &::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: 0.7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+  }
+
+  &:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em 0.25em var(--glow-color),
+      0 0 4em 2em var(--glow-spread-color),
+      inset 0 0 0.75em 0.25em var(--glow-color);
+  }
+
+  &:active {
+    box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+      0 0 2.5em 2em var(--glow-spread-color),
+      inset 0 0 0.5em 0.25em var(--glow-color);
   }
 }
+
+
+  }
+
 
 footer {
   position: relative;

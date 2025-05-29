@@ -2,6 +2,10 @@ body {
   background: #f2f2f4;
 }
 
+header .navbar {
+  top: -70px;
+}
+
 .row {
   opacity: 0;
   transform: translateY(50px);
@@ -105,10 +109,6 @@ p {
   font-weight: 500;
 }
 
-footer {
-  transform: translate(0, 0);
-}
-
 .pagination {
   display: flex;
   justify-content: center;
@@ -134,4 +134,8 @@ footer {
   color: white;
   cursor: default;
   pointer-events: none;
+}
+
+footer {
+  transform: translate(0, 0);
 }/*# sourceMappingURL=reference.css.map */

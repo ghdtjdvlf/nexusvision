@@ -19,23 +19,15 @@
 
 //KV 커지는 영상
 
- document.addEventListener('DOMContentLoaded', () => {
-    const video = document.getElementById('video-background');
+window.addEventListener('scroll', () => {
+  const videoDiv = document.querySelector('.video');
+  if (window.scrollY >= 200) {
+    videoDiv.classList.add('expanded');
+  } else {
+    videoDiv.classList.remove('expanded');
+  }
+});
 
-    gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to(video, {
-      width: "95%", // 목표 너비 (60%에서 95%로 변경 가능)
-      ease: "power1.out",
-      markers: true,
-      scrollTrigger: {
-        trigger: document.body,
-        start: "top top",      // 스크롤 시작 위치
-        end: "+=200",          // 200px 까지 애니메이션
-        scrub: 1.5             // 스크롤에 부드럽게 연동(0.3초 딜레이)
-      }
-    });
-  });
 
 
 
@@ -106,9 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-window.addEventListener('scroll', function() {
-  console.log("현재 스크롤 위치:", window.scrollY + "px");
-});
 
 
 //다크모드

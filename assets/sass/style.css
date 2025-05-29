@@ -14,11 +14,16 @@ body {
   overflow-x: hidden;
 }
 
-.navbar {
+header {
+  /* 모바일 메뉴 스타일 - 글래스모피즘 적용 */
+  /* 컨텐츠 영역 (네브바 아래) */
+  /* 반응형 스타일 */
+}
+header .navbar {
   display: flex;
   justify-content: space-between;
   height: 70px;
-  padding: 1rem 2rem;
+  padding: 0 70px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -29,27 +34,24 @@ body {
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  align-items: center;
 }
-
-.logo {
+header .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--blue-01);
   text-decoration: none;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-.gnb {
+header .gnb {
   display: flex;
   list-style: none;
   align-items: center;
 }
-
-.gnb li {
+header .gnb li {
   margin-left: 2rem;
 }
-
-.gnb li:nth-last-child(1) a {
+header .gnb li:nth-last-child(1) a {
   display: inline-block;
   background: var(--black-03);
   border-radius: 20px;
@@ -57,24 +59,20 @@ body {
   padding: 10px 15px;
   transition: all 0.3s;
 }
-
-.gnb li:nth-last-child(1) a:hover {
+header .gnb li:nth-last-child(1) a:hover {
   background: var(--black-01);
 }
-
-.gnb a {
+header .gnb a {
   text-decoration: none;
   color: var(--black-03);
   font-weight: 500;
   transition: color 0.3s;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-.gnb a:hover {
+header .gnb a:hover {
   color: var(--black-01);
 }
-
-.toggle-btn {
+header .toggle-btn {
   display: none;
   background: none;
   border: none;
@@ -82,9 +80,7 @@ body {
   cursor: pointer;
   color: var(--black-01);
 }
-
-/* 모바일 메뉴 스타일 - 글래스모피즘 적용 */
-.mobile-menu {
+header .mobile-menu {
   position: fixed;
   z-index: 1001;
   top: 70px;
@@ -103,26 +99,21 @@ body {
   flex-direction: column;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-.mobile-menu.active {
+header .mobile-menu.active {
   right: 0;
 }
-
-.mobile-menu .logo {
+header .mobile-menu .logo {
   margin-bottom: 2rem;
   text-align: right;
 }
-
-.mobile-gnb {
+header .mobile-gnb {
   list-style: none;
   text-align: right;
 }
-
-.mobile-gnb li {
+header .mobile-gnb li {
   margin-bottom: 1.8rem;
 }
-
-.mobile-gnb a {
+header .mobile-gnb a {
   text-decoration: none;
   color: var(--white-01);
   font-size: 1.2rem;
@@ -131,12 +122,10 @@ body {
   transition: transform 0.3s;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-.mobile-gnb a:hover {
+header .mobile-gnb a:hover {
   transform: translateX(-10px);
 }
-
-.overlay {
+header .overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -150,42 +139,27 @@ body {
   visibility: hidden;
   transition: opacity 0.4s, visibility 0.4s;
 }
-
-.overlay.active {
+header .overlay.active {
   opacity: 1;
   visibility: visible;
 }
-
-/* 컨텐츠 영역 (네브바 아래) */
-.content {
+header .content {
   margin-top: 70px;
   padding: 2rem;
   color: var(--blue-01);
 }
-
-/* 반응형 스타일 */
 @media (max-width: 768px) {
-  .gnb {
+  header .gnb {
     display: none;
   }
-  .toggle-btn {
+  header .toggle-btn {
     display: block;
   }
-  .mobile-menu {
+  header .mobile-menu {
     align-items: flex-end;
   }
 }
-spline-viewer {
-  position: absolute;
-  z-index: 100;
-  width: 100%;
-  overflow: hidden;
-}
 
-section.kv {
-  position: relative; /* 부모에 relative 추가 */
-  transform: translate(0, 50px);
-}
 section.kv .title {
   margin: 260px 0 65px 0;
 }
@@ -197,10 +171,15 @@ section.kv .title h1 {
   position: relative;
   z-index: 1000;
 }
+section.kv .title h2 {
+  font-size: 40px;
+  color: var(--blue-02);
+  font-weight: 700;
+}
 section.kv .title .next {
   position: absolute;
   z-index: 7000;
-  top: 170%;
+  top: 4.5%;
   left: 50%;
   transform: translate(-50%, 50%);
   animation: fadeInOut 4s ease-in-out infinite;
@@ -232,26 +211,25 @@ section.kv .title .next img {
     transform: translateY(30px);
   }
 }
-section.kv .video video {
-  border-radius: 100px;
+section.kv .video {
+  width: 45%;
+  height: 1440px;
+  margin: 0 auto;
+  transition: all 0.5s;
 }
-section.kv .video #video-container {
-  position: relative; /* fixed → relative 변경 */
+section.kv .video video {
+  border-radius: 28px;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  background: darkblue;
-  border-radius: 100px;
+  margin: 0 auto;
+  display: block;
+  object-fit: cover;
 }
-section.kv .video #video-background {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, 30%);
-  width: 60%; /* 초기 너비 60% */
-  height: auto;
-  aspect-ratio: 16/9;
-  transition: width 0.4s ease-out;
+section.kv .video.expanded {
+  width: 100%;
+}
+section.kv .video.expanded video {
+  border-radius: 0;
 }
 
 .section02 {
@@ -284,30 +262,8 @@ section.kv .video #video-background {
   width: 100%;
   height: 100%;
 }
-.section02 .container .swiper .swiper-pagination {
-  text-align: left;
-  position: absolute;
-  left: 50px;
-  bottom: 20px;
-}
-.section02 .container .swiper .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: #000;
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
-}
-.section02 .container .swiper .swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff;
-}
-.section02 .container .swiper .swiper-wrapper {
-  width: 1000px;
-}
 .section02 .container .swiper .swiper-wrapper .swiper-slide {
+  height: 650px;
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -325,29 +281,6 @@ section.kv .video #video-background {
   position: relative; /* 텍스트 오버레이를 위해 position relative */
   overflow: hidden;
   cursor: pointer;
-}
-.section02 .container .sec02_Swiper .text-wrap {
-  position: absolute;
-  width: 80%;
-  bottom: 20px; /* 원하는 위치로 조정 */
-  left: 50%;
-  transform: translate(-50%, -60%);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none; /* 평상시 텍스트에 마우스 이벤트 방지 */
-}
-.section02 .container .sec02_Swiper .text-wrap h2 {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 140%;
-}
-.section02 .container .sec02_Swiper .swiper-slide:hover .text-wrap {
-  opacity: 1;
-  pointer-events: auto; /* 호버 시 텍스트 활성화 */
 }
 
 .section03 {
@@ -395,6 +328,24 @@ section.kv .video #video-background {
   border-radius: 40px;
   margin: unset;
   background-size: cover;
+}
+.section03 .box .swiper .swiper-button-prev,
+.section03 .box .swiper .swiper-button-next {
+  background-color: #fff;
+  opacity: 0.7;
+  padding: 25px 10px;
+  border-radius: 20px;
+  color: black !important;
+  transition: all 0.3s;
+}
+.section03 .box .swiper .swiper-button-prev:hover,
+.section03 .box .swiper .swiper-button-next:hover {
+  opacity: 1;
+}
+.section03 .box .swiper .swiper-button-prev:after,
+.section03 .box .swiper .swiper-button-next:after {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
 }
 .section03 .box .swiper.swiper-lg {
   max-width: 40%;
@@ -499,14 +450,46 @@ section.kv .video #video-background {
   text-transform: uppercase;
   font-size: 100px;
   font-weight: 700;
-  margin-bottom: 63px;
+  margin-bottom: 60px;
 }
-.section06 a {
-  border-radius: 20px;
-  font-size: 18px;
-  padding: 5px 15px;
-  background: var(--white-01);
-  color: var(--blue-01);
+.section06 .sec06-btn {
+  --glow-color: rgb(255, 255, 255);
+  --glow-spread-color: rgba(255, 255, 255, 0.781);
+  --enhanced-glow-color: rgb(60, 99, 228);
+  --btn-color: rgb(44, 102, 209);
+  border: 0.25em solid var(--glow-color);
+  padding: 20px 60px;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 1em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+.section06 .sec06-btn::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+.section06 .sec06-btn:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color), 0 0 4em 2em var(--glow-spread-color), inset 0 0 0.75em 0.25em var(--glow-color);
+}
+.section06 .sec06-btn:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color), inset 0 0 0.5em 0.25em var(--glow-color);
 }
 
 footer {

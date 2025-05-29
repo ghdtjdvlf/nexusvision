@@ -2,13 +2,14 @@
 
 :root {
     --blue-01: #3e68ff;
+    --blue-02: #6b7684;
     --black-01: #201F1F;
     --black-02: #2F2F2F;
     --black-03: #5c5c5c;
     --grey-01 : #B3B3BA;
     --grey-02 : #e2e2e2;
     --white-01: #FFFFFF;
-    --transform-section: translate(0px, 1475px);
+    /* --transform-section: translate(0px, 1475px); */
     --section-padding: 100px 0;
     --font-title : 52px;
     --font-title-sub : 30px;
@@ -36,6 +37,8 @@ body {
     margin: 0;
 }
 
+
+
 a {
     text-decoration: none;
 }
@@ -51,6 +54,9 @@ a {
 img {
     width: 100%;
 }
+
+/* 공통요소 */
+
 
 /* 색상 클래스 수정 */
 .white {
@@ -98,11 +104,36 @@ img {
     text-align: right;
 }
 
+  .mgbox-200{
+    width: 100%;
+    height: 200px;
+  }
+  .mgbox-300{
+    width: 100%;
+    height: 300px;
+  }
+
 
 /* Swiper 전용 클래스 */
 .speed {
     transition-timing-function: linear !important;
 }
+.swiper-button-prev, .swiper-button-next {
+    background-color: #fff;
+    opacity: .7;
+    padding: 25px 10px;
+    border-radius: 20px;
+    color: black !important;
+    transition: all .3s;
+}
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    opacity: 1;
+}
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+}
+
 
 @media (max-width: 1280px) {
     :root {

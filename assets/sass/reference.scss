@@ -2,6 +2,10 @@ body {
   background: #f2f2f4;
 }
 
+header .navbar {
+  top: -70px;
+}
+
 .row {
   opacity: 0;
   transform: translateY(50px);
@@ -121,9 +125,6 @@ p {
   }
 }
 
-footer {
-  transform: translate(0, 0);
-}
 
 .pagination {
   display: flex;
@@ -153,4 +154,8 @@ footer {
       pointer-events: none;
     }
   }
+}
+
+footer {
+  transform:translate(0,0)
 }
