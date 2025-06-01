@@ -145,11 +145,11 @@ p {
 }
 .card-wrap .card {
   position: relative;
-  width: 520px;
-  height: 700px;
+  width: 700px;
+  height: 900px;
   margin: 15px;
   border-radius: 15px;
-  background: #ffffff;
+  background: #ffffff no-repeat;
   overflow: hidden;
   display: flex;
   justify-content: center;

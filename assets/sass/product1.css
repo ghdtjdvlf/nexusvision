@@ -1,0 +1,25 @@
+body {
+  background-color: #F2F2F4;
+}
+
+#section {
+  background-color: #F2F2F4 !important;
+}
+
+a {
+  display: inline-block;
+}
+
+.myContent {
+  padding: 250px 0px 150px;
+  text-align: left;
+  background-color: #F2F2F4;
+}
+.myContent h1 {
+  font-size: 82px;
+  color: var(--black-01);
+}
+.myContent a {
+  margin-top: 40px;
+  font-size: 24px;
+}/*# sourceMappingURL=product1.css.map */
