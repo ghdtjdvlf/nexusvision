@@ -10,26 +10,27 @@
     --black-01: #201F1F;
     --black-02: #2F2F2F;
     --black-03: #5c5c5c;
-    --grey-01 : #B3B3BA;
-    --grey-02 : #e2e2e2;
+    --grey-01: #B3B3BA;
+    --grey-02: #e2e2e2;
     --white-01: #FFFFFF;
     --section-padding: 80px 0;
-    --font-title : 3rem;
-    --font-title-sub : 30px;
-    --font-main-title : 68px;
-    --font-main-subtitle : 40px
-
+    --font-title: 3rem;
+    --font-title-sub: 30px;
+    --font-main-title: 68px;
+    --font-main-subtitle: 40px
 }
 
 /* 폰트 전체 적용 */
 body {
-    font-family: "Pretendard Variable",  Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
 }
 
 
 
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 * {
@@ -65,9 +66,11 @@ img {
 .white {
     color: var(--white-01) !important;
 }
+
 .blue {
     color: var(--blue-01) !important;
 }
+
 .black {
     color: #000 !important;
 }
@@ -78,12 +81,15 @@ img {
     margin: 0 auto;
     display: flex;
 }
+
 .w-50 {
     width: 50%;
 }
+
 .w-55 {
     width: 55%;
 }
+
 .w-60 {
     width: 60%;
 }
@@ -91,15 +97,19 @@ img {
 .mr-30 {
     margin-right: 30px;
 }
+
 .mb-70 {
     margin-bottom: 70px;
 }
+
 .mb-15 {
     margin-bottom: 15px;
 }
+
 .mb-100 {
     margin-bottom: 100px;
 }
+
 .mt-70 {
     margin-top: 70px;
 }
@@ -107,6 +117,7 @@ img {
 .text-left {
     text-align: left;
 }
+
 .text-right {
     text-align: right;
 }
@@ -116,21 +127,24 @@ img {
     height: 100px;
 }
 
-  .mgbox-200{
+.mgbox-200 {
     width: 100%;
     height: 200px;
-  }
-  .mgbox-300{
+}
+
+.mgbox-300 {
     width: 100%;
     height: 300px;
-  }
+}
 
 
 /* Swiper 전용 클래스 */
 .speed {
     transition-timing-function: linear !important;
 }
-.swiper-button-prev, .swiper-button-next {
+
+.swiper-button-prev,
+.swiper-button-next {
     background-color: #fff;
     opacity: .7;
     padding: 25px 10px;
@@ -138,10 +152,14 @@ img {
     color: black !important;
     transition: all .3s;
 }
-.swiper-button-prev:hover, .swiper-button-next:hover {
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
     opacity: 1;
 }
-.swiper-button-prev:after, .swiper-button-next:after {
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
     font-size: 1.1rem !important;
     font-weight: 600 !important;
 }
@@ -151,34 +169,51 @@ img {
     html {
         font-size: 15px;
     }
+
     .mgbox-300 {
-    height: 50px;
- }
+        height: 50px;
+    }
 }
 
 @media (max-width: 1024px) {
     .off {
         display: none;
     }
+
     .mgbox-100 {
         height: 50px;
     }
+
     .mgbox-200 {
         height: 100px;
     }
 }
-@media (max-width: 768px) {
 
-.mgbox-200 {
-    height: 50px;
+@media (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+
+    .mgbox-200 {
+        height: 50px;
+    }
 }
-}
+
 @media (max-width: 586px) {
+    html {
+        font-size: 12px;
+    }
+
     :root {
         --section-padding: 50px 0
     }
 }
+
 @media (max-width: 346px) {
+    html {
+        font-size: 10px;
+    }
+
     .mgbox-200 {
         height: 0;
     }

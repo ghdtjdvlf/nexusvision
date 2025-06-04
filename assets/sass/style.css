@@ -650,9 +650,6 @@ footer body.dark-mode .theme-toggle {
   }
 }
 @media (max-width: 768px) {
-  html {
-    font-size: 12px;
-  }
   header .gnb {
     display: none;
   }
@@ -731,9 +728,6 @@ footer body.dark-mode .theme-toggle {
 @media (max-width: 586px) {
   :root {
     --swiper-navigation-size: 27px;
-  }
-  html {
-    font-size: 12px;
   }
   .container {
     padding: 0 30px;
@@ -842,10 +836,5 @@ footer body.dark-mode .theme-toggle {
   }
   footer .footer-links a {
     font-size: 1rem;
-  }
-}
-@media (max-width: 346px) {
-  html {
-    font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

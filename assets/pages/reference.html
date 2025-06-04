@@ -861,15 +861,23 @@
       });
 
     //상단 슬라이드
-    var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1.1,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    1024: {
       slidesPerView: 3,
-      spaceBetween: 30,
-      loop: 'true',
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
+    },
+    540: {
+      slidesPerView: 2,
+    }
+  }
+});
 
     //하단 아이템들
     document.addEventListener("DOMContentLoaded", () => {

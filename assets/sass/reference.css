@@ -138,4 +138,41 @@ p {
 
 footer {
   transform: translate(0, 0);
+}
+
+@media (max-width: 1024px) {
+  .off {
+    display: none;
+  }
+  .mgbox-100 {
+    height: 50px;
+  }
+  .mgbox-200 {
+    height: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .mgbox-200 {
+    height: 50px;
+  }
+  .col-md-3 {
+    width: 50%;
+  }
+}
+@media (max-width: 586px) {
+  :root {
+    --section-padding: 50px 0 ;
+  }
+  .col-md-3 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .mb-5 {
+    margin-bottom: 0px !important;
+  }
+}
+@media (max-width: 346px) {
+  .mgbox-200 {
+    height: 0;
+  }
 }/*# sourceMappingURL=reference.css.map */
