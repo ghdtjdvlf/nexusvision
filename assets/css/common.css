@@ -179,4 +179,7 @@ img {
     }
 }
 @media (max-width: 346px) {
+    .mgbox-200 {
+        height: 0;
+    }
 }
