@@ -1,5 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-@import url('https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css');
+
 
 
 
@@ -13,9 +13,8 @@
     --grey-01 : #B3B3BA;
     --grey-02 : #e2e2e2;
     --white-01: #FFFFFF;
-    /* --transform-section: translate(0px, 1475px); */
-    --section-padding: 100px 0;
-    --font-title : 52px;
+    --section-padding: 80px 0;
+    --font-title : 3rem;
     --font-title-sub : 30px;
     --font-main-title : 68px;
     --font-main-subtitle : 40px
@@ -24,7 +23,7 @@
 
 /* 폰트 전체 적용 */
 body {
-    font-family: "Tossface", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+    font-family: "Pretendard Variable",  Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
 }
 
 
@@ -149,33 +148,35 @@ img {
 
 
 @media (max-width: 1280px) {
-    :root {
-        --transform-section:translate(0px, 400px)
+    html {
+        font-size: 15px;
     }
+    .mgbox-300 {
+    height: 50px;
+ }
 }
 
 @media (max-width: 1024px) {
-    :root {
-        --transform-section:translate(0px, 277px);
-    }
     .off {
         display: none;
     }
+    .mgbox-100 {
+        height: 50px;
+    }
+    .mgbox-200 {
+        height: 100px;
+    }
 }
 @media (max-width: 768px) {
-    :root {
-        --transform-section:translate(0px, 69px);
-    }
+
+.mgbox-200 {
+    height: 50px;
+}
 }
 @media (max-width: 586px) {
     :root {
-        --transform-section:translate(0px, -84px);
-        --font-title : 35px;
-        --font-title-sub : 20px
+        --section-padding: 50px 0
     }
 }
 @media (max-width: 346px) {
-    :root {
-        --transform-section:translate(0px, -84px)
-    }
 }

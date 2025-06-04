@@ -161,25 +161,25 @@ header .content {
 }
 
 section.kv .title {
-  margin: 260px 0 65px 0;
+  padding: 160px 0 80px 0;
 }
 section.kv .title h1 {
   color: var(--black-01);
-  font-size: 68px;
+  font-size: 4rem;
   font-weight: 600;
-  margin-bottom: 65px;
+  margin-bottom: 30px;
   position: relative;
   z-index: 1000;
 }
 section.kv .title h2 {
-  font-size: 40px;
+  font-size: 2rem;
   color: var(--blue-02);
   font-weight: 700;
 }
 section.kv .title .next {
   position: absolute;
   z-index: 7000;
-  top: 4.5%;
+  top: 6%;
   left: 50%;
   transform: translate(-50%, 50%);
   animation: fadeInOut 4s ease-in-out infinite;
@@ -213,7 +213,7 @@ section.kv .title .next img {
 }
 section.kv .video {
   width: 45%;
-  height: 900px;
+  height: 1300px;
   margin: 0 auto;
   transition: all 0.5s;
 }
@@ -238,7 +238,6 @@ section.kv .video.expanded video {
   padding: var(--section-padding);
   text-align: center;
   position: relative;
-  transform: var(--transform-section);
 }
 .section02 .container {
   height: auto;
@@ -250,12 +249,12 @@ section.kv .video.expanded video {
   font-weight: 700;
 }
 .section02 .container .title p {
-  font-size: var(--font-title-sub);
+  font-size: 1.5rem;
   color: var(--blue-01);
 }
 .section02 .container .title h2 {
   color: var(--white-01);
-  font-size: var(--font-title);
+  font-size: 3rem;
   line-height: 140%;
 }
 .section02 .container .swiper {
@@ -288,19 +287,18 @@ section.kv .video.expanded video {
   padding: var(--section-padding);
   text-align: left;
   position: relative;
-  transform: var(--transform-section);
 }
 .section03 .title {
   margin-bottom: 58px;
   font-weight: 700;
 }
 .section03 .title p {
-  font-size: var(--font-title-sub);
+  font-size: 1.5rem;
   color: var(--blue-01);
 }
 .section03 .title h2 {
   color: var(--black-02);
-  font-size: var(--font-title);
+  font-size: 3rem;
   line-height: 140%;
 }
 .section03 .box {
@@ -314,13 +312,13 @@ section.kv .video.expanded video {
   top: 15%;
 }
 .section03 .box .content .title {
-  font-size: 35px;
+  font-size: 2rem;
   margin-bottom: 30px;
   font-weight: 700;
 }
 .section03 .box .content .desc {
-  font-size: 20px;
-  opacity: 0.6;
+  font-size: 1.5rem;
+  color: var(--blue-02);
   font-weight: 700;
 }
 .section03 .box .swiper {
@@ -392,7 +390,6 @@ section.kv .video.expanded video {
 }
 
 .section04 {
-  transform: var(--transform-section);
   padding: var(--section-padding);
   text-align: center;
 }
@@ -400,12 +397,12 @@ section.kv .video.expanded video {
   text-align: left;
 }
 .section04 .row.partners p {
-  font-size: var(--font-title-sub);
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--blue-01);
 }
 .section04 .row.partners h2 {
-  font-size: var(--font-title);
+  font-size: 3rem;
   font-weight: 700;
 }
 .section04 .row.title {
@@ -414,7 +411,7 @@ section.kv .video.expanded video {
   align-items: center;
 }
 .section04 .row.title h2 {
-  font-size: 52px;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--black-01);
 }
@@ -433,7 +430,6 @@ section.kv .video.expanded video {
 
 .section06 {
   position: relative;
-  transform: var(--transform-section);
   background: var(--blue-01);
   padding: var(--section-padding);
   text-align: center;
@@ -443,12 +439,12 @@ section.kv .video.expanded video {
   align-items: center;
 }
 .section06 p {
-  font-size: 22px;
+  font-size: 1.5rem;
   margin-bottom: 27px;
 }
 .section06 h2 {
   text-transform: uppercase;
-  font-size: 100px;
+  font-size: 6.25em;
   font-weight: 700;
   margin-bottom: 60px;
 }
@@ -493,25 +489,6 @@ section.kv .video.expanded video {
 }
 
 footer {
-  position: relative;
-  transform: var(--transform-section);
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-/* 메인 콘텐츠 */
-/* 스크롤 막기 */
-body.no-scroll {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-
-footer {
   background-color: #ffffff;
   color: #1a1a1a;
   padding: 60px 0 30px;
@@ -523,11 +500,6 @@ footer {
   /* 링크 섹션 */
   /* 하단 바 */
   /* 다크 모드 토글 */
-}
-footer .footer.dark {
-  background-color: #1a1a1a;
-  color: #f8f9fa;
-  border-top-color: #4a5568;
 }
 footer .container {
   max-width: 1200px;
@@ -544,7 +516,7 @@ footer .brand-section {
   max-width: 280px;
 }
 footer .logo {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
   color: inherit;
@@ -572,9 +544,6 @@ footer .social-icon {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-}
-footer .footer.dark .social-icon {
-  background-color: #2d3748;
 }
 footer .social-icon:hover {
   background-color: #4f46e5;
@@ -612,15 +581,9 @@ footer .footer-bottom {
   padding-top: 30px;
   border-top: 1px solid #e2e8f0;
 }
-footer .footer.dark .footer-bottom {
-  border-top-color: #4a5568;
-}
 footer .footer-bottom p {
   color: #4a5568;
   font-size: 14px;
-}
-footer .footer.dark .footer-bottom p {
-  color: #adb5bd;
 }
 footer .theme-toggle {
   background: none;
@@ -648,26 +611,29 @@ footer body.dark-mode .theme-toggle {
 }
 
 @media (max-width: 1280px) {
+  header .navbar {
+    padding: 0 60px;
+  }
   .container {
     width: 100%;
-    padding: 0 20px;
-  }
-  section.kv {
-    height: 690px;
-  }
-  section.kv .title {
-    margin: 180px 0 65px 0;
   }
   section.kv .title .next {
-    top: 15%;
+    top: 8%;
+  }
+  section.kv .video {
+    width: 60%;
+    height: 600px;
+  }
+  .section02 .container .swiper .swiper-wrapper .swiper-slide {
+    height: 437px;
+  }
+  .section03 .box .swiper.swiper-mini {
+    height: 209px;
   }
   .section04 .row.title h2 {
     font-size: 48px;
     font-weight: 700;
     color: var(--black-01);
-  }
-  .section06 h2 {
-    font-size: 80px;
   }
 }
 /* 반응형 디자인 */
@@ -681,30 +647,43 @@ footer body.dark-mode .theme-toggle {
   section.kv .title .next img {
     width: 50px;
   }
+  .section02 .container .swiper .swiper-wrapper .swiper-slide {
+    height: 300px;
+  }
   .section04 .row.title h2 {
     font-size: 37px;
     font-weight: 700;
     color: var(--black-01);
   }
+  .section06 p {
+    font-size: 1.2rem;
+  }
+  .section06 h2 {
+    font-size: 4rem;
+  }
 }
 @media (max-width: 768px) {
-  .navbar .gnb {
+  html {
+    font-size: 12px;
+  }
+  .gnb {
     display: none;
   }
-  .navbar .toggle-btn {
+  .toggle-btn {
     display: block;
   }
   section.kv .title .next {
-    top: 13%;
+    top: 3.5%;
   }
-  section.kv .title h1 {
-    font-size: 60px;
+  section.kv .video {
+    height: 364px;
   }
-  section.kv .video #video-background {
-    width: 75%;
-  }
-  .section03 .box {
+  .box {
     flex-direction: column;
+  }
+  .box .content {
+    position: static;
+    padding: 0 10% 2rem;
   }
   .section03 .box .swiper.swiper-lg {
     max-width: 80%;
@@ -716,21 +695,24 @@ footer body.dark-mode .theme-toggle {
     width: 80%;
     margin: auto;
   }
+  .section03 .title {
+    margin-bottom: 27px;
+  }
   .section03 .box .content {
     position: static;
-    padding: 0 10% 2rem;
-  }
-  .section03 .box .swiper.swiper-lg {
-    max-width: 100%;
-    height: 400px;
-  }
-  .section03 .box .swiper.swiper-mini {
-    height: 200px;
+    left: calc(33% + 80px);
+    color: var(--black-01);
+    top: 10%;
   }
   .section03 .box .swiper.swiper-mini {
     position: static;
-    width: 100%;
-    margin: auto;
+    height: 130px;
+    border-radius: 0;
+  }
+  .section03 .box .content .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
   }
   .section04 .row.title h2 {
     font-size: 26px;
@@ -746,8 +728,33 @@ footer body.dark-mode .theme-toggle {
   }
 }
 @media (max-width: 586px) {
+  html {
+    font-size: 10px;
+  }
+  .container {
+    padding: 0 30px;
+  }
   header .nav-pills {
     display: none;
+  }
+  section.kv .title h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  section.kv .title h2 {
+    font-size: 1.5rem;
+    color: var(--blue-02);
+    font-weight: 700;
+  }
+  section.kv .title .next {
+    top: 3%;
+  }
+  section.kv .video {
+    height: 270px;
+  }
+  .section02 .container .swiper .swiper-wrapper .swiper-slide {
+    height: 160px;
+    border-radius: 20px;
   }
   .footer-grid {
     grid-template-columns: 1fr;
@@ -757,15 +764,6 @@ footer body.dark-mode .theme-toggle {
     flex-direction: column;
     gap: 20px;
     text-align: center;
-  }
-  section.kv .title {
-    margin: 102px 0 65px 0;
-  }
-  section.kv .title h1 {
-    font-size: 33px;
-  }
-  section.kv .title .next {
-    top: 8%;
   }
   @keyframes moveUpDown {
     0%, 100% {
@@ -778,10 +776,9 @@ footer body.dark-mode .theme-toggle {
   video {
     height: 600px;
   }
-  .section02 .container .swiper .swiper-wrapper .swiper-slide {
-    height: 273px;
-  }
-  .swiper-button-next:after, .swiper-button-prev:after {
-    font-size: 24px;
+}
+@media (max-width: 346px) {
+  html {
+    font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
