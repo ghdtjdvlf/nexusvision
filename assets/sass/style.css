@@ -64,7 +64,7 @@ header .gnb li:nth-last-child(1) a:hover {
 header .gnb a {
   text-decoration: none;
   color: var(--black-03);
-  font-weight: 500;
+  font-weight: 700;
   transition: color 0.3s;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -427,6 +427,7 @@ section.kv .video.expanded video {
 .section06 p {
   font-size: 1.5rem;
   margin-bottom: 27px;
+  font-weight: 500;
 }
 .section06 h2 {
   text-transform: uppercase;
@@ -762,7 +763,7 @@ footer body.dark-mode .theme-toggle {
     top: 6.5%;
   }
   section.kv .video {
-    height: 270px;
+    height: 600px;
   }
   .section02 .container .title p {
     font-size: 1rem;
@@ -770,19 +771,31 @@ footer body.dark-mode .theme-toggle {
   .section02 .container .title h2 {
     font-size: 2rem;
   }
+  .section02 .container .title {
+    margin-bottom: 30px;
+  }
   .section02 .container .swiper .swiper-wrapper .swiper-slide {
     height: 180px;
     border-radius: 20px;
+  }
+  .section03 .title p {
+    font-size: 1rem;
+  }
+  .section03 .title h2 {
+    font-size: 2rem;
+  }
+  .section03 .title {
+    margin-bottom: 10px;
   }
   .section03 .box .swiper.swiper-lg {
     max-width: 100%;
   }
   .section03 .box .swiper.swiper-mini {
     width: 100%;
-    height: 120px;
+    height: 80px;
   }
   .section04 .swiper.logoSwiper .swiper-wrapper .swiper-slide img {
-    width: 70px;
+    width: 40px;
   }
   video {
     height: 600px;
@@ -794,10 +807,10 @@ footer body.dark-mode .theme-toggle {
     font-size: 2rem;
   }
   .section04 .row.title {
-    margin: 30px 0;
+    margin: 80px 0;
   }
   .section04 .row.title h2 {
-    font-size: 18px;
+    font-size: 26px;
     letter-spacing: -1px;
   }
   .section06 p {
@@ -823,6 +836,12 @@ footer body.dark-mode .theme-toggle {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+  }
+  footer .footer-section h3 {
+    font-size: 1.2rem;
+  }
+  footer .footer-links a {
+    font-size: 1rem;
   }
 }
 @media (max-width: 346px) {

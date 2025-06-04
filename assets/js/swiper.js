@@ -155,10 +155,10 @@ let logoSwiper = new Swiper(".logoSwiper", {
   },
   breakpoints: {
     390: {      // 390px 이상일 때
-      slidesPerView: 3,
+      slidesPerView: 5,
     },
     768: {      // 768px 이상일 때
-      slidesPerView: 3,
+      slidesPerView: 5,
     },
     1280: {     // 1280px 이상일 때
       slidesPerView: 5,
