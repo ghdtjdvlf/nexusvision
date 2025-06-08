@@ -1,8 +1,6 @@
-@import url('/assets/css/reset.css');
-@import url('/assets/css/common.css');
-@import url('/assets/sass/style.css');
-
-
+@import url("/assets/css/reset.css");
+@import url("/assets/css/common.css");
+@import url("/assets/sass/style.css");
 body {
   height: 6000px;
 }
@@ -26,18 +24,12 @@ body {
   color: var(--grey-01);
   transition: all 0.3s;
 }
-.top-menu ul li a:focus {
-  color: var(--blue-01);
-}
-.top-menu ul li a:hover {
-  color: var(--blue-01);
-}
-.top-menu ul li a.active {
+.top-menu ul li a:focus, .top-menu ul li a:hover, .top-menu ul li a.active {
   color: var(--blue-01);
 }
 
 .section01 .content {
-  padding: 20px;
+  padding: 0px;
   position: relative;
 }
 .section01 .content .txt-wrap {
@@ -57,6 +49,21 @@ body {
   color: var(--white-01);
   font-weight: 500;
 }
+.section01 .content #text3 {
+  color: var(--white-01);
+  background: url("/assets/img/sec04-01.png") center no-repeat;
+  height: 100vh;
+}
+.section01 .content #text3 span {
+  display: block;
+  margin-bottom: 10px;
+}
+.section01 .content #text3 p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .section01 .text {
   text-align: center;
   position: fixed;
@@ -71,7 +78,9 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   pointer-events: none;
   z-index: 100;
 }
@@ -82,12 +91,25 @@ body {
   top: 48%;
 }
 
+.section02 {
+  background: var(--white-01);
+}
+
 .section03 {
   position: relative;
   transform: translate(0px, 3590px);
 }
+.section03 .col-md-6 {
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translate(0, 50px);
+}
+.section03 .col-md-6.on {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 .section03 .container {
-  padding: 0 138px 0 160px;
+  padding: 0px 168px 0 251px;
 }
 .section03 .container .row {
   margin-bottom: 150px;
@@ -96,9 +118,15 @@ body {
   font-size: 60px;
   color: var(--blue-01);
   font-weight: 700;
+  text-align: left;
 }
 .section03 .container p {
   font-size: 20px;
-  color: var(--grey-01);
-  line-height: 1.4;
-}/*# sourceMappingURL=company.css.map */
+  color: #fff;
+  line-height: 2;
+  transition: all 2.5s;
+}
+.section03 .container p.on {
+  color: var(--black-02);
+}
+

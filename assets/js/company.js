@@ -75,3 +75,31 @@ window.addEventListener('scroll', function() {
 
 
 //sec03 연혁
+
+// 1. 모든 대상 요소 선택 (부모 박스와 <p> 텍스트들)
+const timelineBoxes = document.querySelectorAll('.section03 .col-md-6');
+const timelineP = document.querySelectorAll('.section03 p');
+
+// 2. 하나의 공통 observer 함수
+function observeFadeIn(targets) {
+  targets.forEach((el) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('on');
+        } else {
+          entry.target.classList.remove('on');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    observer.observe(el);
+  });
+}
+
+// 3. 실행 (두 그룹 따로 전달)
+observeFadeIn(timelineBoxes);
+observeFadeIn(timelineP);
+

@@ -1,0 +1,63 @@
+a {
+  display: inline-block;
+}
+
+.active {
+  color: var(--blue-01) !important;
+}
+
+#section0 .myContent {
+  padding: 250px 0px 150px;
+  text-align: left;
+  background-color: #F2F2F4;
+  opacity: 0;
+  transition: all 1s;
+  transform: translate(0, 30px);
+}
+#section0 .myContent.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+#section0 .myContent h1 {
+  font-size: 82px;
+  color: var(--black-01);
+  font-weight: 700;
+}
+#section0 .myContent a {
+  margin-top: 30px;
+  font-size: 24px;
+  color: var(--grey-01);
+  font-weight: 500;
+  letter-spacing: -1px;
+  transition: all 0.5s;
+}
+#section0 .myContent a:hover {
+  color: var(--blue-01);
+}
+#section0 .myContent a:focus {
+  color: var(--blue-01);
+}
+
+#section1, #section2, #section3 {
+  position: relative;
+  cursor: url("/assets/img/icon/section-cursor.svg") 0 0, auto;
+}
+#section1 .text-wrap, #section2 .text-wrap, #section3 .text-wrap {
+  padding: 0px 60px;
+}
+#section1 .text-wrap .h2, #section2 .text-wrap .h2, #section3 .text-wrap .h2 {
+  color: var(--white-01);
+}
+#section1 .text-wrap .line, #section2 .text-wrap .line, #section3 .text-wrap .line {
+  width: 5%;
+  height: 3px;
+  background: var(--blue-01);
+  margin: 20px 0;
+  transition: width 0.6s ease;
+}
+#section1 .text-wrap:hover .line, #section2 .text-wrap:hover .line, #section3 .text-wrap:hover .line {
+  width: 15%;
+}
+#section1 .text-wrap p, #section2 .text-wrap p, #section3 .text-wrap p {
+  color: var(--grey-01);
+}
