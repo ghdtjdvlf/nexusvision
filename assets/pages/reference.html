@@ -349,7 +349,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-  <!-- GSAP core -->
+<!-- GSAP core -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
 
 <!-- GSAP ScrollTrigger -->
@@ -412,27 +412,58 @@ var swiper = new Swiper(".mySwiper", {
       rows.forEach((row) => observer.observe(row));
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
+  // 랜덤 데이터 생성 함수들
+  const organizations = [
+    "한국인터넷진흥원", "과학기술정보통신부", "서울디지털재단", 
+    "한국전자통신연구원", "스마트도시협회", "디지털미디어센터",
+    "한국콘텐츠진흥원", "정보통신기획평가원", "한국방송통신전파진흥원",
+    "스마트미디어연구소"
+  ];
+  
+  const projectTitles = [
+    "디지털 사이니지 구축", "스마트 월 프로젝트", "대형 디스플레이 설치",
+    "인터랙티브 미디어 월", "디지털 아트 프로젝션", "스마트 전시관 구축",
+    "가상현실 체험존", "홀로그램 디스플레이", "터치스크린 정보 키오스크",
+    "AI 인터랙티브 월"
+  ];
+  
+  const displayTypes = ["마이크로 LED", "플렉스 OLED", "디지털 사이니지"];
+  
+  function getRandomItem(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
+  
+  // Intersection Observer 설정 (애니메이션용)
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+  
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+  
+  // 무한 스크롤 구현
   const itemList = document.querySelector('.item-list > div');
   let page = 1;
   let isLoading = false;
   
-  // 초기 데이터 로드
+  // 초기 로드
   loadMoreItems();
   
   // 스크롤 이벤트 리스너
   window.addEventListener('scroll', function() {
     if (isLoading) return;
     
-    // 문서의 전체 높이
-    const documentHeight = document.documentElement.scrollHeight;
-    // 현재 스크롤 위치
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    // 브라우저 창의 높이
-    const windowHeight = window.innerHeight;
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
     
-    // 스크롤이 페이지 하단 근처에 도달했는지 확인 (100px 이내)
-    if (scrollTop + windowHeight >= documentHeight - 100) {
+    if (scrollTop + clientHeight >= scrollHeight - 100) {
       loadMoreItems();
     }
   });
@@ -441,53 +472,48 @@ var swiper = new Swiper(".mySwiper", {
   function loadMoreItems() {
     isLoading = true;
     
-    // 로딩 인디케이터 표시 (옵션)
+    // 로딩 인디케이터
     const loadingDiv = document.createElement('div');
-    loadingDiv.className = 'text-center py-4';
-    loadingDiv.innerHTML = '<div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>';
+    loadingDiv.className = 'text-center py-4 loading-indicator';
+    loadingDiv.innerHTML = '<div class="spinner-border text-primary" role="status"></div>';
     itemList.appendChild(loadingDiv);
     
-    // 실제로는 여기서 서버 API 호출이 이루어져야 합니다
-    // 예제에서는 setTimeout으로 시뮬레이션합니다
+    // 새 아이템 생성 (0.8초 지연 시뮬레이션)
     setTimeout(function() {
-      // 로딩 인디케이터 제거
       itemList.removeChild(loadingDiv);
       
-      // 새 아이템 생성 (실제로는 서버에서 데이터를 가져와야 함)
-      const newItems = generateSampleItems(page);
+      const newRow = document.createElement('div');
+      newRow.className = 'row mb-5 new-row';
+      newRow.style.opacity = '1'; // 새로 추가되는 row는 바로 보이게
       
-      // 아이템을 컨테이너에 추가
-      itemList.insertAdjacentHTML('beforeend', newItems);
+      let html = '';
+      for (let i = 0; i < 4; i++) {
+        html += `
+          <div class="col-md-3 item-card">
+            <div class="img-wrap"><img src="../img/reference/sec01-02.png" alt="${getRandomItem(organizations)}"></div>
+            <div class="txtwrap">
+              <p>${getRandomItem(organizations)}</p>
+              <h3>${getRandomItem(projectTitles)}</h3>
+              <h4>${getRandomItem(displayTypes)} · ${getRandomItem(['기업', '공공기관', '교육기관', '문화시설'])}</h4>
+            </div>
+          </div>
+        `;
+      }
+      
+      newRow.innerHTML = html;
+      itemList.appendChild(newRow);
+      
+      // 새로 추가된 아이템들 관찰 대상으로 등록
+      const newItems = newRow.querySelectorAll('.item-card');
+      newItems.forEach(item => {
+        observer.observe(item);
+      });
       
       page++;
       isLoading = false;
-    }, 800); // 0.8초 지연 (실제로는 API 응답 시간에 따라 다름)
-  }
-  
-  // 예제 아이템 생성 함수
-  function generateSampleItems(pageNum) {
-    const itemsPerPage = 4;
-    let html = '<div class="row mb-5">';
-    
-    for (let i = 0; i < itemsPerPage; i++) {
-      const itemNum = (pageNum - 1) * itemsPerPage + i + 1;
-      html += `
-        <div class="col-md-3">
-          <div class="img-wrap"><img src="../img/reference/sec01-02.png" alt="샘플 이미지 ${itemNum}"></div>
-          <div class="txtwrap">
-            <p>기관명 ${itemNum}</p>
-            <h3>프로젝트 제목 ${itemNum}</h3>
-            <h4>디스플레이 유형 ${itemNum} · 카테고리</h4>
-          </div>
-        </div>
-      `;
-    }
-    
-    html += '</div>';
-    return html;
+    }, 800);
   }
 });
-
 
     
     //랜덤미지

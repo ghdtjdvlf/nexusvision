@@ -1,0 +1,43 @@
+.section01 .col-md-12 {
+  align-items: center;
+}
+.section01 .row {
+  display: flex;
+  align-items: center;
+  padding: 12.5px 0 13.5px 0;
+}
+.section01 .title h2 {
+  font-size: 68px;
+}
+.section01 .title p {
+  font-size: 24px;
+}
+.section01 .input h2 {
+  font-size: 35px;
+}
+.section01 .input .input-box p {
+  font-size: 20px;
+}
+.section01 button {
+  margin: 0 12px;
+  font-size: 16px;
+  padding: 13px 30px;
+  border-radius: 8px;
+  border: 1px solid var(--black-03);
+}
+.section01 .btn-select {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin: 0 8px 8px 0;
+  padding: 13px 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.section01 .btn-select.active {
+  background-color: #007bff;
+  color: white;
+}
