@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -20,22 +20,22 @@
 <body>
   <div id="smooth-wrapper">
     <div id="smooth-content">
-      <header>
-        <nav class="navbar">
-          <a href="/" class="logo">넥서스비전</a>
-          <ul class="gnb">
-            <li><a href="../pages/company.html">Company</a></li>
-            <li><a href="../pages/reference.html">Reference</a></li>
-            <li><a href="../pages/product.html">Product</a></li>
-            <li><a href="../pages/content.html">Content</a></li>
-            <li><a href="../pages/solution.html">Solution</a></li>
-            <li><a href="#">견적문의 02-3221-2231</a></li>
-          </ul>
-          <button class="toggle-btn">
-            <i class="fas fa-bars"></i>
-          </button>
-        </nav>
-      </header>
+         <header>
+            <nav class="navbar">
+              <a href="/" class="logo">넥서스비전</a>
+              <ul class="gnb">
+                <li><a href="../pages/company.html">Company</a></li>
+                <li><a href="../pages/reference.html">Reference</a></li>
+                <li><a href="../pages/product.html">Product</a></li>
+                <li><a href="../pages/content.html">Content</a></li>
+                <li><a href="../pages/solution.html">Solution</a></li>
+                <li><a href="../pages/contact.html">견적문의 02-3221-2231</a></li>
+              </ul>
+              <button class="toggle-btn">
+                <i class="fas fa-bars"></i>
+              </button>
+            </nav>
+          </header>
 
       <section class="section01">
 
@@ -46,7 +46,7 @@
                 견적상담
               </h2>
               <p>
-                DISPLAY 전문기업, JBDISPLAY 와 함께 해보세요!
+                <span>DISPLAY</span> 전문기업, <span>Nexus Vision</span>과 함께 새로운 시야를 열어보세요!
               </p>
             </div>
           </div>
@@ -56,137 +56,220 @@
               <h2>
                 기본정보 입력
               </h2>
+
               <div class="row">
                 <div class="col-md-6">
                   <div class="input-box">
-                    <p>이름</p>
+                    <div class="text-wrap">
+                      <p>이름</p>
+                      <div class="tag">(선택)</div>
+                    </div>
                     <input type="text">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="input-box">
-                    <p>전화번호</p>
-                    <input type="tel">
+                    <div class="text-wrap">
+                      <p>전화번호</p>
+                      <div class="tag-red">(필수)</div>
+                    </div>
+                    <input type="tel" id="phoneInput" maxlength="11">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="input-box">
-                    <p>이름</p>
+                    <div class="text-wrap">
+                      <p>이메일</p>
+                      <div class="tag-red">(필수)</div>
+                    </div>
                     <input type="text">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="input-box">
-                    <p>전화번호</p>
+                    <div class="text-wrap">
+                      <p>기업명</p>
+                      <div class="tag">(선택)</div>
+                    </div>
                     <input type="tel">
+
                   </div>
                 </div>
               </div>
- <div class="row">
-  <div class="col-md-12 d-flex">
-    <div class="col-md-4">
-      <p>어떤 종류의 솔루션 설치를 원하시나요?</p>
-      <div class="tag">(선택)</div>
-    </div>
-    <div class="col-md-8">
-      <button class="btn-select" type="button">LED 사이니지</button>
-      <button class="btn-select" type="button">LCD 사이니지</button>
-      <button class="btn-select" type="button">키오스크</button>
-      <button class="btn-select" type="button">기타</button>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12 d-flex">
-    <div class="col-md-4">
-      <p>어떤 업종에 설치를 원하시나요?</p>
-      <div class="tag">(선택)</div>
-    </div>
-    <div class="col-md-8">
-      <button class="btn-select" type="button">기업</button>
-      <button class="btn-select" type="button">상업시설</button>
-      <button class="btn-select" type="button">문화,공공</button>
-      <button class="btn-select" type="button">병원</button>
-      <button class="btn-select" type="button">기타</button>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12 d-flex">
-    <div class="col-md-4">
-      <p>설치 지역은 어디신가요?</p>
-      <div class="tag">(선택)</div>
-    </div>
-    <div class="col-md-8">
-      <button class="btn-select" type="button">서울,경기,인천(수도권)</button>
-      <button class="btn-select" type="button">충청권</button>
-      <button class="btn-select" type="button">전라권</button>
-      <button class="btn-select" type="button">강원권</button>
-      <button class="btn-select" type="button">경상권</button>
-      <button class="btn-select" type="button">제주</button>
-      <button class="btn-select" type="button">기타</button>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12 d-flex">
-    <div class="col-md-4">
-      <p>설치 예산은 어떻게 되시나요?</p>
-      <div class="tag">(선택)</div>
-    </div>
-    <div class="col-md-8">
-      <button class="btn-select" type="button">500만원 이하</button>
-      <button class="btn-select" type="button">2000만원 이하</button>
-      <button class="btn-select" type="button">5000만원 이하</button>
-      <button class="btn-select" type="button">1억 이상</button>
-      <button class="btn-select" type="button">기타</button>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12 d-flex">
-    <div class="col-md-4">
-      <p>예상 설치 일정이 있으신가요?</p>
-      <div class="tag">(선택)</div>
-    </div>
-    <div class="col-md-8">
-      <button class="btn-select" type="button">1개월 이내</button>
-      <button class="btn-select" type="button">3개월 이내</button>
-      <button class="btn-select" type="button">6개월 이내</button>
-      <button class="btn-select" type="button">1년 이내</button>
-      <button class="btn-select" type="button">기타</button>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-12 d-flex">
-    <div class="col-md-4">
-      <p>어떻게 알고 방문하셨나요?</p>
-      <div class="tag">(선택)</div>
-    </div>
-    <div class="col-md-8">
-      <button class="btn-select" type="button">블로그</button>
-      <button class="btn-select" type="button">카페</button>
-      <button class="btn-select" type="button">검색</button>
-      <button class="btn-select" type="button">소개</button>
-      <button class="btn-select" type="button">기타</button>
-    </div>
-  </div>
-</div>
 
 
 
+              <div class="row">
+                <div class="col-md-12 d-flex">
+                  <div class="col-md-4">
+                    <p>어떤 종류의 솔루션 설치를 원하시나요?</p>
+                    <div class="tag">(선택)</div>
+                  </div>
+                  <div class="col-md-8">
+                    <button class="btn-select" type="button">LED 사이니지</button>
+                    <button class="btn-select" type="button">LCD 사이니지</button>
+                    <button class="btn-select" type="button">키오스크</button>
+                    <button class="btn-select" type="button">기타</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 d-flex">
+                  <div class="col-md-4">
+                    <p>어떤 업종에 설치를 원하시나요?</p>
+                    <div class="tag">(선택)</div>
+                  </div>
+                  <div class="col-md-8">
+                    <button class="btn-select" type="button">기업</button>
+                    <button class="btn-select" type="button">상업시설</button>
+                    <button class="btn-select" type="button">문화,공공</button>
+                    <button class="btn-select" type="button">병원</button>
+                    <button class="btn-select" type="button">기타</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 d-flex">
+                  <div class="col-md-4">
+                    <p>설치 지역은 어디신가요?</p>
+                    <div class="tag">(선택)</div>
+                  </div>
+                  <div class="col-md-8">
+                    <button class="btn-select" type="button">서울,경기,인천(수도권)</button>
+                    <button class="btn-select" type="button">충청권</button>
+                    <button class="btn-select" type="button">전라권</button>
+                    <button class="btn-select" type="button">강원권</button>
+                    <button class="btn-select" type="button">경상권</button>
+                    <button class="btn-select" type="button">제주</button>
+                    <button class="btn-select" type="button">기타</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 d-flex">
+                  <div class="col-md-4">
+                    <p>설치 예산은 어떻게 되시나요?</p>
+                    <div class="tag">(선택)</div>
+                  </div>
+                  <div class="col-md-8">
+                    <button class="btn-select" type="button">500만원 이하</button>
+                    <button class="btn-select" type="button">2000만원 이하</button>
+                    <button class="btn-select" type="button">5000만원 이하</button>
+                    <button class="btn-select" type="button">1억 이상</button>
+                    <button class="btn-select" type="button">기타</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 d-flex">
+                  <div class="col-md-4">
+                    <p>예상 설치 일정이 있으신가요?</p>
+                    <div class="tag">(선택)</div>
+                  </div>
+                  <div class="col-md-8">
+                    <button class="btn-select" type="button">1개월 이내</button>
+                    <button class="btn-select" type="button">3개월 이내</button>
+                    <button class="btn-select" type="button">6개월 이내</button>
+                    <button class="btn-select" type="button">1년 이내</button>
+                    <button class="btn-select" type="button">기타</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 d-flex">
+                  <div class="col-md-4">
+                    <p>어떻게 알고 방문하셨나요?</p>
+                    <div class="tag">(선택)</div>
+                  </div>
+                  <div class="col-md-8">
+                    <button class="btn-select" type="button">블로그</button>
+                    <button class="btn-select" type="button">카페</button>
+                    <button class="btn-select" type="button">검색</button>
+                    <button class="btn-select" type="button">소개</button>
+                    <button class="btn-select" type="button">기타</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row detail">
+                <div class="text-wrap d-flex">
+                  <p>상세문의내용</p>
+                  <div class="tag-red">(필수)</div>
+                </div>
+                <textarea id="inquiry" name="inquiry" placeholder="문의 내용을 입력해주 세요"></textarea>
+
+              </div>
             </div>
+
           </div>
 
+          <form id="inquiryForm" enctype="multipart/form-data">
+            <div class="attach">
+              <div class="text-wrap d-flex">
+                <h2>첨부파일</h2>
+                <div class="tag">(선택)</div>
+              </div>
+
+              <p>설치 예정 장소의 사진 또는 예시 자료를 첨부해 주시면 더욱 빠르고 정확한 상담이 가능합니다.<br>
+                10MB 이하 / 최대 3개 까지 업로드 가능합니다.<br>
+                <span>(첨부 가능: jpg, jpeg, gif, png, svg, zip, pdf, ppt, pptx, doc, docx, xls, xlsx, hwp, stp, 7z, heif,
+                  heic)</span>
+              </p>
+
+              <form id="inquiryForm" enctype="multipart/form-data">
+                <div class="file-wrap">
+                  <div class="file">
+                    <label for="files1" class="visually-hidden">첨부파일</label>
+                    <input type="file" id="files1" name="files1" multiple
+                      accept=".jpg,.jpeg,.gif,.png,.svg,.zip,.pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,.hwp,.stp,.7z,.heif,.heic"
+                      style="display:none;">
+                    <button type="button" class="customUploadBtn">파일 업로드</button>
+                    <div class="fileList"></div>
+                  </div>
+                  <div class="file">
+                    <label for="files2" class="visually-hidden">첨부파일</label>
+                    <input type="file" id="files2" name="files2" multiple
+                      accept=".jpg,.jpeg,.gif,.png,.svg,.zip,.pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,.hwp,.stp,.7z,.heif,.heic"
+                      style="display:none;">
+                    <button type="button" class="customUploadBtn">파일 업로드</button>
+                    <div class="fileList"></div>
+                  </div>
+                  <div class="file">
+                    <label for="files3" class="visually-hidden">첨부파일</label>
+                    <input type="file" id="files3" name="files3" multiple
+                      accept=".jpg,.jpeg,.gif,.png,.svg,.zip,.pdf,.ppt,.pptx,.doc,.docx,.xls,.xlsx,.hwp,.stp,.7z,.heif,.heic"
+                      style="display:none;">
+                    <button type="button" class="customUploadBtn">파일 업로드</button>
+                    <div class="fileList"></div>
+                  </div>
+                </div>
+              </form>
+
+              <div class="condition">
+                <label>
+                  <input type="checkbox" name="privacy" required>
+                  <span class="tag-red">(필수)</span> 개인정보 수집 및 이용에 동의*
+                </label>
+              </div>
+
+
+
+          </form>
         </div>
+
+        <div class="row">
+          <div class="send">
+            <button type="submit" class="submit-btn">제출하기</button>
+          </div>
+        </div>
+
+
 
       </section>
 
@@ -207,19 +290,75 @@
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
     ScrollSmoother.create({
+
       smooth: 1.5,
       effects: true,
     });
 
-  document.querySelectorAll('.col-md-12.d-flex').forEach(container => {
-    const buttons = container.querySelectorAll('.btn-select');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+  const input = document.getElementById('phoneInput');
+  input.addEventListener('input', () => {
+    // 숫자가 아닌 문자 모두 제거
+    input.value = input.value.replace(/[^0-9]/g, '');
+  });
+
+    document.querySelectorAll('.col-md-12.d-flex').forEach(container => {
+      const buttons = container.querySelectorAll('.btn-select');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isActive = btn.classList.contains('active');
+          buttons.forEach(b => b.classList.remove('active'));
+          if (!isActive) {
+            btn.classList.add('active');
+          }
+        });
       });
     });
-  });
+
+    document.querySelectorAll('.file').forEach(fileGroup => {
+      const input = fileGroup.querySelector('input[type="file"]');
+      const uploadBtn = fileGroup.querySelector('.customUploadBtn');
+      const fileListDiv = fileGroup.querySelector('.fileList');
+      let selectedFiles = [];
+
+      uploadBtn.addEventListener('click', () => {
+        input.click();
+      });
+
+      input.addEventListener('change', () => {
+        for (const file of input.files) {
+          if (!selectedFiles.some(f => f.name === file.name && f.size === file.size)) {
+            selectedFiles.push(file);
+          }
+        }
+        input.value = '';
+        renderFileList();
+      });
+
+      function renderFileList() {
+        fileListDiv.innerHTML = '';
+        selectedFiles.forEach((file, index) => {
+          const itemDiv = document.createElement('div');
+
+          const fileNameSpan = document.createElement('span');
+          fileNameSpan.textContent = `${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+
+          const deleteBtn = document.createElement('button');
+          deleteBtn.type = 'button';
+          deleteBtn.textContent = '삭제';
+          deleteBtn.classList.add('delete-btn')
+
+          deleteBtn.addEventListener('click', () => {
+            selectedFiles.splice(index, 1);
+            renderFileList();
+          });
+
+          itemDiv.appendChild(fileNameSpan);
+          itemDiv.appendChild(deleteBtn);
+          fileListDiv.appendChild(itemDiv);
+        });
+      }
+    });
+
   </script>
 
 </body>
