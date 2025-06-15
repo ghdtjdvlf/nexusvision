@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .section01 {
   padding: var(--section-padding);
   font-weight: 600;
@@ -179,25 +180,44 @@
 .section01 .attach .condition label {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .section01 .attach .condition .tag-red {
   font-size: 18px;
   margin-right: 5px;
 }
 .section01 .attach .condition input[type=checkbox][name=privacy] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 30px;
   height: 30px;
-  border-radius: 10px;
+  border: 2px solid #666;
+  border-radius: 6px;
   transition: all 0.4s;
   cursor: pointer;
-  accent-color: #666;
   margin-right: 10px;
+  position: relative;
+  outline: none;
+  /* 체크 표시 스타일 */
 }
 .section01 .attach .condition input[type=checkbox][name=privacy]:checked {
-  accent-color: var(--blue-01);
+  background-color: var(--blue-01);
+  border-color: var(--blue-01);
+  /* 체크 표시 (V 모양) */
+}
+.section01 .attach .condition input[type=checkbox][name=privacy]:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .section01 .attach .condition input[type=checkbox][name=privacy]:not(:checked) {
-  accent-color: #666;
+  background-color: transparent;
+  border-color: #666;
 }
 .section01 .send {
   width: 1320px;

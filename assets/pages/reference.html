@@ -376,27 +376,6 @@ var swiper = new Swiper(".mySwiper", {
 });
 
     //하단 아이템들
-    document.addEventListener("DOMContentLoaded", () => {
-      const rows = document.querySelectorAll(".row");
-
-      const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1, // 요소가 10% 이상 보일 때
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("scroll-in");
-          } else {
-            entry.target.classList.remove("scroll-in");
-          }
-        });
-      }, observerOptions);
-
-      rows.forEach((row) => observer.observe(row));
-    });
 
 document.addEventListener('DOMContentLoaded', function() {
   // 랜덤 데이터 생성 함수들
@@ -511,6 +490,29 @@ document.addEventListener('DOMContentLoaded', function() {
         img.alt = `랜덤 이미지 ${randomNum}`;
       });
     });
+
+        document.addEventListener("DOMContentLoaded", () => {
+      const rows = document.querySelectorAll(".row");
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1, // 요소가 10% 이상 보일 때
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("scroll-in");
+          } else {
+            entry.target.classList.remove("scroll-in");
+          }
+        });
+      }, observerOptions);
+
+      rows.forEach((row) => observer.observe(row));
+    });
+
 
   </script>
 

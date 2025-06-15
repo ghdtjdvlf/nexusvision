@@ -15,9 +15,9 @@
     --white-01: #FFFFFF;
     --section-padding: 80px 0;
     --font-title: 3rem;
-    --font-title-sub: 30px;
-    --font-main-title: 68px;
-    --font-main-subtitle: 40px
+    --font-title-sub: 1.875em;
+    --font-main-title: 4.25em;
+    --font-main-subtitle: 2.5em
 }
 
 /* 폰트 전체 적용 */
@@ -197,6 +197,8 @@ img {
     .mgbox-200 {
         height: 50px;
     }
+
+    
 }
 
 @media (max-width: 586px) {
