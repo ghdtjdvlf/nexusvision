@@ -287,7 +287,7 @@ position: relative;
 
  
     .swiper-wrapper {
-  
+      
       .swiper-slide {
         height: 650px;
         text-align: center;
@@ -351,6 +351,7 @@ position: relative;
 .box {
   position:relative;
   display:flex;
+  height: 600px;
 
   // height:480px;
   .content {
@@ -367,6 +368,7 @@ position: relative;
       font-size: 1.5rem;
       color: var(--blue-02);
       font-weight: 700;
+      line-height: 1.5;
     }
   }
 .swiper {
@@ -842,7 +844,7 @@ body.dark-mode .theme-toggle {
         }
        }
           .box {
-    flex-direction:column;
+           flex-direction:column;
     .content {
       position:static;
       padding: 0 10% 2rem;
@@ -1065,7 +1067,7 @@ body.dark-mode .theme-toggle {
     
   }
 
-  @media (max-width: 346px) {
+  @media (max-width: 360px) {
 
   }
    

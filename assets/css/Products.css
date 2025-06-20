@@ -139,15 +139,13 @@ p {
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .card-wrap .card .card-img {
   position: absolute;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: all 0.5s ease;
 }
 .card-wrap .card:hover .card-img {
@@ -230,4 +228,4 @@ footer {
     height: 330px;
     width: 100%;
   }
-}
+}/*# sourceMappingURL=Products.css.map */

@@ -67,28 +67,33 @@ body {
 .section01 .text {
   text-align: center;
   position: fixed;
-  width: 90%;
+  width: 100%;
   top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 15px 30px;
   font-size: 52px;
   color: black;
-  border-radius: 6px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   pointer-events: none;
   z-index: 100;
+  font-weight: 500;
+}
+.section01 .text span {
+  color: var(--blue-01);
 }
 .section01 .text.active {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  top: 48%;
+  top: 51%;
+}
+.section01 dotlottie-player {
+  width: 200px;
+  margin: 0 auto;
 }
 
 .section02 {
@@ -130,3 +135,4 @@ body {
   color: var(--black-02);
 }
 
+/*# sourceMappingURL=company.css.map */

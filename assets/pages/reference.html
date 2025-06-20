@@ -20,23 +20,32 @@
 
   <div id="smooth-wrapper">
     <div id="smooth-content">
-           <header>
-            <nav class="navbar">
-              <a href="/" class="logo">넥서스비전</a>
-              <ul class="gnb">
-                <li><a href="../pages/company.html">Company</a></li>
-                <li><a href="../pages/reference.html">Reference</a></li>
-                <li><a href="../pages/product.html">Product</a></li>
-                <li><a href="../pages/content.html">Content</a></li>
-                <li><a href="../pages/solution.html">Solution</a></li>
-                <li><a href="../pages/contact.html">견적문의 02-3221-2231</a></li>
-              </ul>
-              <button class="toggle-btn">
-                <i class="fas fa-bars"></i>
-              </button>
-            </nav>
-          </header>
-  
+      <header>
+        <nav class="navbar">
+          <a href="/" class="logo">넥서스비전</a>
+          <ul class="gnb">
+            <li><a href="../pages/company.html">Company</a></li>
+            <li><a href="../pages/reference.html">Reference</a></li>
+            <li><a href="../pages/product.html">Product</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/contact.html">견적문의 02-3221-2231</a></li>
+          </ul>
+          <button class="toggle-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+        <div class="mobile-menu">
+          <a href="#" class="logo">넥서스비전</a>
+          <ul class="mobile-gnb">
+            <li><a href="../pages/company.html">Company</a></li>
+            <li><a href="../pages/reference.html">Reference</a></li>
+            <li><a href="../pages/product.html">Product</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/contact.html">견적문의 02-3221-2231</a></li>
+          </ul>
+        </div>
+      </header>
+
       <div class="container mt-70">
         <div class="row title">
           <div class="col-md-12 text-center">
@@ -96,7 +105,7 @@
                     <h4>LCD 사이니 · 기업</h4>
                   </div>
                 </div>
-  
+
               </div>
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
@@ -104,10 +113,10 @@
             </div>
           </div>
         </div>
-  
+
         <div class="item-list">
-  
-  
+
+
           <div>
             <div class="row mb-5">
               <div class="col-md-3">
@@ -142,7 +151,7 @@
                   <h4>LCD 사이니 · 기업</h4>
                 </div>
               </div>
-  
+
             </div>
             <div class="row mb-5">
               <div class="col-md-3">
@@ -177,7 +186,7 @@
                   <h4>LCD 사이니 · 기업</h4>
                 </div>
               </div>
-  
+
             </div>
             <div class="row mb-5">
               <div class="col-md-3">
@@ -212,7 +221,7 @@
                   <h4>LCD 사이니 · 기업</h4>
                 </div>
               </div>
-  
+
             </div>
             <div class="row mb-5">
               <div class="col-md-3">
@@ -247,11 +256,11 @@
                   <h4>LCD 사이니 · 기업</h4>
                 </div>
               </div>
-  
+
             </div>
           </div>
         </div>
-        
+
       </div>
 
 
@@ -288,7 +297,7 @@
                 </a>
               </div>
             </div>
-  
+
             <!-- 링크 섹션들 -->
             <div class="footer-section">
               <h3>제품</h3>
@@ -299,7 +308,7 @@
                 <li><a href="#">업데이트</a></li>
               </ul>
             </div>
-  
+
             <div class="footer-section">
               <h3>지원</h3>
               <ul class="footer-links">
@@ -309,7 +318,7 @@
                 <li><a href="#">FAQ</a></li>
               </ul>
             </div>
-  
+
             <div class="footer-section">
               <h3>법적 정보</h3>
               <ul class="footer-links">
@@ -320,9 +329,9 @@
               </ul>
             </div>
           </div>
-  
-  
-  
+
+
+
           <!-- 하단 바 -->
           <div class="footer-bottom">
             <p>© 2024 YourBrand. All rights reserved.</p>
@@ -335,125 +344,125 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-<!-- GSAP core -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <!-- GSAP core -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
 
-<!-- GSAP ScrollTrigger -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+  <!-- GSAP ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
 
-<!-- GSAP ScrollSmoother -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollSmoother.min.js"></script>
+  <!-- GSAP ScrollSmoother -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollSmoother.min.js"></script>
 
   <script>
 
-    
+
 
     //gsap smoothscroll
-      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-      ScrollSmoother.create({
-        smooth: 1.5,
-        effects: true,
-      });
+    ScrollSmoother.create({
+      smooth: 1.5,
+      effects: true,
+    });
 
     //상단 슬라이드
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1.1,
-  spaceBetween: 30,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    1024: {
-      slidesPerView: 3,
-    },
-    540: {
-      slidesPerView: 2,
-    }
-  }
-});
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1.1,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+        },
+        540: {
+          slidesPerView: 2,
+        }
+      }
+    });
 
     //하단 아이템들
 
-document.addEventListener('DOMContentLoaded', function() {
-  // 랜덤 데이터 생성 함수들
-  const organizations = [
-    "한국인터넷진흥원", "과학기술정보통신부", "서울디지털재단", 
-    "한국전자통신연구원", "스마트도시협회", "디지털미디어센터",
-    "한국콘텐츠진흥원", "정보통신기획평가원", "한국방송통신전파진흥원",
-    "스마트미디어연구소"
-  ];
-  
-  const projectTitles = [
-    "디지털 사이니지 구축", "스마트 월 프로젝트", "대형 디스플레이 설치",
-    "인터랙티브 미디어 월", "디지털 아트 프로젝션", "스마트 전시관 구축",
-    "가상현실 체험존", "홀로그램 디스플레이", "터치스크린 정보 키오스크",
-    "AI 인터랙티브 월"
-  ];
-  
-  const displayTypes = ["마이크로 LED", "플렉스 OLED", "디지털 사이니지"];
-  
-  function getRandomItem(array) {
-    return array[Math.floor(Math.random() * array.length)];
-  }
-  
-  // Intersection Observer 설정 (애니메이션용)
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
-  
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+    document.addEventListener('DOMContentLoaded', function () {
+      // 랜덤 데이터 생성 함수들
+      const organizations = [
+        "한국인터넷진흥원", "과학기술정보통신부", "서울디지털재단",
+        "한국전자통신연구원", "스마트도시협회", "디지털미디어센터",
+        "한국콘텐츠진흥원", "정보통신기획평가원", "한국방송통신전파진흥원",
+        "스마트미디어연구소"
+      ];
+
+      const projectTitles = [
+        "디지털 사이니지 구축", "스마트 월 프로젝트", "대형 디스플레이 설치",
+        "인터랙티브 미디어 월", "디지털 아트 프로젝션", "스마트 전시관 구축",
+        "가상현실 체험존", "홀로그램 디스플레이", "터치스크린 정보 키오스크",
+        "AI 인터랙티브 월"
+      ];
+
+      const displayTypes = ["마이크로 LED", "플렉스 OLED", "디지털 사이니지"];
+
+      function getRandomItem(array) {
+        return array[Math.floor(Math.random() * array.length)];
       }
-    });
-  }, observerOptions);
-  
-  // 무한 스크롤 구현
-  const itemList = document.querySelector('.item-list > div');
-  let page = 1;
-  let isLoading = false;
-  
-  // 초기 로드
-  loadMoreItems();
-  
-  // 스크롤 이벤트 리스너
-  window.addEventListener('scroll', function() {
-    if (isLoading) return;
-    
-    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    
-    if (scrollTop + clientHeight >= scrollHeight - 100) {
+
+      // Intersection Observer 설정 (애니메이션용)
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+
+      // 무한 스크롤 구현
+      const itemList = document.querySelector('.item-list > div');
+      let page = 1;
+      let isLoading = false;
+
+      // 초기 로드
       loadMoreItems();
-    }
-  });
-  
-  // 아이템 로드 함수
-  function loadMoreItems() {
-    isLoading = true;
-    
-    // 로딩 인디케이터
-    const loadingDiv = document.createElement('div');
-    loadingDiv.className = 'text-center py-4 loading-indicator';
-    loadingDiv.innerHTML = '<div class="spinner-border text-primary" role="status"></div>';
-    itemList.appendChild(loadingDiv);
-    
-    // 새 아이템 생성 (0.8초 지연 시뮬레이션)
-    setTimeout(function() {
-      itemList.removeChild(loadingDiv);
-      
-      const newRow = document.createElement('div');
-      newRow.className = 'row mb-5 new-row';
-      newRow.style.opacity = '1'; // 새로 추가되는 row는 바로 보이게
-      
-      let html = '';
-      for (let i = 0; i < 4; i++) {
-        html += `
+
+      // 스크롤 이벤트 리스너
+      window.addEventListener('scroll', function () {
+        if (isLoading) return;
+
+        const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+        if (scrollTop + clientHeight >= scrollHeight - 100) {
+          loadMoreItems();
+        }
+      });
+
+      // 아이템 로드 함수
+      function loadMoreItems() {
+        isLoading = true;
+
+        // 로딩 인디케이터
+        const loadingDiv = document.createElement('div');
+        loadingDiv.className = 'text-center py-4 loading-indicator';
+        loadingDiv.innerHTML = '<div class="spinner-border text-primary" role="status"></div>';
+        itemList.appendChild(loadingDiv);
+
+        // 새 아이템 생성 (0.8초 지연 시뮬레이션)
+        setTimeout(function () {
+          itemList.removeChild(loadingDiv);
+
+          const newRow = document.createElement('div');
+          newRow.className = 'row mb-5 new-row';
+          newRow.style.opacity = '1'; // 새로 추가되는 row는 바로 보이게
+
+          let html = '';
+          for (let i = 0; i < 4; i++) {
+            html += `
           <div class="col-md-3 item-card">
             <div class="img-wrap"><img src="../img/reference/sec01-02.png" alt="${getRandomItem(organizations)}"></div>
             <div class="txtwrap">
@@ -463,24 +472,24 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </div>
         `;
-      }
-      
-      newRow.innerHTML = html;
-      itemList.appendChild(newRow);
-      
-      // 새로 추가된 아이템들 관찰 대상으로 등록
-      const newItems = newRow.querySelectorAll('.item-card');
-      newItems.forEach(item => {
-        observer.observe(item);
-      });
-      
-      page++;
-      isLoading = false;
-    }, 800);
-  }
-});
+          }
 
-    
+          newRow.innerHTML = html;
+          itemList.appendChild(newRow);
+
+          // 새로 추가된 아이템들 관찰 대상으로 등록
+          const newItems = newRow.querySelectorAll('.item-card');
+          newItems.forEach(item => {
+            observer.observe(item);
+          });
+
+          page++;
+          isLoading = false;
+        }, 800);
+      }
+    });
+
+
     //랜덤미지
     window.addEventListener('DOMContentLoaded', () => {
       const images = document.querySelectorAll('.img-wrap img');
@@ -491,7 +500,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
-        document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
       const rows = document.querySelectorAll(".row");
 
       const observerOptions = {

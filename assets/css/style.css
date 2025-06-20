@@ -209,8 +209,7 @@ section.kv .video video {
   height: 100%;
   margin: 0 auto;
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 section.kv .video.expanded {
   width: 100%;
@@ -261,8 +260,7 @@ section.kv .video.expanded video {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section02 .container .sec02_Swiper .swiper-slide {
   position: relative; /* 텍스트 오버레이를 위해 position relative */
@@ -292,6 +290,7 @@ section.kv .video.expanded video {
 .section03 .box {
   position: relative;
   display: flex;
+  height: 600px;
 }
 .section03 .box .content {
   position: absolute;
@@ -308,6 +307,7 @@ section.kv .video.expanded video {
   font-size: 1.5rem;
   color: var(--blue-02);
   font-weight: 700;
+  line-height: 1.5;
 }
 .section03 .box .swiper {
   width: 100%;
@@ -354,10 +354,8 @@ section.kv .video.expanded video {
 .section03 .box .swiper.swiper-mini .swiper-slide .img-wrapper img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   display: block;
   border-radius: 20px;
 }
@@ -374,10 +372,8 @@ section.kv .video.expanded video {
 .section03 .box .swiper .img-wrapper img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -417,8 +413,7 @@ section.kv .video.expanded video {
   display: flex;
   align-items: center;
   width: 100px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .section06 {
@@ -844,4 +839,4 @@ footer body.dark-mode .theme-toggle {
   footer .footer-links a {
     font-size: 1rem;
   }
-}
+}/*# sourceMappingURL=style.css.map */

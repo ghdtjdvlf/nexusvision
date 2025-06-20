@@ -19,7 +19,7 @@
   const slidesData = [
     {
       title: "플렉스 스크린 (Nexus FlexScreen)",
-      desc: " 초박형, 플렉서블 OLED 디스플레이",
+      desc: "초박형, 플렉서블 OLED 디스플레이는 매우 얇고, 구부리거나 접을 수 있어 차세대 스마트 기기나 웨어러블에 적합합니다.",
       img: "../assets/img/sec03-01.png"
     },
     {
