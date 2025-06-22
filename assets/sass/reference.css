@@ -1,9 +1,16 @@
+@import url(company.css);
+
+
 body {
   background: #f2f2f4;
 }
 
 header .navbar {
-  top: -70px;
+  top: 0;
+}
+
+header .mobile-menu {
+
 }
 
 .row {

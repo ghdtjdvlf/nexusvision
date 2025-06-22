@@ -1,8 +1,11 @@
+@charset "UTF-8";
 @import url("/assets/css/reset.css");
 @import url("/assets/css/common.css");
 @import url("/assets/sass/style.css");
-body {
-  height: 6000px;
+
+
+.d-flex-r {
+  display: flex;
 }
 
 .top-menu {
@@ -10,7 +13,7 @@ body {
   text-align: center;
 }
 .top-menu h2 {
-  font-size: 82px;
+  font-size: var(--font-main-title);
   font-weight: 700;
 }
 .top-menu ul {
@@ -53,6 +56,7 @@ body {
   color: var(--white-01);
   background: url("/assets/img/sec04-01.png") center no-repeat;
   height: 100vh;
+  background-size: contain;
 }
 .section01 .content #text3 span {
   display: block;
@@ -92,26 +96,64 @@ body {
   top: 51%;
 }
 .section01 dotlottie-player {
-  width: 200px;
+  width: 20rem;
   margin: 0 auto;
 }
 
 .section02 {
-  background: var(--white-01);
+  width: 100%;
+  transform: translate(0, 3486px);
+  padding: var(--section-padding);
+  /* 애니메이션이 실행된 후 상태 */
+}
+.section02 h2 {
+  margin-bottom: 20px;
+}
+.section02 #mission {
+  padding: 80px 0;
+}
+.section02 #mission dotlottie-player {
+  width: 400px;
+  margin: 0 auto;
+}
+.section02 #values {
+  padding: 80px 0;
+  background: var(--black-01);
+}
+.section02 #values dotlottie-player {
+  width: 400px;
+  margin: 0 auto;
+}
+.section02 #commit {
+  padding: 80px 0;
+  background: var(--black-01);
+}
+.section02 #commit dotlottie-player {
+  width: 400px;
+  margin: 0 auto;
+}
+.section02 .content {
+  color: var(--white-01);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.section02 .content .txt-wrap h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+}
+.section02 .content .txt-wrap p {
+  font-size: 2rem;
+}
+.section02 .content.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section03 {
   position: relative;
-  transform: translate(0px, 3590px);
-}
-.section03 .col-md-6 {
-  opacity: 0;
-  transition: all 0.5s;
-  transform: translate(0, 50px);
-}
-.section03 .col-md-6.on {
-  opacity: 1;
-  transform: translate(0, 0);
+  transform: translate(0px, 3593px);
 }
 .section03 .container {
   padding: 0px 168px 0 251px;
@@ -135,4 +177,98 @@ body {
   color: var(--black-02);
 }
 
-/*# sourceMappingURL=company.css.map */
+.col-md-6 {
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translate(0, 50px);
+}
+.col-md-6.on {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@media (max-width: 1280px) {
+  .section01 .content .txt-wrap p {
+    font-size: 1.5rem;
+  }
+  .section01 .text p {
+    font-size: 2rem;
+  }
+  .section01 dotlottie-player {
+    width: 150px;
+  }
+  .section02 .content .txt-wrap h2 {
+    font-size: 3rem;
+  }
+  .section02 .content .txt-wrap p {
+    font-size: 1.5rem;
+  }
+  .section03 .container p {
+    font-size: 16px;
+  }
+  .section03 .container h2 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .section01 .text p {
+    font-size: 3rem;
+  }
+  .d-flex-r {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .d-flex {
+    flex-direction: column;
+  }
+  .section01 dotlottie-player {
+    width: 150px;
+  }
+  .section03 .container {
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+  }
+  .section03 .container .col-md-6 {
+    width: 100%;
+  }
+  .section03 .container p {
+    font-size: 14px;
+  }
+  .section03 .container h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 586px) {
+  .section01 .content .txt-wrap p {
+    font-size: 1.2rem;
+  }
+  .section01 .text p {
+    font-size: 1.5rem;
+  }
+  .section02 {
+    transform: translate(0, 3336px);
+  }
+  .section02 .container {
+    padding: 0 30px;
+  }
+  .section02 .content .txt-wrap h2 {
+    font-size: 2rem;
+  }
+  .section02 .content .txt-wrap p {
+    font-size: 1.2rem;
+  }
+  .section02 #mission dotlottie-player {
+    width: 150px;
+  }
+  .section02 #values dotlottie-player {
+    width: 150px;
+  }
+  .section02 #commit dotlottie-player {
+    width: 150px;
+  }
+  .section03 {
+    transform: translate(0, 3336px);
+  }
+}/*# sourceMappingURL=company.css.map */

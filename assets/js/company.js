@@ -1,6 +1,5 @@
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
   const text1 = document.getElementById('text1');
   const text2 = document.getElementById('text2');
@@ -31,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let scale = 1;
 
     if (isMobile()) {
-      scale = 0.6;
+      scale = 0.4;
     } else if (isTablet()) {
       scale = 0.8;
     } else if (isLaptop()) {
@@ -68,9 +67,24 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-window.addEventListener('scroll', function() {
-  console.log("현재 스크롤 위치:", window.scrollY + "px");
-});
+
+
+
+//sec02 회사소개
+  const contents = document.querySelectorAll('.content');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, {});
+  contents.forEach(content => {
+    observer.observe(content);
+  });
 
 
 
@@ -103,3 +117,4 @@ function observeFadeIn(targets) {
 observeFadeIn(timelineBoxes);
 observeFadeIn(timelineP);
 
+    
