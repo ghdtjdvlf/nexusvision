@@ -25,11 +25,7 @@
     <link rel="stylesheet" href="/assets/sass/style.css">
     <link rel="stylesheet" href="/assets/sass/product1.css">
 
-    <!--[if IE]>
-        <script type="text/javascript">
-             var console = { log: function() {} };
-        </script>
-    <![endif]-->
+
 
 
   </head>
@@ -72,6 +68,7 @@
 
 
   <div id="fullpage">
+    <div id="top"></div>
 
     <div class="section fp-auto-height" id="section0">
       <div class="slide" id="slide1">
@@ -84,10 +81,6 @@
           </div>
         </div>
       </div>
-      <!-- 슬라이드추가
-        <div class="slide" id="slide2">
-            <h1>Section 2.2</h1>
-        </div> -->
     </div>
 
     <div class="section" id="section1">
@@ -95,7 +88,7 @@
       <div class="cursor-follower"></div>
 
       <div class="myContent1">
-        <div class="container d-flex text-left">
+        <div class="container d-flex-r text-left">
           <div class="col-md-6">
             <div class="text-wrap">
               <div class="h2">
@@ -141,7 +134,7 @@
 
     <div class="section" id="section3">
       <div class="myContent1">
-        <div class="container d-flex text-left">
+        <div class="container d-flex-r text-left">
           <div class="col-md-6">
             <div class="text-wrap">
               <div class="h2">
@@ -156,6 +149,9 @@
           </div>
           <div class="col-md-6">
             <img src="/assets/img/products/MICROLED/product-img-03.png" alt="마이크로 LED 사진">
+          </div>
+          <div class="go_first">
+            <button id="toTopBtn">맨위로 가기</button>
           </div>
         </div>
       </div>
@@ -193,6 +189,10 @@
     });
 
     observer.observe(myContent);
+
+      document.getElementById('toTopBtn').addEventListener('click', () => {
+      fullpage_api.moveTo(1);
+  });
 
   </script>
 </body>

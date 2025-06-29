@@ -1,12 +1,5 @@
 @charset "UTF-8";
-body {
-  background: #f2f2f4;
-}
-
-header .navbar {
-  top: -70px;
-}
-
+@import url("/assets/css/common.css");
 .row {
   opacity: 0;
   transform: translateY(50px);
@@ -208,7 +201,16 @@ footer {
     margin-bottom: 0px !important;
   }
 }
-@media (max-width: 346px) {
+@media (max-width: 480px) {
+  .row.title {
+    padding: 50px 0 110px 0;
+  }
+  .img-wrap {
+    margin-bottom: 5px;
+  }
+  .item-list .txtwrap {
+    padding: 10px 0;
+  }
   .mgbox-200 {
     height: 0;
   }

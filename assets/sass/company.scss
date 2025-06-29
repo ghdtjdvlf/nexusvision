@@ -74,7 +74,7 @@
       }
       background: url('/assets/img/sec04-01.png') center no-repeat;
       height: 100vh;
-      background-size: contain;
+      background-size: cover;
     }
   }
 
@@ -107,8 +107,8 @@
     }
   }
  dotlottie-player{
-  width: 20rem;
-  margin: 0 auto;
+  width: 15rem;
+  margin: 20px auto;
  }
 }
 
@@ -243,7 +243,7 @@
 
   @media (max-width : 768px) {
     .section01 .text p {
-      font-size: 3rem;
+      font-size: 2rem;
     }
     .d-flex-r {
      display: flex;
@@ -254,7 +254,12 @@
     }
 
     .section01 dotlottie-player{
-     width: 150px;
+     width: 120px;
+    }
+
+    .section01 .content #text3 {
+      background-size : cover;
+      
     }
 
     .section03 .container {

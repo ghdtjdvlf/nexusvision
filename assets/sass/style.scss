@@ -30,7 +30,7 @@ section.kv {
     .next {
       position: absolute;
       z-index: 800;
-      top: 6%;
+      top: 8%;
       left: 50%;
       transform: translate(-50%, 50%);
         animation: fadeInOut 4s ease-in-out infinite;
@@ -635,15 +635,8 @@ body.dark-mode .theme-toggle {
     @media (max-width:768px) {
 
 
-      
-
-
-
-      
-
-
         section.kv .title .next {
-          top: 7.7%;
+          top: 8.7%;
         }
 
       section.kv .video {
@@ -869,7 +862,16 @@ body.dark-mode .theme-toggle {
     
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 480px) {
+      section.kv .title .next {
+        top : 8.5%
+      }
+      .section03 .box .content {
+        padding: 0 5% 1rem;;
+      }
 
+      .section06 .sec06-btn{
+        --glow-spread-color: rgba(255, 255, 255, 0.381);
+      }
   }
    

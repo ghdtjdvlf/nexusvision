@@ -1,4 +1,3 @@
-        document.addEventListener('DOMContentLoaded', function() {
             const toggleBtn = document.querySelector('.toggle-btn');
             const mobileMenu = document.querySelector('.mobile-menu');
             const overlay = document.querySelector('.overlay');
@@ -12,4 +11,3 @@
                 mobileMenu.classList.remove('active');
                 overlay.classList.remove('active');
             });
-        });
