@@ -1,4 +1,6 @@
- a {
+@import url('/assets/css/common.css');
+
+a {
   display: inline-block;
  }
 
@@ -78,16 +80,28 @@
 
 .go_first {
   position: absolute;
-  top: 80%;
+  bottom: 10%;
   left: 50%;
   transform: translate(-50%,-50%);
+  button {
+  font-size: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: all .4s;
+   border: none;    
+  &:hover {
+    background: var(--blue-01); 
+    color: var(--white-01);
+  } 
+  }
 }
 
 
  }
 
 
- @media (max-width: 480px) {  
+ @media (max-width: 500px) {  
   #section0 .myContent h1 {
     font-size: 4rem;
   }

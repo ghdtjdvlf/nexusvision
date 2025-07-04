@@ -1,3 +1,4 @@
+@import url("/assets/css/common.css");
 a {
   display: inline-block;
 }
@@ -67,12 +68,24 @@ a {
 }
 #section1 .go_first, #section2 .go_first, #section3 .go_first {
   position: absolute;
-  top: 80%;
+  bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+#section1 .go_first button, #section2 .go_first button, #section3 .go_first button {
+  font-size: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  transition: all 0.4s;
+  border: none;
+}
+#section1 .go_first button:hover, #section2 .go_first button:hover, #section3 .go_first button:hover {
+  background: var(--blue-01);
+  color: var(--white-01);
+}
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   #section0 .myContent h1 {
     font-size: 4rem;
   }
