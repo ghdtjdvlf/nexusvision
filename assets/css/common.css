@@ -1,29 +1,26 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 
-
-
-
 :root {
-    --blue-01: #3e68ff;
-    --blue-02: #6b7684;
-    --black-01: #201F1F;
-    --black-02: #2F2F2F;
-    --black-03: #5c5c5c;
-    --grey-01: #B3B3BA;
-    --grey-02: #e2e2e2;
-    --white-01: #FFFFFF;
-    --section-padding: 80px 0;
-    --section-transform :translate(0, 3356px);
-    --font-title: 3rem;
-    --font-title-sub: 1.875em;
-    --font-main-title: 4.25em;
-    --font-main-subtitle: 2.5em
+  --blue-01: #3e68ff;
+  --blue-02: #6b7684;
+  --black-01: #201F1F;
+  --black-02: #2F2F2F;
+  --black-03: #5c5c5c;
+  --grey-01: #B3B3BA;
+  --grey-02: #e2e2e2;
+  --white-01: #FFFFFF;
+  --section-padding: 80px 0;
+  --section-transform: translate(0, 3356px);
+  --font-title: 3rem;
+  --font-title-sub: 1.875em;
+  --font-main-title: 4.25em;
+  --font-main-subtitle: 2.5em
 }
 
 /* 폰트 전체 적용 */
 body {
-    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif !important;
 }
 
 
@@ -31,33 +28,33 @@ body {
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-    text-decoration: none;
-    box-sizing: border-box;
-    word-break: keep-all;
-    padding: 0;
-    margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  word-break: keep-all;
+  padding: 0;
+  margin: 0;
 }
 
 
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .on {
-    display: block;
+  display: block;
 }
 
 .off {
-    display: flex;
+  display: flex;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 /* 공통요소 */
@@ -143,20 +140,24 @@ footer {
   border-top: 1px solid #e2e8f0;
   transition: all .3s ease;
 }
+
 footer .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
+
 footer .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
   margin-bottom: 50px;
 }
+
 footer .brand-section {
   max-width: 280px;
 }
+
 footer .logo {
   font-size: 20px;
   font-weight: 700;
@@ -165,18 +166,22 @@ footer .logo {
   text-decoration: none;
   display: inline-block;
 }
+
 footer .company-desc {
   color: #4a5568;
   margin-bottom: 20px;
   font-size: 16px;
 }
+
 footer .footer.dark .company-desc {
   color: #adb5bd;
 }
+
 footer .social-links {
   display: flex;
   gap: 15px;
 }
+
 footer .social-icon {
   width: 40px;
   height: 40px;
@@ -187,34 +192,42 @@ footer .social-icon {
   justify-content: center;
   transition: all .3s ease;
 }
+
 footer .social-icon:hover {
   background-color: #4f46e5;
   color: #fff;
   transform: translateY(-3px);
 }
+
 footer .footer-section h3 {
   font-size: 18px;
   margin-bottom: 20px;
   font-weight: 600;
 }
+
 footer .footer-links {
   list-style: none;
 }
+
 footer .footer-links li {
   margin-bottom: 12px;
 }
+
 footer .footer-links a {
   color: #4a5568;
   text-decoration: none;
   transition: color .2s;
   font-size: 15px;
 }
+
 footer .footer.dark .footer-links a {
   color: #adb5bd;
 }
+
 footer .footer-links a:hover {
   color: #4f46e5;
 }
+
 footer .footer-bottom {
   display: flex;
   flex-direction: column;
@@ -223,10 +236,12 @@ footer .footer-bottom {
   padding-top: 30px;
   border-top: 1px solid #e2e8f0;
 }
+
 footer .footer-bottom p {
   color: #4a5568;
   font-size: 14px;
 }
+
 footer .theme-toggle {
   background: none;
   border: none;
@@ -237,34 +252,42 @@ footer .theme-toggle {
   gap: 8px;
   margin-top: 20px;
 }
+
 footer body.dark-mode footer {
   background-color: #1e1e1e;
   color: #ccc;
 }
+
 footer body.dark-mode .footer-links a {
   color: #ccc;
 }
+
 footer body.dark-mode .social-icon svg {
   stroke: #ccc;
 }
+
 footer body.dark-mode .theme-toggle {
   background-color: #2b2b2b;
   color: #fff;
 }
+
 @media(max-width: 586px) {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
   .footer-bottom {
     flex-direction: column;
     gap: 20px;
     text-align: center;
   }
+
   .footer-section h3 {
     font-size: 1.2rem;
-  }z
-  .footer-links a {
+  }
+
+  z .footer-links a {
     font-size: 1rem;
   }
 }
@@ -354,15 +377,15 @@ header .content {
 
 /* 색상 클래스 수정 */
 .white {
-    color: var(--white-01) !important;
+  color: var(--white-01) !important;
 }
 
 .blue {
-    color: var(--blue-01) !important;
+  color: var(--blue-01) !important;
 }
 
 .black {
-    color: #000 !important;
+  color: #000 !important;
 }
 
 /* 레이아웃 유틸리티 클래스 */
@@ -373,174 +396,174 @@ header .content {
 } */
 
 .w-50 {
-    width: 50%;
+  width: 50%;
 }
 
 .w-55 {
-    width: 55%;
+  width: 55%;
 }
 
 .w-60 {
-    width: 60%;
+  width: 60%;
 }
 
 .mr-30 {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 .mb-70 {
-    margin-bottom: 70px;
+  margin-bottom: 70px;
 }
 
 .mb-15 {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .mb-100 {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .mt-70 {
-    margin-top: 70px;
+  margin-top: 70px;
 }
 
 .text-left {
-    text-align: left;
+  text-align: left;
 }
 
 .text-right {
-    text-align: right;
+  text-align: right;
 }
 
 .mgbox-100 {
-    width: 100%;
-    height: 100px;
+  width: 100%;
+  height: 100px;
 }
 
 .mgbox-200 {
-    width: 100%;
-    height: 200px;
+  width: 100%;
+  height: 200px;
 }
 
 .mgbox-300 {
-    width: 100%;
-    height: 300px;
+  width: 100%;
+  height: 300px;
 }
 
 
 /* Swiper 전용 클래스 */
 .speed {
-    transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-    background-color: #fff;
-    opacity: .7;
-    padding: 25px 10px;
-    border-radius: 20px;
-    color: black !important;
-    transition: all .3s;
+  background-color: #fff;
+  opacity: .7;
+  padding: 25px 10px;
+  border-radius: 20px;
+  color: black !important;
+  transition: all .3s;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .swiper-button-prev:after,
 .swiper-button-next:after {
-    font-size: 1.1rem !important;
-    font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
 }
 
 
 @media (max-width: 1280px) {
-    html {
-        font-size: 15px;
-    }
+  html {
+    font-size: 15px;
+  }
 
-    .mgbox-300 {
-        height: 50px;
-    }
+  .mgbox-300 {
+    height: 50px;
+  }
 
-    header .navbar {
-  padding: 0 60px;
-}
+  header .navbar {
+    padding: 0 60px;
+  }
 }
 
 @media (max-width: 1024px) {
-    .off {
-        display: none;
-    }
+  .off {
+    display: none;
+  }
 
-    .mgbox-100 {
-        height: 50px;
-    }
+  .mgbox-100 {
+    height: 50px;
+  }
 
-    .mgbox-200 {
-        height: 100px;
-    }
+  .mgbox-200 {
+    height: 100px;
+  }
 }
 
 @media (max-width: 768px) {
-    html {
-        font-size: 12px;
-    }
+  html {
+    font-size: 12px;
+  }
 
-    .mgbox-200 {
-        height: 50px;
-    }
+  .mgbox-200 {
+    height: 50px;
+  }
 
-    header .gnb {
-  display: none;
-}
+  header .gnb {
+    display: none;
+  }
 
-header .toggle-btn {
-  display: block;
-  font-size: 30px;
-}
+  header .toggle-btn {
+    display: block;
+    font-size: 30px;
+  }
 
-header .mobile-menu {
-  align-items: flex-end;
-}
+  header .mobile-menu {
+    align-items: flex-end;
+  }
 
-header .fa,
-header .fas {
-  font-size: 22px;
-}
+  header .fa,
+  header .fas {
+    font-size: 22px;
+  }
 
-header .mobile-gnb a {
-  font-size: 1.5rem;
-}
-    
-    
+  header .mobile-gnb a {
+    font-size: 1.5rem;
+  }
+
+
 }
 
 @media (max-width: 586px) {
-    html {
-        font-size: 12px;
-    }
+  html {
+    font-size: 12px;
+  }
 
-    :root {
-        --section-padding: 50px 0
-    }
+  :root {
+    --section-padding: 50px 0
+  }
 
-    header .nav-pills {
-  display: none;
-}
+  header .nav-pills {
+    display: none;
+  }
 
-header .navbar {
-  padding: 0 40px;
-}
+  header .navbar {
+    padding: 0 40px;
+  }
 }
 
 @media (max-width: 346px) {
-    html {
-        font-size: 10px;
-    }
+  html {
+    font-size: 10px;
+  }
 
-    .mgbox-200 {
-        height: 0;
-    }
+  .mgbox-200 {
+    height: 0;
+  }
 }

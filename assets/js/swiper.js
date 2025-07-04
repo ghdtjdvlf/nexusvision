@@ -15,26 +15,31 @@ var swiper = new Swiper(".sec02_Swiper", {
 });
 
 const slidesData = [
-  {
-    title: "플렉스 스크린 (Nexus FlexScreen)",
-    desc: "초박형, 플렉서블 OLED 디스플레이는 매우 얇고, 구부리거나 접을 수 있어 차세대 스마트 기기나 웨어러블에 적합합니다.",
-    img: "../assets/img/sec03-01.png",
-  },
-  {
-    title: "Dune",
-    desc: "Long live the fighters",
-    img: "../assets/img/sec03-02.png",
-  },
-  {
-    title: "Wonka",
-    desc: "Every good thing in this world started with a dream",
-    img: "../assets/img/sec03-03.png",
-  },
-  {
-    title: "The Roundup : Punishment",
-    desc: "Don lee returns as the monster cop",
-    img: "../assets/img/sec03-01.png",
-  },
+{
+  title: "플렉스 스크린 (Nexus FlexScreen)",
+  desc: "초박형, 플렉서블 OLED 디스플레이는 매우 얇고, 구부리거나 접을 수 있어 차세대 스마트 기기나 웨어러블에 적합합니다.",
+  img: "../assets/img/sec03-01.png",
+  alt: "플렉서블 OLED 디스플레이 이미지",
+},
+{
+  title: "Nexus CrystalView",
+  desc: "초고해상도 마이크로LED 디스플레이로, 고명암비와 생생한 컬러 표현이 특징입니다. 대형 TV 및 디지털 아트 갤러리 디스플레이 등에 이상적입니다.",
+  img: "../assets/img/sec03-02.png",
+  alt: "마이크로LED 디스플레이 예시 이미지",
+},
+{
+  title: "Nexus AirTouch Panel",
+  desc: "무접촉 터치 인식이 가능한 인터랙티브 패널로, 공중에서 손짓만으로 조작이 가능합니다. 의료기기, 박물관 전시, 방역이 중요한 공간에 적합합니다.",
+  img: "../assets/img/sec03-03.png",
+  alt: "비접촉식 터치 패널 조작 예시 이미지",
+},
+{
+  title: "Nexus ClearVision",
+  desc: "투명 OLED 디스플레이 기술을 적용해 유리처럼 보이지만 화면이 구현되는 디스플레이입니다. 쇼윈도, 자동차 HUD, AR 디바이스 등에 활용됩니다.",
+  img: "../assets/img/sec03-01.png",
+  alt: "투명 OLED 디스플레이 예시 이미지",
+},
+
 ];
 function createSlideContent(slide) {
   return `
@@ -129,16 +134,18 @@ renderSlides();
 initSwipers();
 
 addSlide({
-  title: "New Slide",
-  desc: "New Desc",
+  title: "Nexus SolarSkin",
+  desc: "태양광을 전력으로 활용할 수 있는 반투명 디스플레이로, 스마트 윈도우와 에너지 수확형 건축 외장재에 쓰일 수 있습니다. 친환경 디스플레이 솔루션입니다.",
   img: "../assets/img/sec04-01.png",
-});
-addSlide({
-  title: "New Slide",
-  desc: "New Desc",
-  img: "../assets/img/slide-img01.png",
+  alt: "태양광 활용 가능한 반투명 디스플레이 이미지",
 });
 
+addSlide({
+  title: "Nexus QuantumLayer",
+  desc: "자체 개발한 양자점 기술 기반의 QD-OLED 디스플레이로, 블루라이트를 최소화하면서도 고색재현율을 실현합니다. 프로페셔널 모니터나 고급 의료용 디스플레이에 적합합니다.",
+  img: "../assets/img/slide-img01.png",
+  alt: "양자점 기반 QD-OLED 디스플레이 예시 이미지",
+});
 // sec03 로고 슬라이드
 
 let logoSwiper = new Swiper(".logoSwiper", {
