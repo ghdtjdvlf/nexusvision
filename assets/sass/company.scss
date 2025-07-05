@@ -36,16 +36,15 @@
   .content {
     padding: 0px;
     position: relative;
-
-    .txt-wrap {
+    .content-main {
+      .txt-wrap {
       text-align: center;
-      font-size: 35px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-
-      h2 {
+            h2 {
+              font-size: 50px;
         color: var(--blue-01);
         font-weight: 700;
         margin-bottom: 20px;
@@ -55,6 +54,10 @@
         color: var(--white-01);
         font-weight: 500;
       }
+    }
+   
+
+
     }
     #text3 {
       color: var(--white-01);
