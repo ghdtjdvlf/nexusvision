@@ -32,6 +32,12 @@
   padding: 0px;
   position: relative;
 }
+.section01 .content .content-main .dim-object {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
 .section01 .content .content-main .txt-wrap {
   text-align: center;
   position: absolute;
@@ -48,10 +54,11 @@
 .section01 .content .content-main .txt-wrap p {
   color: var(--white-01);
   font-weight: 500;
+  font-size: 30px;
 }
 .section01 .content #text3 {
   color: var(--white-01);
-  background: url("/assets/img/sec04-01.png") center no-repeat;
+  background: url("/assets/img/company/text3.png") center no-repeat;
   height: 100vh;
   background-size: cover;
 }
@@ -60,6 +67,12 @@
   margin-bottom: 10px;
 }
 .section01 .content #text3 p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section01 .content #text3 .dim-object {
   position: absolute;
   top: 50%;
   left: 50%;
