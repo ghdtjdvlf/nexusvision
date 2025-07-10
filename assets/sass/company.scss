@@ -302,6 +302,14 @@
     .section01 .text p {
       font-size: 1.5rem;
     }
+    .section01 .content .content-main .txt-wrap h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .section01 .content .content-main .txt-wrap p {
+      font-size: 1.2rem;
+    }
+    
     .section02 {
       transform: translate(0, 3336px);
     }
@@ -327,9 +335,11 @@
     .section03 {
       transform: translate(0, 3336px);
     }
+
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    
   }
-
-  @media (max-width : 346px) {
-
-  }
-
