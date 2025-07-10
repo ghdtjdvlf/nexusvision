@@ -1,76 +1,99 @@
-# 💼 Portfolio - 홍성필
+# 🚀 NexusVision – 홍성필 포트폴리오
 
-신입 웹 퍼블리셔 홍성필의 포트폴리오 사이트입니다.  
-HTML, CSS, JavaScript를 기반으로 제작되었으며,  
-라이브러리 없이 순수한 웹 기술만으로 구현한 정적 웹사이트입니다.
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Midjourney-AI-blueviolet?style=for-the-badge"/>
+</p>
 
-[사이트 바로가기](https://nexusvision-robot.netlify.app/)
+> 감각적인 인터페이스와 애니메이션으로 완성한 정적 웹 기반 포트폴리오  
+> 신입 웹 퍼블리셔 홍성필의 정체성을 보여주는 포트폴리오 사이트입니다.
 
 ---
 
-## 🔍 About
+## 🔗 사이트 바로가기
 
-이 프로젝트는 웹 퍼블리셔 취업을 위한 개인 포트폴리오 웹사이트입니다.  
-직관적인 구조와 반응형 레이아웃을 통해 다양한 디바이스에서 일관된 사용자 경험을 제공합니다.
+👉 [nexusvision-robot.netlify.app](https://nexusvision-robot.netlify.app/)
 
-🎨 시각적 몰입감을 높이기 위해 일부 일러스트 요소는 **Midjourney AI 이미지 생성 도구**를 활용하였습니다.
+---
+
+## 🖼️ 미리보기
+
+(스크린샷 이미지 위치: `preview/screenshot-main.png`)
+
+---
+
+## 💡 주요 기능 (Features)
+
+- 🌟 로딩 일러스트와 인트로 애니메이션
+- 🎨 Midjourney 기반의 커스텀 AI 일러스트 활용
+- 📱 반응형 웹 디자인
+- 💾 기술 스택 섹션 및 시각 아이콘 정리
+- 🗂️ 프로젝트 상세 페이지 구성
+- 💬 연락처 및 외부 링크
 
 ---
 
 ## ⚙️ 사용 기술
 
-### 🧩 Front-End
-| HTML5 | CSS3 | JavaScript |
-|-------|------|------------|
-| ![HTML5](./public/icons/html5.svg) | ![CSS3](./public/icons/css3.svg) | ![JS](./public/icons/javascript.svg) |
-
-### 🎨 Design & Platform
-| Figma | Photoshop | WordPress | Gnuboard | Midjourney |
-|--------|-----------|------------|-----------|-------------|
-| ![Figma](./public/icons/figma.svg) | ![PS](./public/icons/photoshop.svg) | ![WP](./public/icons/wordpress.svg) | ![GB](./public/icons/gnuboard.svg) | 🎨 |
+- **Markup**: HTML5, CSS3, SCSS
+- **Script**: JavaScript (Vanilla JS)
+- **Design Tool**: Figma, Photoshop
+- **Image Generator**: Midjourney
+- **Deployment**: Netlify
 
 ---
 
-## 🧱 주요 구성 섹션
+## 📁 프로젝트 폴더 구조
 
-- **Hero**: 인트로 일러스트 및 자기소개
-- **About**: 신입 웹 퍼블리셔로서의 간단한 소개
-- **Skills**: 보유 기술 정리
-- **Projects**: 주요 작업물 소개
-- **Contact**: GitHub, 이메일 등 외부 링크
-
----
-
-## 🧑‍💻 제작자 소개
-
-> 홍성필  
-> 웹 퍼블리셔 지망생으로, 사용자의 경험과 퍼포먼스를 고려한 마크업과 구현에 집중하고 있습니다.
-
----
-
-## 📁 프로젝트 구조
-
-```text
-index.html
-style.css
-script.js
-/icons/
-    html5.svg
-    css3.svg
-    javascript.svg
-    ...
+```
+📁 nexusvision/
+├── index.html
+├── og-image.jpg
+├── robots.txt
+├── sitemap.xml
+├── README.md
+├── assets/
+│   ├── css/             # 컴파일된 CSS 파일
+│   ├── sass/            # SCSS 소스 파일
+│   ├── js/              # JavaScript 모듈 및 효과
+│   ├── img/             # 이미지 리소스 (아이콘, 배경 등)
+│   ├── vid/             # 비주얼 효과 관련 파일
+│   ├── pages/           # 서브페이지 HTML
+│   ├── icon/            # 기술스택 아이콘
+│   ├── company/         # 회사 소개 관련 이미지
+│   ├── products/        # 제품 이미지
+│   ├── reference/       # 참고 사례/시공 이미지
+├── style.css
+├── style.css.map
+├── common.js
+├── fullpage.js
+├── gsap.js
+├── swiper.js
+├── main.js
+├── list.js
+├── company.html
+├── contact.html
 ```
 
 ---
 
-## 🔗 소셜 링크
+## 🧑‍💻 제작자
 
-- GitHub: [링크 입력]
-- Email: [이메일 입력]
-- Blog: [선택사항]
+**홍성필** – 웹 퍼블리셔 지망생  
+사용자 경험 중심의 웹 UI 구현과 반응형 퍼블리싱에 열정을 가지고 있습니다.
 
 ---
 
-## 📌 License
+## 📮 연락처
 
-본 프로젝트는 개인 포트폴리오 용도로만 사용되며, 상업적 목적의 사용은 금지됩니다.
+- GitHub: [링크 입력]
+- Email: [이메일 입력]
+- Blog: [선택 사항]
+
+---
+
+## 📌 라이선스
+
+본 프로젝트는 개인 포트폴리오 용도로만 사용되며, 상업적 목적의 사용은 제한됩니다.
