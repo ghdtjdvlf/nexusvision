@@ -20,33 +20,13 @@ HTML, CSS, JavaScript를 기반으로 제작되었으며,
 ## ⚙️ 사용 기술
 
 ### 🧩 Front-End
-| HTML5 | CSS3 | JavaScript |
-|-------|------|------------|
-| ![HTML5](./public/icons/html5.svg) | ![CSS3](./public/icons/css3.svg) | ![JS](./public/icons/javascript.svg) |
-
-### 🎨 Design & Platform
-| Figma | Photoshop | WordPress | Gnuboard | Midjourney |
-|--------|-----------|------------|-----------|-------------|
-| ![Figma](./public/icons/figma.svg) | ![PS](./public/icons/photoshop.svg) | ![WP](./public/icons/wordpress.svg) | ![GB](./public/icons/gnuboard.svg) | 🎨 |
-
----
-
-## 🧱 주요 구성 섹션
-
-- **Hero**: 인트로 일러스트 및 자기소개
-- **About**: 신입 웹 퍼블리셔로서의 간단한 소개
-- **Skills**: 보유 기술 정리
-- **Projects**: 주요 작업물 소개
-- **Contact**: GitHub, 이메일 등 외부 링크
-
----
+| HTML5 | CSS3 | JavaScript | SCSS |
 
 ## 🧑‍💻 제작자 소개
 
 > 홍성필  
 > 웹 퍼블리셔 지망생으로, 사용자의 경험과 퍼포먼스를 고려한 마크업과 구현에 집중하고 있습니다.
 
----
 
 ## 📁 프로젝트 구조
 
