@@ -85,6 +85,7 @@
 
   <div id="smooth-wrapper">
     <div id="smooth-content">
+
       <header>
         <nav class="navbar" role="navigation" aria-label="메인 내비게이션">
           <a href="/" class="logo">
@@ -293,6 +294,12 @@
             </div>
           </div>
         </section>
+        <div id="portfolioModal" class="modal">
+          <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p>이 페이지는 포트폴리오 용도로 제작된 사이트입니다.</p>
+          </div>
+        </div>
         <footer>
           <div class="container">
 
@@ -404,7 +411,29 @@
   <script src="assets/js/gsap.js"></script>
 
   <!-- js -->
+
   <script src="assets/js/common.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById("portfolioModal");
+      const closeBtn = document.querySelector(".close-button");
+
+      // 항상 보이도록 설정
+      modal.style.display = "block";
+
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      closeBtn.addEventListener("click", closeModal);
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+      });
+    });
+  </script>
 </body>
 
 </html>
